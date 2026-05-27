@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>热度排行榜 - 日韩热门视频-热门好看的视频大全-热门片库持续更新</title>
+  <meta name="description" content="热度排行榜页展示按热度与年份排序的影视内容。" />
+  <meta name="keywords" content="排行榜,日韩热门视频,热门好看的视频大全,热门片库持续更新,日韩视频,热门视频,视频大全" />
+  <meta name="theme-color" content="#0b1120" />
+  <meta property="og:title" content="热度排行榜 - 日韩热门视频-热门好看的视频大全-热门片库持续更新" />
+  <meta property="og:description" content="热度排行榜页展示按热度与年份排序的影视内容。" />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="inner">
+      <a class="brand" href="index.html" aria-label="日韩热门视频">
+        <span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 10.5A2.5 2.5 0 1 1 12 7a2.5 2.5 0 0 1 0 5.5z"/></svg></span>
+        <span class="brand-text">
+          <span class="brand-title">日韩热门视频</span>
+          <span class="brand-sub">热门内容整理 · 静态站点</span>
+        </span>
+      </a>
+      <nav class="nav" aria-label="主导航">
+        <a href="index.html" class="">首页</a><a href="categories.html" class="">分类总览</a><a href="rankings.html" class="active">排行榜</a><a href="search.html" class="">搜索</a><a href="about.html" class="">关于我们</a>
+      </nav>
+      <div class="header-actions">
+        <form class="search-pill" action="search.html" method="get" role="search">
+          <span aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4a6 6 0 1 0 3.7 10.7l4.3 4.3 1.4-1.4-4.3-4.3A6 6 0 0 0 10 4zm0 2a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/></svg></span>
+          <input type="search" name="q" placeholder="搜索影片名称、地区、年份、标签" />
+        </form>
+        <button class="icon-btn mobile-toggle" type="button" data-mobile-toggle aria-expanded="false" aria-label="展开菜单">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-nav" data-mobile-nav aria-label="移动端导航">
+      <a href="index.html" class="">首页</a><a href="categories.html" class="">分类总览</a><a href="rankings.html" class="active">排行榜</a><a href="search.html" class="">搜索</a><a href="about.html" class="">关于我们</a>
+      <form class="search-pill" action="search.html" method="get" role="search" style="margin-top:10px; min-width:0;">
+        <span aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4a6 6 0 1 0 3.7 10.7l4.3 4.3 1.4-1.4-4.3-4.3A6 6 0 0 0 10 4zm0 2a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/></svg></span>
+        <input type="search" name="q" placeholder="搜索影片名称、地区、年份、标签" />
+      </form>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">首页</a><span>›</span><span>排行榜</span></div>
+      <h1 class="title">热度排行榜</h1>
+      <p class="sub">根据年份、题材关键词和标题热度生成的静态排行榜，支持分页浏览全部条目。</p>
+    </div>
+  </section>
+  <section class="section" data-live-filter>
+    <div class="container">
+      <div class="filter-bar">
+        <input type="search" placeholder="在本页内搜索影片名称、地区、标签" data-filter-input />
+        <select data-filter-select>
+          <option value="">全部分类</option>
+          <option value="国产电影">国产电影</option><option value="国产剧集">国产剧集</option><option value="日韩电影">日韩电影</option><option value="日韩剧集">日韩剧集</option><option value="欧美作品">欧美作品</option><option value="动画动漫">动画动漫</option><option value="其他热播">其他热播</option>
+        </select>
+        <select data-filter-select>
+          <option value="">全部年份</option>
+          <option value="2019">2019</option><option value="2018">2018</option><option value="2017">2017</option><option value="2016">2016</option>
+        </select>
+      </div>
+      <div class="card-grid">
+        <a class="movie-card" href="movie-0623.html" data-filter-card data-search="遗愿 中国大陆 电影 剧情/家庭 被诊断为肺癌晚期的父亲,逼着当滴滴司机的儿子带他重访过去三十年他曾经“背叛过的人”。 父子和解 绝症 公路片" data-cat="国产电影" data-year="2019">
+  <div class="movie-poster">
+    <img src="assets/covers/0623.svg" alt="遗愿" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">遗愿</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2019</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">被诊断为肺癌晚期的父亲,逼着当滴滴司机的儿子带他重访过去三十年他曾经“背叛过的人”。</p>
+    <div class="chip-row"><span class="chip muted">父子和解</span><span class="chip muted">绝症</span><span class="chip muted">公路片</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0397.html" data-filter-card data-search="驭风男孩 马拉维/英国 电影 传记/剧情 马拉维饥荒期间,13岁男孩用废品造风车拯救全村,却被当作巫师。 真实改编 风力发电 非洲 教育改变命运 自强不息" data-cat="欧美作品" data-year="2019">
+  <div class="movie-poster">
+    <img src="assets/covers/0397.svg" alt="驭风男孩" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">驭风男孩</h3>
+    <div class="movie-meta">
+      <span>马拉维/英国</span>
+      <span>•</span>
+      <span>2019</span>
+      <span>•</span>
+      <span>传记</span>
+    </div>
+    <p class="movie-line">马拉维饥荒期间,13岁男孩用废品造风车拯救全村,却被当作巫师。</p>
+    <div class="chip-row"><span class="chip muted">真实改编</span><span class="chip muted">风力发电</span><span class="chip muted">非洲</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0687.html" data-filter-card data-search="我的美女老师2 中国大陆 剧集 爱情,喜剧,校园 第一季的师生情侣毕业后成为同事,一个当助教一个当讲师,办公室恋情比上课还难。 师生恋 大学 反差萌 甜宠 轻喜剧" data-cat="国产剧集" data-year="2017">
+  <div class="movie-poster">
+    <img src="assets/covers/0687.svg" alt="我的美女老师2" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">我的美女老师2</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2017</span>
+      <span>•</span>
+      <span>爱情</span>
+    </div>
+    <p class="movie-line">第一季的师生情侣毕业后成为同事,一个当助教一个当讲师,办公室恋情比上课还难。</p>
+    <div class="chip-row"><span class="chip muted">师生恋</span><span class="chip muted">大学</span><span class="chip muted">反差萌</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1433.html" data-filter-card data-search="惊恐 西班牙 电影 恐怖/悬疑 一栋老旧公寓的居民接连遭遇灵异现象,监控摄像头记录下了最令人毛骨悚然的真相。 伪纪录片 超自然 公寓怪谈 低成本" data-cat="欧美作品" data-year="2017">
+  <div class="movie-poster">
+    <img src="assets/covers/1433.svg" alt="惊恐" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">惊恐</h3>
+    <div class="movie-meta">
+      <span>西班牙</span>
+      <span>•</span>
+      <span>2017</span>
+      <span>•</span>
+      <span>恐怖</span>
+    </div>
+    <p class="movie-line">一栋老旧公寓的居民接连遭遇灵异现象,监控摄像头记录下了最令人毛骨悚然的真相。</p>
+    <div class="chip-row"><span class="chip muted">伪纪录片</span><span class="chip muted">超自然</span><span class="chip muted">公寓怪谈</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1691.html" data-filter-card data-search="我喊爱 中国香港 电影 爱情,剧情,青春 为了向聋哑暗恋的女孩告白,他打算在全校面前用口型喊出那个无声的“爱”。 青春 爱情 香港 怀旧 聋哑 遗憾" data-cat="国产电影" data-year="2018">
+  <div class="movie-poster">
+    <img src="assets/covers/1691.svg" alt="我喊爱" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">我喊爱</h3>
+    <div class="movie-meta">
+      <span>中国香港</span>
+      <span>•</span>
+      <span>2018</span>
+      <span>•</span>
+      <span>爱情</span>
+    </div>
+    <p class="movie-line">为了向聋哑暗恋的女孩告白,他打算在全校面前用口型喊出那个无声的“爱”。</p>
+    <div class="chip-row"><span class="chip muted">青春</span><span class="chip muted">爱情</span><span class="chip muted">香港</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1722.html" data-filter-card data-search="小捣蛋闯天关 中国大陆 电影 儿童喜剧/冒险 三个熊孩子为寻找失踪的玩伴,意外卷入一场啼笑皆非的宝藏追逐战。 熊孩子 逆袭 公路喜剧 成长" data-cat="国产电影" data-year="2018">
+  <div class="movie-poster">
+    <img src="assets/covers/1722.svg" alt="小捣蛋闯天关" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">小捣蛋闯天关</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2018</span>
+      <span>•</span>
+      <span>儿童喜剧</span>
+    </div>
+    <p class="movie-line">三个熊孩子为寻找失踪的玩伴,意外卷入一场啼笑皆非的宝藏追逐战。</p>
+    <div class="chip-row"><span class="chip muted">熊孩子</span><span class="chip muted">逆袭</span><span class="chip muted">公路喜剧</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1802.html" data-filter-card data-search="春宵苦短,少女前进吧! 日本 电影/动画 爱情/奇幻/喜剧 一位黑发少女在京都一夜之间经历了酒宴、旧书市、学园祭和寒风,却不知学长在拼命追她。 浪漫 奇幻 青春 汤浅政明 狂欢" data-cat="动画动漫" data-year="2017">
+  <div class="movie-poster">
+    <img src="assets/covers/1802.svg" alt="春宵苦短,少女前进吧!" loading="lazy" />
+    <span class="type-badge">电影/动画</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">春宵苦短,少女前进吧!</h3>
+    <div class="movie-meta">
+      <span>日本</span>
+      <span>•</span>
+      <span>2017</span>
+      <span>•</span>
+      <span>爱情</span>
+    </div>
+    <p class="movie-line">一位黑发少女在京都一夜之间经历了酒宴、旧书市、学园祭和寒风,却不知学长在拼命追她。</p>
+    <div class="chip-row"><span class="chip muted">浪漫</span><span class="chip muted">奇幻</span><span class="chip muted">青春</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0139.html" data-filter-card data-search="我的哥哥在游泳队 中国大陆 电影 剧情/家庭/运动 为了唤醒自闭症哥哥的意识,弟弟把他扔进泳池,没想到哥哥竟是个天生的游泳奇才。 自闭症 兄弟亲情 励志向" data-cat="国产电影" data-year="2018">
+  <div class="movie-poster">
+    <img src="assets/covers/0139.svg" alt="我的哥哥在游泳队" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">我的哥哥在游泳队</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2018</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">为了唤醒自闭症哥哥的意识,弟弟把他扔进泳池,没想到哥哥竟是个天生的游泳奇才。</p>
+    <div class="chip-row"><span class="chip muted">自闭症</span><span class="chip muted">兄弟亲情</span><span class="chip muted">励志向</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0872.html" data-filter-card data-search="罪恶黑名单:救赎 美国 剧集 剧情/犯罪/悬疑 前特工汤姆·基恩为了寻找失踪的妻子,被迫加入一个神秘且危险的雇佣兵组织“灰白质”。 特工 卧底 雇佣兵 父女关系 黑名单" data-cat="欧美作品" data-year="2017">
+  <div class="movie-poster">
+    <img src="assets/covers/0872.svg" alt="罪恶黑名单:救赎" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">罪恶黑名单:救赎</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2017</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">前特工汤姆·基恩为了寻找失踪的妻子,被迫加入一个神秘且危险的雇佣兵组织“灰白质”。</p>
+    <div class="chip-row"><span class="chip muted">特工</span><span class="chip muted">卧底</span><span class="chip muted">雇佣兵</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1317.html" data-filter-card data-search="红色白鹦鹉 德国 电影 剧情,悬疑,历史 柏林墙倒塌前夜,一幅画着红色鹦鹉的油画被偷走,画里藏着整个东德情报网名单。 柏林墙 间谍画作 鹦鹉密码 冷战传奇 东德" data-cat="欧美作品" data-year="2018">
+  <div class="movie-poster">
+    <img src="assets/covers/1317.svg" alt="红色白鹦鹉" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">红色白鹦鹉</h3>
+    <div class="movie-meta">
+      <span>德国</span>
+      <span>•</span>
+      <span>2018</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">柏林墙倒塌前夜,一幅画着红色鹦鹉的油画被偷走,画里藏着整个东德情报网名单。</p>
+    <div class="chip-row"><span class="chip muted">柏林墙</span><span class="chip muted">间谍画作</span><span class="chip muted">鹦鹉密码</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1874.html" data-filter-card data-search="胸口 法国 电影 剧情,奇幻 一个男人的胸口突然开了一扇门,走进去能看见他爱过的每个人。 身体 情感 寓言 文艺 心理" data-cat="欧美作品" data-year="2018">
+  <div class="movie-poster">
+    <img src="assets/covers/1874.svg" alt="胸口" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">胸口</h3>
+    <div class="movie-meta">
+      <span>法国</span>
+      <span>•</span>
+      <span>2018</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">一个男人的胸口突然开了一扇门,走进去能看见他爱过的每个人。</p>
+    <div class="chip-row"><span class="chip muted">身体</span><span class="chip muted">情感</span><span class="chip muted">寓言</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1359.html" data-filter-card data-search="曼克顿影痴部落 美国 剧集 喜剧、剧情 纽约一家濒临倒闭的艺术影院里,四名性格迥异的员工为了保住影院,决定自己拍一部电影。 迷影文化 群像剧 独立电影 友情" data-cat="欧美作品" data-year="2018">
+  <div class="movie-poster">
+    <img src="assets/covers/1359.svg" alt="曼克顿影痴部落" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">曼克顿影痴部落</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2018</span>
+      <span>•</span>
+      <span>喜剧</span>
+    </div>
+    <p class="movie-line">纽约一家濒临倒闭的艺术影院里,四名性格迥异的员工为了保住影院,决定自己拍一部电影。</p>
+    <div class="chip-row"><span class="chip muted">迷影文化</span><span class="chip muted">群像剧</span><span class="chip muted">独立电影</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0244.html" data-filter-card data-search="四月的女儿 墨西哥 电影 剧情,惊悚,悬疑 17岁的未婚妈妈瓦莱里娅在医院生下孩子后失踪,她的母亲“四月”赶来,却试图扮演婴儿的母亲,掩盖一个惊人的秘密。 少女怀孕 家庭控制 社会议题 压抑 反转" data-cat="其他热播" data-year="2017">
+  <div class="movie-poster">
+    <img src="assets/covers/0244.svg" alt="四月的女儿" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">四月的女儿</h3>
+    <div class="movie-meta">
+      <span>墨西哥</span>
+      <span>•</span>
+      <span>2017</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">17岁的未婚妈妈瓦莱里娅在医院生下孩子后失踪,她的母亲“四月”赶来,却试图扮演婴儿的母亲,掩盖一个惊人的秘密。</p>
+    <div class="chip-row"><span class="chip muted">少女怀孕</span><span class="chip muted">家庭控制</span><span class="chip muted">社会议题</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1385.html" data-filter-card data-search="骇故事之凶宅 中国大陆 电影 悬疑/惊悚 网红主播住进顶级凶宅直播“凶宅试睡”,却发现自己正被三百年前的房主“围观”。 直播 灵异 反转 都市传说" data-cat="国产电影" data-year="2017">
+  <div class="movie-poster">
+    <img src="assets/covers/1385.svg" alt="骇故事之凶宅" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">骇故事之凶宅</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2017</span>
+      <span>•</span>
+      <span>悬疑</span>
+    </div>
+    <p class="movie-line">网红主播住进顶级凶宅直播“凶宅试睡”,却发现自己正被三百年前的房主“围观”。</p>
+    <div class="chip-row"><span class="chip muted">直播</span><span class="chip muted">灵异</span><span class="chip muted">反转</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1810.html" data-filter-card data-search="星际大战外传:侠盗一号 美国 电影 科幻,动作,冒险 一群没有原力的普通人,偷走了死星蓝图,用自己的命换来了正传的一线希望。 太空歌剧 反抗军 牺牲 死星 盗取计划" data-cat="欧美作品" data-year="2016">
+  <div class="movie-poster">
+    <img src="assets/covers/1810.svg" alt="星际大战外传:侠盗一号" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">星际大战外传:侠盗一号</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2016</span>
+      <span>•</span>
+      <span>科幻</span>
+    </div>
+    <p class="movie-line">一群没有原力的普通人,偷走了死星蓝图,用自己的命换来了正传的一线希望。</p>
+    <div class="chip-row"><span class="chip muted">太空歌剧</span><span class="chip muted">反抗军</span><span class="chip muted">牺牲</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0679.html" data-filter-card data-search="买下我 俄罗斯 电影 剧情/情色 为了给母亲治病,名牌大学的女大学生踏入高级应召女郎的世界,却发现这是一场针对女性的精密陷阱。 社会批判 女性觉醒 阶层" data-cat="欧美作品" data-year="2018">
+  <div class="movie-poster">
+    <img src="assets/covers/0679.svg" alt="买下我" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">买下我</h3>
+    <div class="movie-meta">
+      <span>俄罗斯</span>
+      <span>•</span>
+      <span>2018</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">为了给母亲治病,名牌大学的女大学生踏入高级应召女郎的世界,却发现这是一场针对女性的精密陷阱。</p>
+    <div class="chip-row"><span class="chip muted">社会批判</span><span class="chip muted">女性觉醒</span><span class="chip muted">阶层</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0312.html" data-filter-card data-search="木一林的珍珠 日本 电影 剧情,家庭,文艺 患有阿尔茨海默症的祖母每天都会去海边找一颗不存在的珍珠,孙女追随她的脚步,挖出了一段家族秘密。 冲绳 海女 失智症 三代和解" data-cat="日韩电影" data-year="2018">
+  <div class="movie-poster">
+    <img src="assets/covers/0312.svg" alt="木一林的珍珠" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">木一林的珍珠</h3>
+    <div class="movie-meta">
+      <span>日本</span>
+      <span>•</span>
+      <span>2018</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">患有阿尔茨海默症的祖母每天都会去海边找一颗不存在的珍珠,孙女追随她的脚步,挖出了一段家族秘密。</p>
+    <div class="chip-row"><span class="chip muted">冲绳</span><span class="chip muted">海女</span><span class="chip muted">失智症</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1854.html" data-filter-card data-search="伊塞克湖的猩红色罂粟花 吉尔吉斯斯坦/俄罗斯 电影 剧情,历史 一位苏联女军医在伊塞克湖畔山村爱上当地牧羊人,而漫山罂粟花田下埋着二战时期集体屠杀的罪证。 苏联 禁忌恋 罂粟 山村" data-cat="欧美作品" data-year="2018">
+  <div class="movie-poster">
+    <img src="assets/covers/1854.svg" alt="伊塞克湖的猩红色罂粟花" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">伊塞克湖的猩红色罂粟花</h3>
+    <div class="movie-meta">
+      <span>吉尔吉斯斯坦/俄罗斯</span>
+      <span>•</span>
+      <span>2018</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">一位苏联女军医在伊塞克湖畔山村爱上当地牧羊人,而漫山罂粟花田下埋着二战时期集体屠杀的罪证。</p>
+    <div class="chip-row"><span class="chip muted">苏联</span><span class="chip muted">禁忌恋</span><span class="chip muted">罂粟</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0977.html" data-filter-card data-search="无防备孕记 日本 电影 剧情,伦理,家庭 高中女生杏子意外怀孕,当她决定生下孩子时,男友消失了,学校要开除她,母亲要跟她断绝关系。 少女怀孕 校园 社会问题 成长" data-cat="日韩电影" data-year="2018">
+  <div class="movie-poster">
+    <img src="assets/covers/0977.svg" alt="无防备孕记" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">无防备孕记</h3>
+    <div class="movie-meta">
+      <span>日本</span>
+      <span>•</span>
+      <span>2018</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">高中女生杏子意外怀孕,当她决定生下孩子时,男友消失了,学校要开除她,母亲要跟她断绝关系。</p>
+    <div class="chip-row"><span class="chip muted">少女怀孕</span><span class="chip muted">校园</span><span class="chip muted">社会问题</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1104.html" data-filter-card data-search="超萌英雄 中国大陆 电影 喜剧,动作,奇幻 菜鸟程序员意外获得超能力,代价是他的吐槽全部变成了真,且只能由宠物狗执行。 萌宠 超能力 特工 搞笑 合家欢" data-cat="国产电影" data-year="2016">
+  <div class="movie-poster">
+    <img src="assets/covers/1104.svg" alt="超萌英雄" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">超萌英雄</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2016</span>
+      <span>•</span>
+      <span>喜剧</span>
+    </div>
+    <p class="movie-line">菜鸟程序员意外获得超能力,代价是他的吐槽全部变成了真,且只能由宠物狗执行。</p>
+    <div class="chip-row"><span class="chip muted">萌宠</span><span class="chip muted">超能力</span><span class="chip muted">特工</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0801.html" data-filter-card data-search="后备空姐 中国大陆 电视剧 喜剧,爱情 土气村姑为追男神考入航空公司的后备空姐班,却发现自己恐高又晕机。 职场 逆袭 空姐题材" data-cat="国产剧集" data-year="2017">
+  <div class="movie-poster">
+    <img src="assets/covers/0801.svg" alt="后备空姐" loading="lazy" />
+    <span class="type-badge">电视剧</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">后备空姐</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2017</span>
+      <span>•</span>
+      <span>喜剧</span>
+    </div>
+    <p class="movie-line">土气村姑为追男神考入航空公司的后备空姐班,却发现自己恐高又晕机。</p>
+    <div class="chip-row"><span class="chip muted">职场</span><span class="chip muted">逆袭</span><span class="chip muted">空姐题材</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1203.html" data-filter-card data-search="幽暗哈瓦那 西班牙/古巴 电影 惊悚,悬疑 一名西班牙建筑修复师被派往哈瓦那老城,在一栋殖民古宅中发现了隐藏半个世纪的秘密。 异国犯罪 热带哥特 古建筑 双线叙事 心理惊悚" data-cat="欧美作品" data-year="2017">
+  <div class="movie-poster">
+    <img src="assets/covers/1203.svg" alt="幽暗哈瓦那" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">幽暗哈瓦那</h3>
+    <div class="movie-meta">
+      <span>西班牙/古巴</span>
+      <span>•</span>
+      <span>2017</span>
+      <span>•</span>
+      <span>惊悚</span>
+    </div>
+    <p class="movie-line">一名西班牙建筑修复师被派往哈瓦那老城,在一栋殖民古宅中发现了隐藏半个世纪的秘密。</p>
+    <div class="chip-row"><span class="chip muted">异国犯罪</span><span class="chip muted">热带哥特</span><span class="chip muted">古建筑</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0364.html" data-filter-card data-search="美好年华研习社 台湾 电视剧 青春、校园、励志 一群“吊车尾”学生为了拯救废社危机,竟误打误撞破解了校园百年宝藏之谜。 社团 废校危机 成长" data-cat="国产剧集" data-year="2018">
+  <div class="movie-poster">
+    <img src="assets/covers/0364.svg" alt="美好年华研习社" loading="lazy" />
+    <span class="type-badge">电视剧</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">美好年华研习社</h3>
+    <div class="movie-meta">
+      <span>台湾</span>
+      <span>•</span>
+      <span>2018</span>
+      <span>•</span>
+      <span>青春</span>
+    </div>
+    <p class="movie-line">一群“吊车尾”学生为了拯救废社危机,竟误打误撞破解了校园百年宝藏之谜。</p>
+    <div class="chip-row"><span class="chip muted">社团</span><span class="chip muted">废校危机</span><span class="chip muted">成长</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1911.html" data-filter-card data-search="拉塞尔·皮特斯:臭名远扬 加拿大 脱口秀电影 喜剧 喜剧大师拉塞尔·皮特斯用他标志性的口音模仿,把全世界的文化和政治正确挨个“冒犯”了一遍。 单口喜剧 种族 模仿 辛辣 现场" data-cat="欧美作品" data-year="2018">
+  <div class="movie-poster">
+    <img src="assets/covers/1911.svg" alt="拉塞尔·皮特斯:臭名远扬" loading="lazy" />
+    <span class="type-badge">脱口秀电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">拉塞尔·皮特斯:臭名远扬</h3>
+    <div class="movie-meta">
+      <span>加拿大</span>
+      <span>•</span>
+      <span>2018</span>
+      <span>•</span>
+      <span>喜剧</span>
+    </div>
+    <p class="movie-line">喜剧大师拉塞尔·皮特斯用他标志性的口音模仿,把全世界的文化和政治正确挨个“冒犯”了一遍。</p>
+    <div class="chip-row"><span class="chip muted">单口喜剧</span><span class="chip muted">种族</span><span class="chip muted">模仿</span></div>
+  </div>
+</a>
+      </div>
+      <div class="pagination"><a href="rankings-70.html">上一页</a><a href="rankings.html" class="">1</a><span>…</span><a href="rankings-70.html" class="">70</a><a href="rankings-71.html" class="active">71</a><a href="rankings-72.html" class="">72</a><span>…</span><a href="rankings-84.html" class="">84</a><a href="rankings-72.html">下一页</a></div>
+    </div>
+  </section>
+</main>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <h4>日韩热门视频</h4>
+        <p>日韩热门视频页面整理近期关注较高的视频内容，按类型与热度展示相关分类。</p>
+      </div>
+      <div>
+        <h4>分类入口</h4>
+        <p><a href="categories.html">分类总览</a></p>
+        <p><a href="rankings.html">热度排行榜</a></p>
+        <p><a href="search.html">站内搜索</a></p>
+      </div>
+      <div>
+        <h4>帮助说明</h4>
+        <p><a href="service.html">使用指南</a></p>
+        <p><a href="copyright.html">用户协议</a></p>
+        <p><a href="about.html">关于我们</a></p>
+      </div>
+      <div>
+        <h4>联系信息</h4>
+        <p>工作日 9:00 - 18:00</p>
+        <p>我们将在 24 小时内回复邮件</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 日韩热门视频. 保留所有权利。</span>
+      <span>纯静态 HTML / CSS / JS 构建</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?76b5e2e0f6c84c06f0a7cb7105df054d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>

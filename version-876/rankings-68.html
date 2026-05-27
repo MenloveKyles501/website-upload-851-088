@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>热度排行榜 - 日韩热门视频-热门好看的视频大全-热门片库持续更新</title>
+  <meta name="description" content="热度排行榜页展示按热度与年份排序的影视内容。" />
+  <meta name="keywords" content="排行榜,日韩热门视频,热门好看的视频大全,热门片库持续更新,日韩视频,热门视频,视频大全" />
+  <meta name="theme-color" content="#0b1120" />
+  <meta property="og:title" content="热度排行榜 - 日韩热门视频-热门好看的视频大全-热门片库持续更新" />
+  <meta property="og:description" content="热度排行榜页展示按热度与年份排序的影视内容。" />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="inner">
+      <a class="brand" href="index.html" aria-label="日韩热门视频">
+        <span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 10.5A2.5 2.5 0 1 1 12 7a2.5 2.5 0 0 1 0 5.5z"/></svg></span>
+        <span class="brand-text">
+          <span class="brand-title">日韩热门视频</span>
+          <span class="brand-sub">热门内容整理 · 静态站点</span>
+        </span>
+      </a>
+      <nav class="nav" aria-label="主导航">
+        <a href="index.html" class="">首页</a><a href="categories.html" class="">分类总览</a><a href="rankings.html" class="active">排行榜</a><a href="search.html" class="">搜索</a><a href="about.html" class="">关于我们</a>
+      </nav>
+      <div class="header-actions">
+        <form class="search-pill" action="search.html" method="get" role="search">
+          <span aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4a6 6 0 1 0 3.7 10.7l4.3 4.3 1.4-1.4-4.3-4.3A6 6 0 0 0 10 4zm0 2a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/></svg></span>
+          <input type="search" name="q" placeholder="搜索影片名称、地区、年份、标签" />
+        </form>
+        <button class="icon-btn mobile-toggle" type="button" data-mobile-toggle aria-expanded="false" aria-label="展开菜单">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-nav" data-mobile-nav aria-label="移动端导航">
+      <a href="index.html" class="">首页</a><a href="categories.html" class="">分类总览</a><a href="rankings.html" class="active">排行榜</a><a href="search.html" class="">搜索</a><a href="about.html" class="">关于我们</a>
+      <form class="search-pill" action="search.html" method="get" role="search" style="margin-top:10px; min-width:0;">
+        <span aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4a6 6 0 1 0 3.7 10.7l4.3 4.3 1.4-1.4-4.3-4.3A6 6 0 0 0 10 4zm0 2a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/></svg></span>
+        <input type="search" name="q" placeholder="搜索影片名称、地区、年份、标签" />
+      </form>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">首页</a><span>›</span><span>排行榜</span></div>
+      <h1 class="title">热度排行榜</h1>
+      <p class="sub">根据年份、题材关键词和标题热度生成的静态排行榜，支持分页浏览全部条目。</p>
+    </div>
+  </section>
+  <section class="section" data-live-filter>
+    <div class="container">
+      <div class="filter-bar">
+        <input type="search" placeholder="在本页内搜索影片名称、地区、标签" data-filter-input />
+        <select data-filter-select>
+          <option value="">全部分类</option>
+          <option value="国产电影">国产电影</option><option value="国产剧集">国产剧集</option><option value="日韩电影">日韩电影</option><option value="日韩剧集">日韩剧集</option><option value="欧美作品">欧美作品</option><option value="动画动漫">动画动漫</option><option value="其他热播">其他热播</option>
+        </select>
+        <select data-filter-select>
+          <option value="">全部年份</option>
+          <option value="2020">2020</option><option value="2019">2019</option><option value="2018">2018</option>
+        </select>
+      </div>
+      <div class="card-grid">
+        <a class="movie-card" href="movie-1512.html" data-filter-card data-search="色香味谋杀案 法国 电影 悬疑犯罪 三位米其林评审接连死亡,死时表情安详,身体里只剩一道完美的菜肴。 美食 连环杀手 米其林 复仇" data-cat="欧美作品" data-year="2019">
+  <div class="movie-poster">
+    <img src="assets/covers/1512.svg" alt="色香味谋杀案" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">色香味谋杀案</h3>
+    <div class="movie-meta">
+      <span>法国</span>
+      <span>•</span>
+      <span>2019</span>
+      <span>•</span>
+      <span>悬疑犯罪</span>
+    </div>
+    <p class="movie-line">三位米其林评审接连死亡,死时表情安详,身体里只剩一道完美的菜肴。</p>
+    <div class="chip-row"><span class="chip muted">美食</span><span class="chip muted">连环杀手</span><span class="chip muted">米其林</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0540.html" data-filter-card data-search="盗爱之家 韩国 电影 犯罪、爱情、黑色喜剧 一对专偷富人空宅的情侣盗贼,在最后一单生意里偷到了一栋“自己家”——里面住着女方的亲姐姐。 鸳鸯盗 末路狂花 赃物 公寓埋伏 荒诞" data-cat="日韩电影" data-year="2019">
+  <div class="movie-poster">
+    <img src="assets/covers/0540.svg" alt="盗爱之家" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">盗爱之家</h3>
+    <div class="movie-meta">
+      <span>韩国</span>
+      <span>•</span>
+      <span>2019</span>
+      <span>•</span>
+      <span>犯罪</span>
+    </div>
+    <p class="movie-line">一对专偷富人空宅的情侣盗贼,在最后一单生意里偷到了一栋“自己家”——里面住着女方的亲姐姐。</p>
+    <div class="chip-row"><span class="chip muted">鸳鸯盗</span><span class="chip muted">末路狂花</span><span class="chip muted">赃物</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1871.html" data-filter-card data-search="神奇的影像 法国 电影 剧情/科幻 一位老放映员发现了一台能修复并“进入”老照片的神奇投影仪,他回到了父母年轻时。 老照片 时光倒流 亲情 默片 怀旧" data-cat="欧美作品" data-year="2019">
+  <div class="movie-poster">
+    <img src="assets/covers/1871.svg" alt="神奇的影像" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">神奇的影像</h3>
+    <div class="movie-meta">
+      <span>法国</span>
+      <span>•</span>
+      <span>2019</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">一位老放映员发现了一台能修复并“进入”老照片的神奇投影仪,他回到了父母年轻时。</p>
+    <div class="chip-row"><span class="chip muted">老照片</span><span class="chip muted">时光倒流</span><span class="chip muted">亲情</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0747.html" data-filter-card data-search="狮城之歌1958 新加坡 电影 历史,歌舞,剧情 1958年的新加坡河畔,一群来自不同方言群体的码头工人,用歌声对抗殖民者的压迫,唱出了独立的前奏。 建国一代 奋斗 怀旧 南洋" data-cat="其他热播" data-year="2020">
+  <div class="movie-poster">
+    <img src="assets/covers/0747.svg" alt="狮城之歌1958" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">狮城之歌1958</h3>
+    <div class="movie-meta">
+      <span>新加坡</span>
+      <span>•</span>
+      <span>2020</span>
+      <span>•</span>
+      <span>历史</span>
+    </div>
+    <p class="movie-line">1958年的新加坡河畔,一群来自不同方言群体的码头工人,用歌声对抗殖民者的压迫,唱出了独立的前奏。</p>
+    <div class="chip-row"><span class="chip muted">建国一代</span><span class="chip muted">奋斗</span><span class="chip muted">怀旧</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1947.html" data-filter-card data-search="再见吧 中国大陆 电影 剧情,家庭 患癌父亲坚持要回老家等死,女儿在送别火车上发现他藏了一辈子的秘密。 临终 告别 父女 黑白摄影" data-cat="国产电影" data-year="2020">
+  <div class="movie-poster">
+    <img src="assets/covers/1947.svg" alt="再见吧" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">再见吧</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2020</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">患癌父亲坚持要回老家等死,女儿在送别火车上发现他藏了一辈子的秘密。</p>
+    <div class="chip-row"><span class="chip muted">临终</span><span class="chip muted">告别</span><span class="chip muted">父女</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0512.html" data-filter-card data-search="水果篮子第一季 日本 剧集 动画、奇幻、治愈 一个无家可归的高中女生住进了森林里的帐篷,却意外揭开了草摩家“被十二生肖附身”的秘密。 十二生肖 附身 少女漫 温馨 搞笑" data-cat="动画动漫" data-year="2019">
+  <div class="movie-poster">
+    <img src="assets/covers/0512.svg" alt="水果篮子第一季" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">水果篮子第一季</h3>
+    <div class="movie-meta">
+      <span>日本</span>
+      <span>•</span>
+      <span>2019</span>
+      <span>•</span>
+      <span>动画</span>
+    </div>
+    <p class="movie-line">一个无家可归的高中女生住进了森林里的帐篷,却意外揭开了草摩家“被十二生肖附身”的秘密。</p>
+    <div class="chip-row"><span class="chip muted">十二生肖</span><span class="chip muted">附身</span><span class="chip muted">少女漫</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1036.html" data-filter-card data-search="想爱趁现在 中国台湾 电影 爱情,喜剧 一个确诊只剩三个月生命的厌世女孩,被一个憨厚殡葬师拉去完成匪夷所思的“生前告别仪式”。 绝症 遗愿清单 公路 治愈 临终关怀" data-cat="国产电影" data-year="2020">
+  <div class="movie-poster">
+    <img src="assets/covers/1036.svg" alt="想爱趁现在" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">想爱趁现在</h3>
+    <div class="movie-meta">
+      <span>中国台湾</span>
+      <span>•</span>
+      <span>2020</span>
+      <span>•</span>
+      <span>爱情</span>
+    </div>
+    <p class="movie-line">一个确诊只剩三个月生命的厌世女孩,被一个憨厚殡葬师拉去完成匪夷所思的“生前告别仪式”。</p>
+    <div class="chip-row"><span class="chip muted">绝症</span><span class="chip muted">遗愿清单</span><span class="chip muted">公路</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0783.html" data-filter-card data-search="吶喊2019 中国 电影 剧情/悬疑 一桩尘封十年的校园悬案因一则匿名吶喊视频重启,全班同学都成了嫌疑人。 校园霸凌 真相 反转 社会议题" data-cat="国产电影" data-year="2019">
+  <div class="movie-poster">
+    <img src="assets/covers/0783.svg" alt="吶喊2019" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">吶喊2019</h3>
+    <div class="movie-meta">
+      <span>中国</span>
+      <span>•</span>
+      <span>2019</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">一桩尘封十年的校园悬案因一则匿名吶喊视频重启,全班同学都成了嫌疑人。</p>
+    <div class="chip-row"><span class="chip muted">校园霸凌</span><span class="chip muted">真相</span><span class="chip muted">反转</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1490.html" data-filter-card data-search="神偷侠盗团 韩国 电影 动作/犯罪/喜剧 各怀绝技的小偷接到神秘任务:在跨国列车到达终点前,偷走藏在富商保险柜里的绝密U盘。 高智商犯罪 团队合作 反转 偷盗艺术" data-cat="日韩电影" data-year="2018">
+  <div class="movie-poster">
+    <img src="assets/covers/1490.svg" alt="神偷侠盗团" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">神偷侠盗团</h3>
+    <div class="movie-meta">
+      <span>韩国</span>
+      <span>•</span>
+      <span>2018</span>
+      <span>•</span>
+      <span>动作</span>
+    </div>
+    <p class="movie-line">各怀绝技的小偷接到神秘任务:在跨国列车到达终点前,偷走藏在富商保险柜里的绝密U盘。</p>
+    <div class="chip-row"><span class="chip muted">高智商犯罪</span><span class="chip muted">团队合作</span><span class="chip muted">反转</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0565.html" data-filter-card data-search="美国皮条客 美国 电影 剧情,犯罪,传记 上世纪70年代纽约地下皮条客之王,如何从街头混混爬上欲望王座,又急速坠落。 底层 夜生活 权力 生存 真实改编" data-cat="欧美作品" data-year="2019">
+  <div class="movie-poster">
+    <img src="assets/covers/0565.svg" alt="美国皮条客" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">美国皮条客</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2019</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">上世纪70年代纽约地下皮条客之王,如何从街头混混爬上欲望王座,又急速坠落。</p>
+    <div class="chip-row"><span class="chip muted">底层</span><span class="chip muted">夜生活</span><span class="chip muted">权力</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0836.html" data-filter-card data-search="应承 中国大陆 电影 剧情/公路 陕北老汉为了一个承诺,骑三轮车三千公里送工友的骨灰回家。 诚信 底层人民 陕北" data-cat="国产电影" data-year="2020">
+  <div class="movie-poster">
+    <img src="assets/covers/0836.svg" alt="应承" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">应承</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2020</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">陕北老汉为了一个承诺,骑三轮车三千公里送工友的骨灰回家。</p>
+    <div class="chip-row"><span class="chip muted">诚信</span><span class="chip muted">底层人民</span><span class="chip muted">陕北</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1726.html" data-filter-card data-search="男孩遇见男孩 日本 电影 爱情,剧情 内向的高中生在与一位转学来的男孩相遇后,决定在毕业前的最后一个夏天拍一部关于他的纪录片。 BL 夏日 初恋 治愈" data-cat="日韩电影" data-year="2019">
+  <div class="movie-poster">
+    <img src="assets/covers/1726.svg" alt="男孩遇见男孩" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">男孩遇见男孩</h3>
+    <div class="movie-meta">
+      <span>日本</span>
+      <span>•</span>
+      <span>2019</span>
+      <span>•</span>
+      <span>爱情</span>
+    </div>
+    <p class="movie-line">内向的高中生在与一位转学来的男孩相遇后,决定在毕业前的最后一个夏天拍一部关于他的纪录片。</p>
+    <div class="chip-row"><span class="chip muted">BL</span><span class="chip muted">夏日</span><span class="chip muted">初恋</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0409.html" data-filter-card data-search="阳光之门 法国/摩洛哥 电影 剧情/战争 一对索马里父子穿越非洲大陆只为抵达“阳光之门”——一张传单上的欧洲照片。 难民 父子情 偷渡 希望" data-cat="欧美作品" data-year="2019">
+  <div class="movie-poster">
+    <img src="assets/covers/0409.svg" alt="阳光之门" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">阳光之门</h3>
+    <div class="movie-meta">
+      <span>法国/摩洛哥</span>
+      <span>•</span>
+      <span>2019</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">一对索马里父子穿越非洲大陆只为抵达“阳光之门”——一张传单上的欧洲照片。</p>
+    <div class="chip-row"><span class="chip muted">难民</span><span class="chip muted">父子情</span><span class="chip muted">偷渡</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0694.html" data-filter-card data-search="为妳唱的歌 中国台湾 电影 剧情/音乐/爱情 一个无法唱歌的过气歌手,在医院里遇到一个只能活三个月的绝症女孩,女孩的愿望是听他唱一首“为妳唱的歌”。 音乐 清新 绝症 治愈" data-cat="国产电影" data-year="2019">
+  <div class="movie-poster">
+    <img src="assets/covers/0694.svg" alt="为妳唱的歌" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">为妳唱的歌</h3>
+    <div class="movie-meta">
+      <span>中国台湾</span>
+      <span>•</span>
+      <span>2019</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">一个无法唱歌的过气歌手,在医院里遇到一个只能活三个月的绝症女孩,女孩的愿望是听他唱一首“为妳唱的歌”。</p>
+    <div class="chip-row"><span class="chip muted">音乐</span><span class="chip muted">清新</span><span class="chip muted">绝症</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0074.html" data-filter-card data-search="龙王子第二季 美国 剧集 奇幻动画 携带龙蛋的三人小队穿越诅咒之境,身后是追兵,前方是未知的古龙苏醒。 魔法归来 龙蛋任务 精灵与人类 团队羁绊" data-cat="动画动漫" data-year="2019">
+  <div class="movie-poster">
+    <img src="assets/covers/0074.svg" alt="龙王子第二季" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">龙王子第二季</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2019</span>
+      <span>•</span>
+      <span>奇幻动画</span>
+    </div>
+    <p class="movie-line">携带龙蛋的三人小队穿越诅咒之境,身后是追兵,前方是未知的古龙苏醒。</p>
+    <div class="chip-row"><span class="chip muted">魔法归来</span><span class="chip muted">龙蛋任务</span><span class="chip muted">精灵与人类</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0072.html" data-filter-card data-search="朋友请听好 中国大陆 剧集 剧情,治愈 一座即将被拆除的老电台,在最后 30 天里接到了改变所有人命运的来电。 广播 夜间电台 都市温情" data-cat="国产剧集" data-year="2020">
+  <div class="movie-poster">
+    <img src="assets/covers/0072.svg" alt="朋友请听好" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">朋友请听好</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2020</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">一座即将被拆除的老电台,在最后 30 天里接到了改变所有人命运的来电。</p>
+    <div class="chip-row"><span class="chip muted">广播</span><span class="chip muted">夜间电台</span><span class="chip muted">都市温情</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0510.html" data-filter-card data-search="在蒙特维多分手 乌拉圭 电影 剧情/爱情/文艺 他们约定在乌拉圭的蒙特维多结束七年的感情,却在老城区的石板路上,重新学会了如何牵手。 分手旅行 南美风情 文艺对白 情感沉淀" data-cat="其他热播" data-year="2019">
+  <div class="movie-poster">
+    <img src="assets/covers/0510.svg" alt="在蒙特维多分手" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">在蒙特维多分手</h3>
+    <div class="movie-meta">
+      <span>乌拉圭</span>
+      <span>•</span>
+      <span>2019</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">他们约定在乌拉圭的蒙特维多结束七年的感情,却在老城区的石板路上,重新学会了如何牵手。</p>
+    <div class="chip-row"><span class="chip muted">分手旅行</span><span class="chip muted">南美风情</span><span class="chip muted">文艺对白</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1030.html" data-filter-card data-search="国学小名士第三季 中国大陆 综艺 真人秀/竞赛 百位少年才俊同台竞技,用飞花令、诗词接龙和最强大脑,重新定义当代年轻人的国学素养。 国学 知识竞赛 诗词 传统文化" data-cat="国产电影" data-year="2020">
+  <div class="movie-poster">
+    <img src="assets/covers/1030.svg" alt="国学小名士第三季" loading="lazy" />
+    <span class="type-badge">综艺</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">国学小名士第三季</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2020</span>
+      <span>•</span>
+      <span>真人秀</span>
+    </div>
+    <p class="movie-line">百位少年才俊同台竞技,用飞花令、诗词接龙和最强大脑,重新定义当代年轻人的国学素养。</p>
+    <div class="chip-row"><span class="chip muted">国学</span><span class="chip muted">知识竞赛</span><span class="chip muted">诗词</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0690.html" data-filter-card data-search="她房间里的云 中国内地 电影 剧情/文艺 北方姑娘南下收租,在潮湿的南方老宅里,她与租客、继母之间的情感如云般聚散。 家庭关系 隐秘情感 诗意叙事" data-cat="国产电影" data-year="2020">
+  <div class="movie-poster">
+    <img src="assets/covers/0690.svg" alt="她房间里的云" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">她房间里的云</h3>
+    <div class="movie-meta">
+      <span>中国内地</span>
+      <span>•</span>
+      <span>2020</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">北方姑娘南下收租,在潮湿的南方老宅里,她与租客、继母之间的情感如云般聚散。</p>
+    <div class="chip-row"><span class="chip muted">家庭关系</span><span class="chip muted">隐秘情感</span><span class="chip muted">诗意叙事</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0198.html" data-filter-card data-search="英雄不死 法国 电影 战争 萨拉热窝围城25年后,一名幸存者突然指控当年的“英雄”其实见死不救,全城陷入信任危机。 萨拉热窝 记者 真相" data-cat="欧美作品" data-year="2019">
+  <div class="movie-poster">
+    <img src="assets/covers/0198.svg" alt="英雄不死" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">英雄不死</h3>
+    <div class="movie-meta">
+      <span>法国</span>
+      <span>•</span>
+      <span>2019</span>
+      <span>•</span>
+      <span>战争</span>
+    </div>
+    <p class="movie-line">萨拉热窝围城25年后,一名幸存者突然指控当年的“英雄”其实见死不救,全城陷入信任危机。</p>
+    <div class="chip-row"><span class="chip muted">萨拉热窝</span><span class="chip muted">记者</span><span class="chip muted">真相</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0752.html" data-filter-card data-search="恐怖特快 日本 电影 恐怖/悬疑 深夜末班电车上,每节车厢的乘客都在用同一种诡异的方式死去。 密闭空间 列车 怪谈" data-cat="日韩电影" data-year="2019">
+  <div class="movie-poster">
+    <img src="assets/covers/0752.svg" alt="恐怖特快" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">恐怖特快</h3>
+    <div class="movie-meta">
+      <span>日本</span>
+      <span>•</span>
+      <span>2019</span>
+      <span>•</span>
+      <span>恐怖</span>
+    </div>
+    <p class="movie-line">深夜末班电车上,每节车厢的乘客都在用同一种诡异的方式死去。</p>
+    <div class="chip-row"><span class="chip muted">密闭空间</span><span class="chip muted">列车</span><span class="chip muted">怪谈</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1232.html" data-filter-card data-search="募恋英雄 日本 剧集 悬疑,犯罪,女性 女警美和假扮大龄剩女潜入一个高端婚恋网站,却发现该网站的头号“完美恋人”是她失踪了三年的前男友。 女警 卧底 婚恋网站 连环骗婚 集体诉讼" data-cat="日韩剧集" data-year="2019">
+  <div class="movie-poster">
+    <img src="assets/covers/1232.svg" alt="募恋英雄" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">募恋英雄</h3>
+    <div class="movie-meta">
+      <span>日本</span>
+      <span>•</span>
+      <span>2019</span>
+      <span>•</span>
+      <span>悬疑</span>
+    </div>
+    <p class="movie-line">女警美和假扮大龄剩女潜入一个高端婚恋网站,却发现该网站的头号“完美恋人”是她失踪了三年的前男友。</p>
+    <div class="chip-row"><span class="chip muted">女警</span><span class="chip muted">卧底</span><span class="chip muted">婚恋网站</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1162.html" data-filter-card data-search="关键性关系 中国大陆 电影 悬疑,剧情 一场绑架案牵扯出三个家庭六位主角之间意想不到的情感漩涡。 谈判 人质 伦理 反转 独角戏" data-cat="国产电影" data-year="2019">
+  <div class="movie-poster">
+    <img src="assets/covers/1162.svg" alt="关键性关系" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">关键性关系</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2019</span>
+      <span>•</span>
+      <span>悬疑</span>
+    </div>
+    <p class="movie-line">一场绑架案牵扯出三个家庭六位主角之间意想不到的情感漩涡。</p>
+    <div class="chip-row"><span class="chip muted">谈判</span><span class="chip muted">人质</span><span class="chip muted">伦理</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0691.html" data-filter-card data-search="后妻业之女 日本 电影 剧情,犯罪 专业“后妻业”女欺诈师盯上了一个孤僻的富商,却发现对方比她更精通骗术,两人的婚姻变成了一场死亡游戏。 欺诈师 黄昏恋 遗产争夺" data-cat="日韩电影" data-year="2019">
+  <div class="movie-poster">
+    <img src="assets/covers/0691.svg" alt="后妻业之女" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">后妻业之女</h3>
+    <div class="movie-meta">
+      <span>日本</span>
+      <span>•</span>
+      <span>2019</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">专业“后妻业”女欺诈师盯上了一个孤僻的富商,却发现对方比她更精通骗术,两人的婚姻变成了一场死亡游戏。</p>
+    <div class="chip-row"><span class="chip muted">欺诈师</span><span class="chip muted">黄昏恋</span><span class="chip muted">遗产争夺</span></div>
+  </div>
+</a>
+      </div>
+      <div class="pagination"><a href="rankings-67.html">上一页</a><a href="rankings.html" class="">1</a><span>…</span><a href="rankings-67.html" class="">67</a><a href="rankings-68.html" class="active">68</a><a href="rankings-69.html" class="">69</a><span>…</span><a href="rankings-84.html" class="">84</a><a href="rankings-69.html">下一页</a></div>
+    </div>
+  </section>
+</main>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <h4>日韩热门视频</h4>
+        <p>日韩热门视频页面整理近期关注较高的视频内容，按类型与热度展示相关分类。</p>
+      </div>
+      <div>
+        <h4>分类入口</h4>
+        <p><a href="categories.html">分类总览</a></p>
+        <p><a href="rankings.html">热度排行榜</a></p>
+        <p><a href="search.html">站内搜索</a></p>
+      </div>
+      <div>
+        <h4>帮助说明</h4>
+        <p><a href="service.html">使用指南</a></p>
+        <p><a href="copyright.html">用户协议</a></p>
+        <p><a href="about.html">关于我们</a></p>
+      </div>
+      <div>
+        <h4>联系信息</h4>
+        <p>工作日 9:00 - 18:00</p>
+        <p>我们将在 24 小时内回复邮件</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 日韩热门视频. 保留所有权利。</span>
+      <span>纯静态 HTML / CSS / JS 构建</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?76b5e2e0f6c84c06f0a7cb7105df054d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>

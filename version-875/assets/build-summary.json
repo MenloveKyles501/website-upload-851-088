@@ -1,0 +1,9 @@
+{
+  "site_title": "日韩高清视频-高清影视片库-高清视频在线播放",
+  "site_name": "日韩高清视频",
+  "movie_count": 2000,
+  "category_count": 10,
+  "detail_page_count": 2000,
+  "video_source_count": 20,
+  "image_reference_rule": "影片封面与 Hero 均引用站点根目录 1.jpg 到 150.jpg，未额外生成 JPG/PNG/WebP 图片。"
+}

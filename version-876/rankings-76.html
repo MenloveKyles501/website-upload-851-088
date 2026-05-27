@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>热度排行榜 - 日韩热门视频-热门好看的视频大全-热门片库持续更新</title>
+  <meta name="description" content="热度排行榜页展示按热度与年份排序的影视内容。" />
+  <meta name="keywords" content="排行榜,日韩热门视频,热门好看的视频大全,热门片库持续更新,日韩视频,热门视频,视频大全" />
+  <meta name="theme-color" content="#0b1120" />
+  <meta property="og:title" content="热度排行榜 - 日韩热门视频-热门好看的视频大全-热门片库持续更新" />
+  <meta property="og:description" content="热度排行榜页展示按热度与年份排序的影视内容。" />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="inner">
+      <a class="brand" href="index.html" aria-label="日韩热门视频">
+        <span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 10.5A2.5 2.5 0 1 1 12 7a2.5 2.5 0 0 1 0 5.5z"/></svg></span>
+        <span class="brand-text">
+          <span class="brand-title">日韩热门视频</span>
+          <span class="brand-sub">热门内容整理 · 静态站点</span>
+        </span>
+      </a>
+      <nav class="nav" aria-label="主导航">
+        <a href="index.html" class="">首页</a><a href="categories.html" class="">分类总览</a><a href="rankings.html" class="active">排行榜</a><a href="search.html" class="">搜索</a><a href="about.html" class="">关于我们</a>
+      </nav>
+      <div class="header-actions">
+        <form class="search-pill" action="search.html" method="get" role="search">
+          <span aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4a6 6 0 1 0 3.7 10.7l4.3 4.3 1.4-1.4-4.3-4.3A6 6 0 0 0 10 4zm0 2a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/></svg></span>
+          <input type="search" name="q" placeholder="搜索影片名称、地区、年份、标签" />
+        </form>
+        <button class="icon-btn mobile-toggle" type="button" data-mobile-toggle aria-expanded="false" aria-label="展开菜单">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-nav" data-mobile-nav aria-label="移动端导航">
+      <a href="index.html" class="">首页</a><a href="categories.html" class="">分类总览</a><a href="rankings.html" class="active">排行榜</a><a href="search.html" class="">搜索</a><a href="about.html" class="">关于我们</a>
+      <form class="search-pill" action="search.html" method="get" role="search" style="margin-top:10px; min-width:0;">
+        <span aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4a6 6 0 1 0 3.7 10.7l4.3 4.3 1.4-1.4-4.3-4.3A6 6 0 0 0 10 4zm0 2a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/></svg></span>
+        <input type="search" name="q" placeholder="搜索影片名称、地区、年份、标签" />
+      </form>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">首页</a><span>›</span><span>排行榜</span></div>
+      <h1 class="title">热度排行榜</h1>
+      <p class="sub">根据年份、题材关键词和标题热度生成的静态排行榜，支持分页浏览全部条目。</p>
+    </div>
+  </section>
+  <section class="section" data-live-filter>
+    <div class="container">
+      <div class="filter-bar">
+        <input type="search" placeholder="在本页内搜索影片名称、地区、标签" data-filter-input />
+        <select data-filter-select>
+          <option value="">全部分类</option>
+          <option value="国产电影">国产电影</option><option value="国产剧集">国产剧集</option><option value="日韩电影">日韩电影</option><option value="日韩剧集">日韩剧集</option><option value="欧美作品">欧美作品</option><option value="动画动漫">动画动漫</option><option value="其他热播">其他热播</option>
+        </select>
+        <select data-filter-select>
+          <option value="">全部年份</option>
+          <option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option>
+        </select>
+      </div>
+      <div class="card-grid">
+        <a class="movie-card" href="movie-0860.html" data-filter-card data-search="同门兄弟 中国大陆 电视剧 剧情,历史 晚清徽州,一对茶商兄弟因一纸朝廷禁令反目,大哥保家产,二哥毁家纾难,多年后两人在战场上兵戎相见。 商战 徽商 兄弟反目 清末民初" data-cat="国产剧集" data-year="2011">
+  <div class="movie-poster">
+    <img src="assets/covers/0860.svg" alt="同门兄弟" loading="lazy" />
+    <span class="type-badge">电视剧</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">同门兄弟</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2011</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">晚清徽州,一对茶商兄弟因一纸朝廷禁令反目,大哥保家产,二哥毁家纾难,多年后两人在战场上兵戎相见。</p>
+    <div class="chip-row"><span class="chip muted">商战</span><span class="chip muted">徽商</span><span class="chip muted">兄弟反目</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0293.html" data-filter-card data-search="偷情大丈夫 香港 电影 喜剧/爱情 三个出轨的男人组成互助会,结果发现彼此的老婆才是真正的“外遇高手”。 都市 出轨 黑色幽默 港式喜剧" data-cat="国产电影" data-year="2011">
+  <div class="movie-poster">
+    <img src="assets/covers/0293.svg" alt="偷情大丈夫" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">偷情大丈夫</h3>
+    <div class="movie-meta">
+      <span>香港</span>
+      <span>•</span>
+      <span>2011</span>
+      <span>•</span>
+      <span>喜剧</span>
+    </div>
+    <p class="movie-line">三个出轨的男人组成互助会,结果发现彼此的老婆才是真正的“外遇高手”。</p>
+    <div class="chip-row"><span class="chip muted">都市</span><span class="chip muted">出轨</span><span class="chip muted">黑色幽默</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0547.html" data-filter-card data-search="幻夜 日本 剧集 悬疑,爱情,犯罪 地震后幸存的女人美冬,用美貌与心计操控身边所有男人,走向不可挽回的深渊。 暗黑 蛇蝎美人 东野圭吾" data-cat="日韩剧集" data-year="2010">
+  <div class="movie-poster">
+    <img src="assets/covers/0547.svg" alt="幻夜" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">幻夜</h3>
+    <div class="movie-meta">
+      <span>日本</span>
+      <span>•</span>
+      <span>2010</span>
+      <span>•</span>
+      <span>悬疑</span>
+    </div>
+    <p class="movie-line">地震后幸存的女人美冬,用美貌与心计操控身边所有男人,走向不可挽回的深渊。</p>
+    <div class="chip-row"><span class="chip muted">暗黑</span><span class="chip muted">蛇蝎美人</span><span class="chip muted">东野圭吾</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1855.html" data-filter-card data-search="耻辱 英国 电影 剧情/情色 一名看似成功的纽约白领,被性瘾与亲妹妹突然的借住彻底撕碎了伪装。 性成瘾 孤独 都市病" data-cat="欧美作品" data-year="2011">
+  <div class="movie-poster">
+    <img src="assets/covers/1855.svg" alt="耻辱" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">耻辱</h3>
+    <div class="movie-meta">
+      <span>英国</span>
+      <span>•</span>
+      <span>2011</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">一名看似成功的纽约白领,被性瘾与亲妹妹突然的借住彻底撕碎了伪装。</p>
+    <div class="chip-row"><span class="chip muted">性成瘾</span><span class="chip muted">孤独</span><span class="chip muted">都市病</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0286.html" data-filter-card data-search="红小鬼 中国大陆 电影 历史,战争 长征途中,一个只想找鞋穿的红军小战士,意外护送了一份关系全师存亡的情报。 红色题材 儿童 长征 革命" data-cat="国产电影" data-year="2011">
+  <div class="movie-poster">
+    <img src="assets/covers/0286.svg" alt="红小鬼" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">红小鬼</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2011</span>
+      <span>•</span>
+      <span>历史</span>
+    </div>
+    <p class="movie-line">长征途中,一个只想找鞋穿的红军小战士,意外护送了一份关系全师存亡的情报。</p>
+    <div class="chip-row"><span class="chip muted">红色题材</span><span class="chip muted">儿童</span><span class="chip muted">长征</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1756.html" data-filter-card data-search="爱而为一演唱会影音馆 中国台湾 综艺/演唱会 音乐,现场 SHE 暂别单飞前的最后一场完整演唱会,三个女孩在台上哭着唱完了《老婆》。 演唱会 SHE 青春 回忆 告别" data-cat="国产电影" data-year="2011">
+  <div class="movie-poster">
+    <img src="assets/covers/1756.svg" alt="爱而为一演唱会影音馆" loading="lazy" />
+    <span class="type-badge">综艺/演唱会</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">爱而为一演唱会影音馆</h3>
+    <div class="movie-meta">
+      <span>中国台湾</span>
+      <span>•</span>
+      <span>2011</span>
+      <span>•</span>
+      <span>音乐</span>
+    </div>
+    <p class="movie-line">SHE 暂别单飞前的最后一场完整演唱会,三个女孩在台上哭着唱完了《老婆》。</p>
+    <div class="chip-row"><span class="chip muted">演唱会</span><span class="chip muted">SHE</span><span class="chip muted">青春</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1484.html" data-filter-card data-search="机器肉鸡第三季 美国 剧集 喜剧/动画/科幻 各种流行文化角色在机器肉鸡的世界里被疯狂恶搞,没有他们不敢毁的童年。 黏土动画 恶搞 无厘头 定格动画 成人向" data-cat="动画动漫" data-year="2010">
+  <div class="movie-poster">
+    <img src="assets/covers/1484.svg" alt="机器肉鸡第三季" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">机器肉鸡第三季</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2010</span>
+      <span>•</span>
+      <span>喜剧</span>
+    </div>
+    <p class="movie-line">各种流行文化角色在机器肉鸡的世界里被疯狂恶搞,没有他们不敢毁的童年。</p>
+    <div class="chip-row"><span class="chip muted">黏土动画</span><span class="chip muted">恶搞</span><span class="chip muted">无厘头</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0481.html" data-filter-card data-search="安非他命粤语 中国香港 电影 剧情/同性/犯罪 一个断臂的游泳健将,一个吸毒的金融才俊,两个在深水埗天台互相救赎也互相毁灭的亡命之徒。 港产独立 边缘群体 冰毒隐喻 虐心爱情 底层挣扎" data-cat="国产电影" data-year="2010">
+  <div class="movie-poster">
+    <img src="assets/covers/0481.svg" alt="安非他命粤语" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">安非他命粤语</h3>
+    <div class="movie-meta">
+      <span>中国香港</span>
+      <span>•</span>
+      <span>2010</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">一个断臂的游泳健将,一个吸毒的金融才俊,两个在深水埗天台互相救赎也互相毁灭的亡命之徒。</p>
+    <div class="chip-row"><span class="chip muted">港产独立</span><span class="chip muted">边缘群体</span><span class="chip muted">冰毒隐喻</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0437.html" data-filter-card data-search="外姓兄弟 中国大陆 剧集 剧情/家庭/年代 七十年代,三个同母异父、不同姓的兄弟,在动荡岁月里抱团取暖,活成了一家人。 知青 重组家庭 兄弟情义 改革开放" data-cat="国产剧集" data-year="2011">
+  <div class="movie-poster">
+    <img src="assets/covers/0437.svg" alt="外姓兄弟" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">外姓兄弟</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2011</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">七十年代,三个同母异父、不同姓的兄弟,在动荡岁月里抱团取暖,活成了一家人。</p>
+    <div class="chip-row"><span class="chip muted">知青</span><span class="chip muted">重组家庭</span><span class="chip muted">兄弟情义</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1694.html" data-filter-card data-search="国色天香 中国大陆 剧集 爱情,悬疑,年代 民国时期,上海滩第一香水世家的大小姐神秘失踪,一个卖花女被找来假扮她,却闻出家族里隐藏多年的谋杀秘密。 民国 香水 替身 家族恩怨" data-cat="国产剧集" data-year="2010">
+  <div class="movie-poster">
+    <img src="assets/covers/1694.svg" alt="国色天香" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">国色天香</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2010</span>
+      <span>•</span>
+      <span>爱情</span>
+    </div>
+    <p class="movie-line">民国时期,上海滩第一香水世家的大小姐神秘失踪,一个卖花女被找来假扮她,却闻出家族里隐藏多年的谋杀秘密。</p>
+    <div class="chip-row"><span class="chip muted">民国</span><span class="chip muted">香水</span><span class="chip muted">替身</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1268.html" data-filter-card data-search="娘家母亲 韩国 电影 剧情,家庭 首尔的白领女儿回乡,嫌弃农村母亲土气,却不知道母亲为了供她读书,卖了四十年血。 母女 农村 催泪 牺牲" data-cat="日韩电影" data-year="2010">
+  <div class="movie-poster">
+    <img src="assets/covers/1268.svg" alt="娘家母亲" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">娘家母亲</h3>
+    <div class="movie-meta">
+      <span>韩国</span>
+      <span>•</span>
+      <span>2010</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">首尔的白领女儿回乡,嫌弃农村母亲土气,却不知道母亲为了供她读书,卖了四十年血。</p>
+    <div class="chip-row"><span class="chip muted">母女</span><span class="chip muted">农村</span><span class="chip muted">催泪</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1462.html" data-filter-card data-search="最佳电影 美国 电影 喜剧,剧情 一个电影系穷学生拿到了五千万投资,条件只有一个:必须让投资人的白痴女友当女主角。 电影拍摄 幕后闹剧 独立片" data-cat="欧美作品" data-year="2010">
+  <div class="movie-poster">
+    <img src="assets/covers/1462.svg" alt="最佳电影" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">最佳电影</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2010</span>
+      <span>•</span>
+      <span>喜剧</span>
+    </div>
+    <p class="movie-line">一个电影系穷学生拿到了五千万投资,条件只有一个:必须让投资人的白痴女友当女主角。</p>
+    <div class="chip-row"><span class="chip muted">电影拍摄</span><span class="chip muted">幕后闹剧</span><span class="chip muted">独立片</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1918.html" data-filter-card data-search="自恋刑警 日本 剧集 喜剧 一个极度自恋的刑警每次遇到心动女嘉宾,对方必定是凶手,于是他用“求婚”的方式逼供。 宫藤官九郎 长濑智也 破案 恋爱脑 无厘头" data-cat="日韩剧集" data-year="2010">
+  <div class="movie-poster">
+    <img src="assets/covers/1918.svg" alt="自恋刑警" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">自恋刑警</h3>
+    <div class="movie-meta">
+      <span>日本</span>
+      <span>•</span>
+      <span>2010</span>
+      <span>•</span>
+      <span>喜剧</span>
+    </div>
+    <p class="movie-line">一个极度自恋的刑警每次遇到心动女嘉宾,对方必定是凶手,于是他用“求婚”的方式逼供。</p>
+    <div class="chip-row"><span class="chip muted">宫藤官九郎</span><span class="chip muted">长濑智也</span><span class="chip muted">破案</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1953.html" data-filter-card data-search="致命追击 2009 法国 电影 犯罪动作 退休杀手接到最后一个任务:追杀17年前的自己。 杀手 复仇 巴黎 怀旧动作" data-cat="欧美作品" data-year="2009">
+  <div class="movie-poster">
+    <img src="assets/covers/1953.svg" alt="致命追击 2009" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">致命追击 2009</h3>
+    <div class="movie-meta">
+      <span>法国</span>
+      <span>•</span>
+      <span>2009</span>
+      <span>•</span>
+      <span>犯罪动作</span>
+    </div>
+    <p class="movie-line">退休杀手接到最后一个任务:追杀17年前的自己。</p>
+    <div class="chip-row"><span class="chip muted">杀手</span><span class="chip muted">复仇</span><span class="chip muted">巴黎</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0949.html" data-filter-card data-search="狂蟒之灾4 美国 电影 动作/恐怖 一条被注入血兰花基因的变异巨蟒逃出实验室,整个城市地铁系统沦为狩猎场。 巨蛇 实验室 丛林 基因变异" data-cat="欧美作品" data-year="2009">
+  <div class="movie-poster">
+    <img src="assets/covers/0949.svg" alt="狂蟒之灾4" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">狂蟒之灾4</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2009</span>
+      <span>•</span>
+      <span>动作</span>
+    </div>
+    <p class="movie-line">一条被注入血兰花基因的变异巨蟒逃出实验室,整个城市地铁系统沦为狩猎场。</p>
+    <div class="chip-row"><span class="chip muted">巨蛇</span><span class="chip muted">实验室</span><span class="chip muted">丛林</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0695.html" data-filter-card data-search="飞屋环游记 美国 电影 动画,冒险,喜剧,家庭 一位七十八岁的老头用万千气球拽起老屋飞向南美,却发现门口还挂着一个想当探险家的小胖墩。 气球飞屋 老人冒险 童年约定 遗忘与记忆 皮克斯" data-cat="动画动漫" data-year="2009">
+  <div class="movie-poster">
+    <img src="assets/covers/0695.svg" alt="飞屋环游记" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">飞屋环游记</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2009</span>
+      <span>•</span>
+      <span>动画</span>
+    </div>
+    <p class="movie-line">一位七十八岁的老头用万千气球拽起老屋飞向南美,却发现门口还挂着一个想当探险家的小胖墩。</p>
+    <div class="chip-row"><span class="chip muted">气球飞屋</span><span class="chip muted">老人冒险</span><span class="chip muted">童年约定</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0967.html" data-filter-card data-search="彩虹艳尽半边天 美国 电影 剧情,女性 七位不同年龄、不同遭遇的黑人女性坐在美发沙龙里,用诗的语言讲述性侵、家暴与歧视,最终拼凑出完整的“彩虹”。 非裔 诗歌 群像 自我救赎" data-cat="欧美作品" data-year="2010">
+  <div class="movie-poster">
+    <img src="assets/covers/0967.svg" alt="彩虹艳尽半边天" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">彩虹艳尽半边天</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2010</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">七位不同年龄、不同遭遇的黑人女性坐在美发沙龙里,用诗的语言讲述性侵、家暴与歧视,最终拼凑出完整的“彩虹”。</p>
+    <div class="chip-row"><span class="chip muted">非裔</span><span class="chip muted">诗歌</span><span class="chip muted">群像</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1331.html" data-filter-card data-search="乘龙怪婿第四季 中国大陆 剧集 喜剧,古装,家庭 贾发为了保住“最佳岳父”的称号,竟然把现代女婿培训班的课程搬到了唐朝。 穿越 女婿 搞笑 岭南文化" data-cat="国产剧集" data-year="2010">
+  <div class="movie-poster">
+    <img src="assets/covers/1331.svg" alt="乘龙怪婿第四季" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">乘龙怪婿第四季</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2010</span>
+      <span>•</span>
+      <span>喜剧</span>
+    </div>
+    <p class="movie-line">贾发为了保住“最佳岳父”的称号,竟然把现代女婿培训班的课程搬到了唐朝。</p>
+    <div class="chip-row"><span class="chip muted">穿越</span><span class="chip muted">女婿</span><span class="chip muted">搞笑</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1820.html" data-filter-card data-search="迷失第五季 美国 剧集 悬疑,科幻 幸存者们被迫跳岛,他们在混乱的时空中穿梭,试图改变过去,却导致了更可怕的后果。 时空跳跃 生存 解谜 科幻" data-cat="欧美作品" data-year="2009">
+  <div class="movie-poster">
+    <img src="assets/covers/1820.svg" alt="迷失第五季" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">迷失第五季</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2009</span>
+      <span>•</span>
+      <span>悬疑</span>
+    </div>
+    <p class="movie-line">幸存者们被迫跳岛,他们在混乱的时空中穿梭,试图改变过去,却导致了更可怕的后果。</p>
+    <div class="chip-row"><span class="chip muted">时空跳跃</span><span class="chip muted">生存</span><span class="chip muted">解谜</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1254.html" data-filter-card data-search="孟祥斌 中国大陆 电影 传记/剧情/战争 一位解放军军官在回家探亲时,跃入冰河救起轻生女子,自己再也没能上岸。 烈士 军人 真实改编 牺牲" data-cat="国产电影" data-year="2009">
+  <div class="movie-poster">
+    <img src="assets/covers/1254.svg" alt="孟祥斌" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">孟祥斌</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2009</span>
+      <span>•</span>
+      <span>传记</span>
+    </div>
+    <p class="movie-line">一位解放军军官在回家探亲时,跃入冰河救起轻生女子,自己再也没能上岸。</p>
+    <div class="chip-row"><span class="chip muted">烈士</span><span class="chip muted">军人</span><span class="chip muted">真实改编</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0025.html" data-filter-card data-search="哈罗德主人与男孩 南非 电影 剧情/历史 种族隔离阴影下,白人少年与黑人仆人的信任在醉父归来后崩溃。 种族隔离 师徒情 话剧改编 成长" data-cat="其他热播" data-year="2010">
+  <div class="movie-poster">
+    <img src="assets/covers/0025.svg" alt="哈罗德主人与男孩" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">哈罗德主人与男孩</h3>
+    <div class="movie-meta">
+      <span>南非</span>
+      <span>•</span>
+      <span>2010</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">种族隔离阴影下,白人少年与黑人仆人的信任在醉父归来后崩溃。</p>
+    <div class="chip-row"><span class="chip muted">种族隔离</span><span class="chip muted">师徒情</span><span class="chip muted">话剧改编</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0955.html" data-filter-card data-search="恋爱兵法 中国大陆 剧集 喜剧,爱情 追女屡战屡败的程序员,请了一位自称“情圣”的军师,结果每次“计谋”都引发连锁灾难。 军师联盟 职场恋情 反套路 笑料百出" data-cat="国产剧集" data-year="2008">
+  <div class="movie-poster">
+    <img src="assets/covers/0955.svg" alt="恋爱兵法" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">恋爱兵法</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2008</span>
+      <span>•</span>
+      <span>喜剧</span>
+    </div>
+    <p class="movie-line">追女屡战屡败的程序员,请了一位自称“情圣”的军师,结果每次“计谋”都引发连锁灾难。</p>
+    <div class="chip-row"><span class="chip muted">军师联盟</span><span class="chip muted">职场恋情</span><span class="chip muted">反套路</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0934.html" data-filter-card data-search="食灵 零 日本 动画剧集 动作/奇幻/悲剧 一对曾经最亲密的除灵师姐妹,为何最终走向了不死不休的对决? 姐妹相爱相杀 除灵 前传" data-cat="动画动漫" data-year="2008">
+  <div class="movie-poster">
+    <img src="assets/covers/0934.svg" alt="食灵 零" loading="lazy" />
+    <span class="type-badge">动画剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">食灵 零</h3>
+    <div class="movie-meta">
+      <span>日本</span>
+      <span>•</span>
+      <span>2008</span>
+      <span>•</span>
+      <span>动作</span>
+    </div>
+    <p class="movie-line">一对曾经最亲密的除灵师姐妹,为何最终走向了不死不休的对决?</p>
+    <div class="chip-row"><span class="chip muted">姐妹相爱相杀</span><span class="chip muted">除灵</span><span class="chip muted">前传</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0219.html" data-filter-card data-search="绝望主妇第五季 美国 剧集 剧情/喜剧/悬疑 五年后,紫藤巷又搬来了神秘的新邻居,而她脖子上似乎缠绕着与Edie相同的红丝巾。 紫藤巷 时间跳跃 中年危机 邻里秘密 黑色幽默" data-cat="欧美作品" data-year="2008">
+  <div class="movie-poster">
+    <img src="assets/covers/0219.svg" alt="绝望主妇第五季" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">绝望主妇第五季</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2008</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">五年后,紫藤巷又搬来了神秘的新邻居,而她脖子上似乎缠绕着与Edie相同的红丝巾。</p>
+    <div class="chip-row"><span class="chip muted">紫藤巷</span><span class="chip muted">时间跳跃</span><span class="chip muted">中年危机</span></div>
+  </div>
+</a>
+      </div>
+      <div class="pagination"><a href="rankings-75.html">上一页</a><a href="rankings.html" class="">1</a><span>…</span><a href="rankings-75.html" class="">75</a><a href="rankings-76.html" class="active">76</a><a href="rankings-77.html" class="">77</a><span>…</span><a href="rankings-84.html" class="">84</a><a href="rankings-77.html">下一页</a></div>
+    </div>
+  </section>
+</main>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <h4>日韩热门视频</h4>
+        <p>日韩热门视频页面整理近期关注较高的视频内容，按类型与热度展示相关分类。</p>
+      </div>
+      <div>
+        <h4>分类入口</h4>
+        <p><a href="categories.html">分类总览</a></p>
+        <p><a href="rankings.html">热度排行榜</a></p>
+        <p><a href="search.html">站内搜索</a></p>
+      </div>
+      <div>
+        <h4>帮助说明</h4>
+        <p><a href="service.html">使用指南</a></p>
+        <p><a href="copyright.html">用户协议</a></p>
+        <p><a href="about.html">关于我们</a></p>
+      </div>
+      <div>
+        <h4>联系信息</h4>
+        <p>工作日 9:00 - 18:00</p>
+        <p>我们将在 24 小时内回复邮件</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 日韩热门视频. 保留所有权利。</span>
+      <span>纯静态 HTML / CSS / JS 构建</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?76b5e2e0f6c84c06f0a7cb7105df054d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>

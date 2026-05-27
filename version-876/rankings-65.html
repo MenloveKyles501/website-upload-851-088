@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>热度排行榜 - 日韩热门视频-热门好看的视频大全-热门片库持续更新</title>
+  <meta name="description" content="热度排行榜页展示按热度与年份排序的影视内容。" />
+  <meta name="keywords" content="排行榜,日韩热门视频,热门好看的视频大全,热门片库持续更新,日韩视频,热门视频,视频大全" />
+  <meta name="theme-color" content="#0b1120" />
+  <meta property="og:title" content="热度排行榜 - 日韩热门视频-热门好看的视频大全-热门片库持续更新" />
+  <meta property="og:description" content="热度排行榜页展示按热度与年份排序的影视内容。" />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="inner">
+      <a class="brand" href="index.html" aria-label="日韩热门视频">
+        <span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 10.5A2.5 2.5 0 1 1 12 7a2.5 2.5 0 0 1 0 5.5z"/></svg></span>
+        <span class="brand-text">
+          <span class="brand-title">日韩热门视频</span>
+          <span class="brand-sub">热门内容整理 · 静态站点</span>
+        </span>
+      </a>
+      <nav class="nav" aria-label="主导航">
+        <a href="index.html" class="">首页</a><a href="categories.html" class="">分类总览</a><a href="rankings.html" class="active">排行榜</a><a href="search.html" class="">搜索</a><a href="about.html" class="">关于我们</a>
+      </nav>
+      <div class="header-actions">
+        <form class="search-pill" action="search.html" method="get" role="search">
+          <span aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4a6 6 0 1 0 3.7 10.7l4.3 4.3 1.4-1.4-4.3-4.3A6 6 0 0 0 10 4zm0 2a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/></svg></span>
+          <input type="search" name="q" placeholder="搜索影片名称、地区、年份、标签" />
+        </form>
+        <button class="icon-btn mobile-toggle" type="button" data-mobile-toggle aria-expanded="false" aria-label="展开菜单">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-nav" data-mobile-nav aria-label="移动端导航">
+      <a href="index.html" class="">首页</a><a href="categories.html" class="">分类总览</a><a href="rankings.html" class="active">排行榜</a><a href="search.html" class="">搜索</a><a href="about.html" class="">关于我们</a>
+      <form class="search-pill" action="search.html" method="get" role="search" style="margin-top:10px; min-width:0;">
+        <span aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4a6 6 0 1 0 3.7 10.7l4.3 4.3 1.4-1.4-4.3-4.3A6 6 0 0 0 10 4zm0 2a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/></svg></span>
+        <input type="search" name="q" placeholder="搜索影片名称、地区、年份、标签" />
+      </form>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">首页</a><span>›</span><span>排行榜</span></div>
+      <h1 class="title">热度排行榜</h1>
+      <p class="sub">根据年份、题材关键词和标题热度生成的静态排行榜，支持分页浏览全部条目。</p>
+    </div>
+  </section>
+  <section class="section" data-live-filter>
+    <div class="container">
+      <div class="filter-bar">
+        <input type="search" placeholder="在本页内搜索影片名称、地区、标签" data-filter-input />
+        <select data-filter-select>
+          <option value="">全部分类</option>
+          <option value="国产电影">国产电影</option><option value="国产剧集">国产剧集</option><option value="日韩电影">日韩电影</option><option value="日韩剧集">日韩剧集</option><option value="欧美作品">欧美作品</option><option value="动画动漫">动画动漫</option><option value="其他热播">其他热播</option>
+        </select>
+        <select data-filter-select>
+          <option value="">全部年份</option>
+          <option value="2022">2022</option><option value="2021">2021</option><option value="2020">2020</option>
+        </select>
+      </div>
+      <div class="card-grid">
+        <a class="movie-card" href="movie-0193.html" data-filter-card data-search="盐和樟脑 中国台湾 电影 剧情、家庭、美食 丈夫突然离世,不会做饭的妻子继承了祖传卤味店,而她必须找到丢失的“樟脑盐”秘方。 丧夫 卤味店 母女冷战 和解" data-cat="国产电影" data-year="2022">
+  <div class="movie-poster">
+    <img src="assets/covers/0193.svg" alt="盐和樟脑" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">盐和樟脑</h3>
+    <div class="movie-meta">
+      <span>中国台湾</span>
+      <span>•</span>
+      <span>2022</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">丈夫突然离世,不会做饭的妻子继承了祖传卤味店,而她必须找到丢失的“樟脑盐”秘方。</p>
+    <div class="chip-row"><span class="chip muted">丧夫</span><span class="chip muted">卤味店</span><span class="chip muted">母女冷战</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1594.html" data-filter-card data-search="洪水横流 美国 电影 灾难,动作,剧情 一场史无前例的特大洪水席卷小镇,分居多年的父女被围困在医院顶楼,他们必须在6小时内找到一艘船并穿越激流。 洪水 救援 父女 牺牲" data-cat="欧美作品" data-year="2021">
+  <div class="movie-poster">
+    <img src="assets/covers/1594.svg" alt="洪水横流" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">洪水横流</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2021</span>
+      <span>•</span>
+      <span>灾难</span>
+    </div>
+    <p class="movie-line">一场史无前例的特大洪水席卷小镇,分居多年的父女被围困在医院顶楼,他们必须在6小时内找到一艘船并穿越激流。</p>
+    <div class="chip-row"><span class="chip muted">洪水</span><span class="chip muted">救援</span><span class="chip muted">父女</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0325.html" data-filter-card data-search="空中飞鸟 中国 电影 剧情、家庭、伦理 一个留守女孩为了寻找“飞走”的父母,偷偷在即将离世的乡村教师身上绑了追踪器。 留守儿童 临终关怀 乡村教师 候鸟迁徙" data-cat="国产电影" data-year="2022">
+  <div class="movie-poster">
+    <img src="assets/covers/0325.svg" alt="空中飞鸟" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">空中飞鸟</h3>
+    <div class="movie-meta">
+      <span>中国</span>
+      <span>•</span>
+      <span>2022</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">一个留守女孩为了寻找“飞走”的父母,偷偷在即将离世的乡村教师身上绑了追踪器。</p>
+    <div class="chip-row"><span class="chip muted">留守儿童</span><span class="chip muted">临终关怀</span><span class="chip muted">乡村教师</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0574.html" data-filter-card data-search="阿根廷之恋 阿根廷,西班牙 电影 爱情,剧情 以色列女间谍与叙利亚难民在博卡青年球场假扮情侣,却真的爱上了同一支球队的10号。 探戈 足球 错位 移民 布宜诺斯艾利斯" data-cat="欧美作品" data-year="2021">
+  <div class="movie-poster">
+    <img src="assets/covers/0574.svg" alt="阿根廷之恋" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">阿根廷之恋</h3>
+    <div class="movie-meta">
+      <span>阿根廷,西班牙</span>
+      <span>•</span>
+      <span>2021</span>
+      <span>•</span>
+      <span>爱情</span>
+    </div>
+    <p class="movie-line">以色列女间谍与叙利亚难民在博卡青年球场假扮情侣,却真的爱上了同一支球队的10号。</p>
+    <div class="chip-row"><span class="chip muted">探戈</span><span class="chip muted">足球</span><span class="chip muted">错位</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0509.html" data-filter-card data-search="开罗车站 埃及/法国 电影 剧情/悬疑 开罗车站的清洁工捡到一枚U盘,里面记录了一名失踪旅客的最后72小时。 车站众生相 失踪谜案 底层视角" data-cat="欧美作品" data-year="2021">
+  <div class="movie-poster">
+    <img src="assets/covers/0509.svg" alt="开罗车站" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">开罗车站</h3>
+    <div class="movie-meta">
+      <span>埃及/法国</span>
+      <span>•</span>
+      <span>2021</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">开罗车站的清洁工捡到一枚U盘,里面记录了一名失踪旅客的最后72小时。</p>
+    <div class="chip-row"><span class="chip muted">车站众生相</span><span class="chip muted">失踪谜案</span><span class="chip muted">底层视角</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0498.html" data-filter-card data-search="老妈操碎心 中国大陆 剧集 喜剧,家庭 东北退休老妈偷偷卖掉房子搬到北京,就为了给985毕业却在家打游戏三年的“废物”儿子当保姆。 妈妈 北漂 代际冲突" data-cat="国产剧集" data-year="2022">
+  <div class="movie-poster">
+    <img src="assets/covers/0498.svg" alt="老妈操碎心" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">老妈操碎心</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2022</span>
+      <span>•</span>
+      <span>喜剧</span>
+    </div>
+    <p class="movie-line">东北退休老妈偷偷卖掉房子搬到北京,就为了给985毕业却在家打游戏三年的“废物”儿子当保姆。</p>
+    <div class="chip-row"><span class="chip muted">妈妈</span><span class="chip muted">北漂</span><span class="chip muted">代际冲突</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1005.html" data-filter-card data-search="狗咬狗骨粤语 香港 电影 犯罪/黑色幽默 社团大佬暴毙,五个手下为争夺他藏在一根狗骨头里的黑金账目,展开了一场荒诞至极的厮杀。 黑帮 内讧 荒诞" data-cat="国产电影" data-year="2021">
+  <div class="movie-poster">
+    <img src="assets/covers/1005.svg" alt="狗咬狗骨粤语" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">狗咬狗骨粤语</h3>
+    <div class="movie-meta">
+      <span>香港</span>
+      <span>•</span>
+      <span>2021</span>
+      <span>•</span>
+      <span>犯罪</span>
+    </div>
+    <p class="movie-line">社团大佬暴毙,五个手下为争夺他藏在一根狗骨头里的黑金账目,展开了一场荒诞至极的厮杀。</p>
+    <div class="chip-row"><span class="chip muted">黑帮</span><span class="chip muted">内讧</span><span class="chip muted">荒诞</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0158.html" data-filter-card data-search="伟人秘闻 英国 剧集 历史传记 一位被写进教科书的民族英雄,背后藏着一个连敌国都不敢公开的惊天秘密。 政治 丑闻 双面人生 宫廷" data-cat="欧美作品" data-year="2022">
+  <div class="movie-poster">
+    <img src="assets/covers/0158.svg" alt="伟人秘闻" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">伟人秘闻</h3>
+    <div class="movie-meta">
+      <span>英国</span>
+      <span>•</span>
+      <span>2022</span>
+      <span>•</span>
+      <span>历史传记</span>
+    </div>
+    <p class="movie-line">一位被写进教科书的民族英雄,背后藏着一个连敌国都不敢公开的惊天秘密。</p>
+    <div class="chip-row"><span class="chip muted">政治</span><span class="chip muted">丑闻</span><span class="chip muted">双面人生</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1035.html" data-filter-card data-search="白虎 印度 电影 剧情,犯罪 一个印度贫民窟的聪明司机,为了摆脱奴隶命运,用极其残忍的手段杀死了自己的主人,并取而代之。 阶级 贫富差距 黑色幽默 逆袭" data-cat="欧美作品" data-year="2021">
+  <div class="movie-poster">
+    <img src="assets/covers/1035.svg" alt="白虎" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">白虎</h3>
+    <div class="movie-meta">
+      <span>印度</span>
+      <span>•</span>
+      <span>2021</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">一个印度贫民窟的聪明司机,为了摆脱奴隶命运,用极其残忍的手段杀死了自己的主人,并取而代之。</p>
+    <div class="chip-row"><span class="chip muted">阶级</span><span class="chip muted">贫富差距</span><span class="chip muted">黑色幽默</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0084.html" data-filter-card data-search="缘来大饭店 泰国 剧集 喜剧/爱情/群像 曼谷五星饭店的24小时里,门童被误认为总裁,厨师爱上了女食客,保洁捡到了黑帮的钻石。 饭店职场 多线叙事 阴差阳错 泰式搞笑" data-cat="其他热播" data-year="2021">
+  <div class="movie-poster">
+    <img src="assets/covers/0084.svg" alt="缘来大饭店" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">缘来大饭店</h3>
+    <div class="movie-meta">
+      <span>泰国</span>
+      <span>•</span>
+      <span>2021</span>
+      <span>•</span>
+      <span>喜剧</span>
+    </div>
+    <p class="movie-line">曼谷五星饭店的24小时里,门童被误认为总裁,厨师爱上了女食客,保洁捡到了黑帮的钻石。</p>
+    <div class="chip-row"><span class="chip muted">饭店职场</span><span class="chip muted">多线叙事</span><span class="chip muted">阴差阳错</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1266.html" data-filter-card data-search="国家德比 西班牙 电影 剧情,运动,犯罪 就在巴萨对皇马的国家德比开球前,看台上的一对父子被告知:如果主队输了,他们绑在人质脚上的炸弹就会爆炸。 足球 巴塞罗那 皇马 绑架案 父子和解" data-cat="欧美作品" data-year="2021">
+  <div class="movie-poster">
+    <img src="assets/covers/1266.svg" alt="国家德比" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">国家德比</h3>
+    <div class="movie-meta">
+      <span>西班牙</span>
+      <span>•</span>
+      <span>2021</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">就在巴萨对皇马的国家德比开球前,看台上的一对父子被告知:如果主队输了,他们绑在人质脚上的炸弹就会爆炸。</p>
+    <div class="chip-row"><span class="chip muted">足球</span><span class="chip muted">巴塞罗那</span><span class="chip muted">皇马</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1546.html" data-filter-card data-search="摩加迪沙 韩国 电影 剧情,动作,历史 索马里内战爆发,朝韩两国大使馆人员被困摩加迪沙,他们被迫放下对立,携手展开一场九死一生的逃亡。 索马里内战 外交 避难 真实事件改编 人性" data-cat="日韩电影" data-year="2021">
+  <div class="movie-poster">
+    <img src="assets/covers/1546.svg" alt="摩加迪沙" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">摩加迪沙</h3>
+    <div class="movie-meta">
+      <span>韩国</span>
+      <span>•</span>
+      <span>2021</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">索马里内战爆发,朝韩两国大使馆人员被困摩加迪沙,他们被迫放下对立,携手展开一场九死一生的逃亡。</p>
+    <div class="chip-row"><span class="chip muted">索马里内战</span><span class="chip muted">外交</span><span class="chip muted">避难</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1821.html" data-filter-card data-search="飞驰吧!少年 中国大陆 电影 喜剧/运动 四个小镇少年组装一辆废铁赛车,要去打败省城来的百万改装车队。 赛车 少年 逆袭 草根" data-cat="国产电影" data-year="2021">
+  <div class="movie-poster">
+    <img src="assets/covers/1821.svg" alt="飞驰吧!少年" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">飞驰吧!少年</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2021</span>
+      <span>•</span>
+      <span>喜剧</span>
+    </div>
+    <p class="movie-line">四个小镇少年组装一辆废铁赛车,要去打败省城来的百万改装车队。</p>
+    <div class="chip-row"><span class="chip muted">赛车</span><span class="chip muted">少年</span><span class="chip muted">逆袭</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0384.html" data-filter-card data-search="中流击水 中国大陆 电视剧 历史/传记/革命 1925年,青年毛泽东在橘子洲头写下“谁主沉浮”之前,经历了怎样的思想蜕变? 毛泽东 青年 革命 理想 热血" data-cat="国产剧集" data-year="2022">
+  <div class="movie-poster">
+    <img src="assets/covers/0384.svg" alt="中流击水" loading="lazy" />
+    <span class="type-badge">电视剧</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">中流击水</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2022</span>
+      <span>•</span>
+      <span>历史</span>
+    </div>
+    <p class="movie-line">1925年,青年毛泽东在橘子洲头写下“谁主沉浮”之前,经历了怎样的思想蜕变?</p>
+    <div class="chip-row"><span class="chip muted">毛泽东</span><span class="chip muted">青年</span><span class="chip muted">革命</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1125.html" data-filter-card data-search="我的画家老朋友 法国 电影 剧情,艺术 年迈的抽象派画家即将失明,他请年轻时的好友做模特,画下最后一幅肖像。 友情 衰老 创作" data-cat="欧美作品" data-year="2021">
+  <div class="movie-poster">
+    <img src="assets/covers/1125.svg" alt="我的画家老朋友" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">我的画家老朋友</h3>
+    <div class="movie-meta">
+      <span>法国</span>
+      <span>•</span>
+      <span>2021</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">年迈的抽象派画家即将失明,他请年轻时的好友做模特,画下最后一幅肖像。</p>
+    <div class="chip-row"><span class="chip muted">友情</span><span class="chip muted">衰老</span><span class="chip muted">创作</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0360.html" data-filter-card data-search="初尝禁果 中国台湾 电影 剧情,同性 宗教寄宿学校里的两个女孩在秘密恋情暴露后,被迫接受荒谬的“矫正治疗”。 校园 成长疼痛 觉醒 保守社会" data-cat="国产电影" data-year="2021">
+  <div class="movie-poster">
+    <img src="assets/covers/0360.svg" alt="初尝禁果" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">初尝禁果</h3>
+    <div class="movie-meta">
+      <span>中国台湾</span>
+      <span>•</span>
+      <span>2021</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">宗教寄宿学校里的两个女孩在秘密恋情暴露后,被迫接受荒谬的“矫正治疗”。</p>
+    <div class="chip-row"><span class="chip muted">校园</span><span class="chip muted">成长疼痛</span><span class="chip muted">觉醒</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0605.html" data-filter-card data-search="爵迹2:冷血狂宴 中国大陆 电影 动画/奇幻 为了拯救被白银祭司囚禁的灵魂,麒零一行人深入禁忌之地,揭开了魂术世界的终极秘密。 CG 王爵 使徒 魂力 战斗" data-cat="动画动漫" data-year="2020">
+  <div class="movie-poster">
+    <img src="assets/covers/0605.svg" alt="爵迹2:冷血狂宴" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">爵迹2:冷血狂宴</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2020</span>
+      <span>•</span>
+      <span>动画</span>
+    </div>
+    <p class="movie-line">为了拯救被白银祭司囚禁的灵魂,麒零一行人深入禁忌之地,揭开了魂术世界的终极秘密。</p>
+    <div class="chip-row"><span class="chip muted">CG</span><span class="chip muted">王爵</span><span class="chip muted">使徒</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1883.html" data-filter-card data-search="鸵鸟先知 澳大利亚 电影 奇幻 一座干旱小镇的鸵鸟突然开始下金蛋,但每个金蛋里都藏着一句关于某人死期的预言。 魔幻现实 动物预言 小镇奇谭" data-cat="欧美作品" data-year="2021">
+  <div class="movie-poster">
+    <img src="assets/covers/1883.svg" alt="鸵鸟先知" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">鸵鸟先知</h3>
+    <div class="movie-meta">
+      <span>澳大利亚</span>
+      <span>•</span>
+      <span>2021</span>
+      <span>•</span>
+      <span>奇幻</span>
+    </div>
+    <p class="movie-line">一座干旱小镇的鸵鸟突然开始下金蛋,但每个金蛋里都藏着一句关于某人死期的预言。</p>
+    <div class="chip-row"><span class="chip muted">魔幻现实</span><span class="chip muted">动物预言</span><span class="chip muted">小镇奇谭</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0750.html" data-filter-card data-search="剧场版 白箱 日本 动画电影 剧情/喜剧 五年后,武藏野动画团队再次集结,但这次他们要拯救的不是一部作品,而是整个行业。 业界现实 职场 追梦 续作" data-cat="动画动漫" data-year="2020">
+  <div class="movie-poster">
+    <img src="assets/covers/0750.svg" alt="剧场版 白箱" loading="lazy" />
+    <span class="type-badge">动画电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">剧场版 白箱</h3>
+    <div class="movie-meta">
+      <span>日本</span>
+      <span>•</span>
+      <span>2020</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">五年后,武藏野动画团队再次集结,但这次他们要拯救的不是一部作品,而是整个行业。</p>
+    <div class="chip-row"><span class="chip muted">业界现实</span><span class="chip muted">职场</span><span class="chip muted">追梦</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0359.html" data-filter-card data-search="杜玛 南非 电影 剧情/家庭/冒险 十岁男孩带着一只猎豹横穿南非,只为把它送回属于荒野的故乡。 人狮情 成长之旅 非洲原野 治愈" data-cat="其他热播" data-year="2020">
+  <div class="movie-poster">
+    <img src="assets/covers/0359.svg" alt="杜玛" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">杜玛</h3>
+    <div class="movie-meta">
+      <span>南非</span>
+      <span>•</span>
+      <span>2020</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">十岁男孩带着一只猎豹横穿南非,只为把它送回属于荒野的故乡。</p>
+    <div class="chip-row"><span class="chip muted">人狮情</span><span class="chip muted">成长之旅</span><span class="chip muted">非洲原野</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0150.html" data-filter-card data-search="让我过过瘾 中国大陆 电影 喜剧,黑色幽默 老实人李富贵中了三千万彩票,还没来得及高兴,就发现自己被全村人、黑社会、前妻和亲妈同时盯上了。 小人物 逆袭 彩票 荒诞" data-cat="国产电影" data-year="2021">
+  <div class="movie-poster">
+    <img src="assets/covers/0150.svg" alt="让我过过瘾" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">让我过过瘾</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2021</span>
+      <span>•</span>
+      <span>喜剧</span>
+    </div>
+    <p class="movie-line">老实人李富贵中了三千万彩票,还没来得及高兴,就发现自己被全村人、黑社会、前妻和亲妈同时盯上了。</p>
+    <div class="chip-row"><span class="chip muted">小人物</span><span class="chip muted">逆袭</span><span class="chip muted">彩票</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0082.html" data-filter-card data-search="老师们 中国大陆 剧集 剧情/校园 一所即将被撤并的乡村小学,五位性格迥异的老师守护最后32个学生。 乡村教育 群像剧 现实题材 代课教师" data-cat="国产剧集" data-year="2021">
+  <div class="movie-poster">
+    <img src="assets/covers/0082.svg" alt="老师们" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">老师们</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2021</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">一所即将被撤并的乡村小学,五位性格迥异的老师守护最后32个学生。</p>
+    <div class="chip-row"><span class="chip muted">乡村教育</span><span class="chip muted">群像剧</span><span class="chip muted">现实题材</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1077.html" data-filter-card data-search="长椅 中国大陆 电影 剧情/家庭 一位父亲每天同一时间去公园同一张长椅上坐着,二十八年后人们才发现他等的不是老伴。 亲情 失独老人 公园长椅 时间跨度" data-cat="国产电影" data-year="2021">
+  <div class="movie-poster">
+    <img src="assets/covers/1077.svg" alt="长椅" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">长椅</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2021</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">一位父亲每天同一时间去公园同一张长椅上坐着,二十八年后人们才发现他等的不是老伴。</p>
+    <div class="chip-row"><span class="chip muted">亲情</span><span class="chip muted">失独老人</span><span class="chip muted">公园长椅</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1975.html" data-filter-card data-search="最后一次赛跑 德国 电影 剧情/运动 86岁的前马拉松冠军保罗为了证明“人老心不老”,决定重新参加柏林马拉松,而他的对手不仅是疲劳,还有整个世界的轻视。 马拉松 老年 梦想 感人 励志" data-cat="欧美作品" data-year="2021">
+  <div class="movie-poster">
+    <img src="assets/covers/1975.svg" alt="最后一次赛跑" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">最后一次赛跑</h3>
+    <div class="movie-meta">
+      <span>德国</span>
+      <span>•</span>
+      <span>2021</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">86岁的前马拉松冠军保罗为了证明“人老心不老”,决定重新参加柏林马拉松,而他的对手不仅是疲劳,还有整个世界的轻视。</p>
+    <div class="chip-row"><span class="chip muted">马拉松</span><span class="chip muted">老年</span><span class="chip muted">梦想</span></div>
+  </div>
+</a>
+      </div>
+      <div class="pagination"><a href="rankings-64.html">上一页</a><a href="rankings.html" class="">1</a><span>…</span><a href="rankings-64.html" class="">64</a><a href="rankings-65.html" class="active">65</a><a href="rankings-66.html" class="">66</a><span>…</span><a href="rankings-84.html" class="">84</a><a href="rankings-66.html">下一页</a></div>
+    </div>
+  </section>
+</main>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <h4>日韩热门视频</h4>
+        <p>日韩热门视频页面整理近期关注较高的视频内容，按类型与热度展示相关分类。</p>
+      </div>
+      <div>
+        <h4>分类入口</h4>
+        <p><a href="categories.html">分类总览</a></p>
+        <p><a href="rankings.html">热度排行榜</a></p>
+        <p><a href="search.html">站内搜索</a></p>
+      </div>
+      <div>
+        <h4>帮助说明</h4>
+        <p><a href="service.html">使用指南</a></p>
+        <p><a href="copyright.html">用户协议</a></p>
+        <p><a href="about.html">关于我们</a></p>
+      </div>
+      <div>
+        <h4>联系信息</h4>
+        <p>工作日 9:00 - 18:00</p>
+        <p>我们将在 24 小时内回复邮件</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 日韩热门视频. 保留所有权利。</span>
+      <span>纯静态 HTML / CSS / JS 构建</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?76b5e2e0f6c84c06f0a7cb7105df054d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>

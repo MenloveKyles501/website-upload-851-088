@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>热度排行榜 - 日韩热门视频-热门好看的视频大全-热门片库持续更新</title>
+  <meta name="description" content="热度排行榜页展示按热度与年份排序的影视内容。" />
+  <meta name="keywords" content="排行榜,日韩热门视频,热门好看的视频大全,热门片库持续更新,日韩视频,热门视频,视频大全" />
+  <meta name="theme-color" content="#0b1120" />
+  <meta property="og:title" content="热度排行榜 - 日韩热门视频-热门好看的视频大全-热门片库持续更新" />
+  <meta property="og:description" content="热度排行榜页展示按热度与年份排序的影视内容。" />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="inner">
+      <a class="brand" href="index.html" aria-label="日韩热门视频">
+        <span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 10.5A2.5 2.5 0 1 1 12 7a2.5 2.5 0 0 1 0 5.5z"/></svg></span>
+        <span class="brand-text">
+          <span class="brand-title">日韩热门视频</span>
+          <span class="brand-sub">热门内容整理 · 静态站点</span>
+        </span>
+      </a>
+      <nav class="nav" aria-label="主导航">
+        <a href="index.html" class="">首页</a><a href="categories.html" class="">分类总览</a><a href="rankings.html" class="active">排行榜</a><a href="search.html" class="">搜索</a><a href="about.html" class="">关于我们</a>
+      </nav>
+      <div class="header-actions">
+        <form class="search-pill" action="search.html" method="get" role="search">
+          <span aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4a6 6 0 1 0 3.7 10.7l4.3 4.3 1.4-1.4-4.3-4.3A6 6 0 0 0 10 4zm0 2a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/></svg></span>
+          <input type="search" name="q" placeholder="搜索影片名称、地区、年份、标签" />
+        </form>
+        <button class="icon-btn mobile-toggle" type="button" data-mobile-toggle aria-expanded="false" aria-label="展开菜单">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-nav" data-mobile-nav aria-label="移动端导航">
+      <a href="index.html" class="">首页</a><a href="categories.html" class="">分类总览</a><a href="rankings.html" class="active">排行榜</a><a href="search.html" class="">搜索</a><a href="about.html" class="">关于我们</a>
+      <form class="search-pill" action="search.html" method="get" role="search" style="margin-top:10px; min-width:0;">
+        <span aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4a6 6 0 1 0 3.7 10.7l4.3 4.3 1.4-1.4-4.3-4.3A6 6 0 0 0 10 4zm0 2a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/></svg></span>
+        <input type="search" name="q" placeholder="搜索影片名称、地区、年份、标签" />
+      </form>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">首页</a><span>›</span><span>排行榜</span></div>
+      <h1 class="title">热度排行榜</h1>
+      <p class="sub">根据年份、题材关键词和标题热度生成的静态排行榜，支持分页浏览全部条目。</p>
+    </div>
+  </section>
+  <section class="section" data-live-filter>
+    <div class="container">
+      <div class="filter-bar">
+        <input type="search" placeholder="在本页内搜索影片名称、地区、标签" data-filter-input />
+        <select data-filter-select>
+          <option value="">全部分类</option>
+          <option value="国产电影">国产电影</option><option value="国产剧集">国产剧集</option><option value="日韩电影">日韩电影</option><option value="日韩剧集">日韩剧集</option><option value="欧美作品">欧美作品</option><option value="动画动漫">动画动漫</option><option value="其他热播">其他热播</option>
+        </select>
+        <select data-filter-select>
+          <option value="">全部年份</option>
+          <option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option><option value="2001">2001</option><option value="2000">2000</option><option value="1999">1999</option><option value="1998">1998</option>
+        </select>
+      </div>
+      <div class="card-grid">
+        <a class="movie-card" href="movie-1504.html" data-filter-card data-search="绝境情真 中国大陆 电影 剧情/灾难/家庭 一场突如其来的矿难将六个矿工困于地下,在等待救援的七天里,他们的一壶水成了考验人性的天平。 灾难求生 人性抉择 感人至深" data-cat="国产电影" data-year="2005">
+  <div class="movie-poster">
+    <img src="assets/covers/1504.svg" alt="绝境情真" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">绝境情真</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2005</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">一场突如其来的矿难将六个矿工困于地下,在等待救援的七天里,他们的一壶水成了考验人性的天平。</p>
+    <div class="chip-row"><span class="chip muted">灾难求生</span><span class="chip muted">人性抉择</span><span class="chip muted">感人至深</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1697.html" data-filter-card data-search="记忆裂痕 美国 电影 科幻/动作/悬疑 工程师删除了自己三年的记忆,醒来后发现一群黑帮也在找那段记忆。 吴宇森 失忆 预知未来 工程师复仇" data-cat="欧美作品" data-year="2003">
+  <div class="movie-poster">
+    <img src="assets/covers/1697.svg" alt="记忆裂痕" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">记忆裂痕</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2003</span>
+      <span>•</span>
+      <span>科幻</span>
+    </div>
+    <p class="movie-line">工程师删除了自己三年的记忆,醒来后发现一群黑帮也在找那段记忆。</p>
+    <div class="chip-row"><span class="chip muted">吴宇森</span><span class="chip muted">失忆</span><span class="chip muted">预知未来</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1202.html" data-filter-card data-search="血色浪漫 中国大陆 剧集 爱情/青春/历史 七十年代末北京军队大院里,一群少年用拳头和吉他写下的血色青春,而那个被称为“魔鬼”的女孩是所有人心里的白月光与朱砂痣。 大院 知青 八十年代 怀旧" data-cat="国产剧集" data-year="2004">
+  <div class="movie-poster">
+    <img src="assets/covers/1202.svg" alt="血色浪漫" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">血色浪漫</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2004</span>
+      <span>•</span>
+      <span>爱情</span>
+    </div>
+    <p class="movie-line">七十年代末北京军队大院里,一群少年用拳头和吉他写下的血色青春,而那个被称为“魔鬼”的女孩是所有人心里的白月光与朱砂痣。</p>
+    <div class="chip-row"><span class="chip muted">大院</span><span class="chip muted">知青</span><span class="chip muted">八十年代</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0990.html" data-filter-card data-search="女高中生结婚记 韩国 电视剧 浪漫喜剧 全校第一的乖乖女和全校倒数第一的混混,因为一次意外怀孕,被迫开启了一段荒唐又温暖的同居生活。 高中生 契约婚姻 怀孕 早婚 家庭" data-cat="日韩剧集" data-year="2004">
+  <div class="movie-poster">
+    <img src="assets/covers/0990.svg" alt="女高中生结婚记" loading="lazy" />
+    <span class="type-badge">电视剧</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">女高中生结婚记</h3>
+    <div class="movie-meta">
+      <span>韩国</span>
+      <span>•</span>
+      <span>2004</span>
+      <span>•</span>
+      <span>浪漫喜剧</span>
+    </div>
+    <p class="movie-line">全校第一的乖乖女和全校倒数第一的混混,因为一次意外怀孕,被迫开启了一段荒唐又温暖的同居生活。</p>
+    <div class="chip-row"><span class="chip muted">高中生</span><span class="chip muted">契约婚姻</span><span class="chip muted">怀孕</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0732.html" data-filter-card data-search="虎口余生 美国 电影 冒险/惊悚/生存 摄影师林恩在西伯利亚丛林遭东北虎袭击,她必须在断粮断联的绝境中,与这只受伤的猛兽周旋七天。 荒野求生 人虎对抗 女性主角 真实事件改编" data-cat="欧美作品" data-year="2003">
+  <div class="movie-poster">
+    <img src="assets/covers/0732.svg" alt="虎口余生" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">虎口余生</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2003</span>
+      <span>•</span>
+      <span>冒险</span>
+    </div>
+    <p class="movie-line">摄影师林恩在西伯利亚丛林遭东北虎袭击,她必须在断粮断联的绝境中,与这只受伤的猛兽周旋七天。</p>
+    <div class="chip-row"><span class="chip muted">荒野求生</span><span class="chip muted">人虎对抗</span><span class="chip muted">女性主角</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1863.html" data-filter-card data-search="疯狂约会美丽都 法国,比利时,加拿大 电影 动画,喜剧,家庭 一个沉默寡言的奶奶,为了从黑手党手中救出参加环法自行车赛的孙子,带着狗横穿整个法国。 公路动画 环法 温情 怪诞 怀旧" data-cat="动画动漫" data-year="2003">
+  <div class="movie-poster">
+    <img src="assets/covers/1863.svg" alt="疯狂约会美丽都" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">疯狂约会美丽都</h3>
+    <div class="movie-meta">
+      <span>法国,比利时,加拿大</span>
+      <span>•</span>
+      <span>2003</span>
+      <span>•</span>
+      <span>动画</span>
+    </div>
+    <p class="movie-line">一个沉默寡言的奶奶,为了从黑手党手中救出参加环法自行车赛的孙子,带着狗横穿整个法国。</p>
+    <div class="chip-row"><span class="chip muted">公路动画</span><span class="chip muted">环法</span><span class="chip muted">温情</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0942.html" data-filter-card data-search="红苹果乐园2003 中国大陆 剧集 剧情/爱情/偶像 五个男住客的公寓迎来一个灰姑娘,原本的兄弟团开始为了爱情分崩离析。 青春 合租 老剧 怀旧 多角恋" data-cat="国产剧集" data-year="2003">
+  <div class="movie-poster">
+    <img src="assets/covers/0942.svg" alt="红苹果乐园2003" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">红苹果乐园2003</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2003</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">五个男住客的公寓迎来一个灰姑娘,原本的兄弟团开始为了爱情分崩离析。</p>
+    <div class="chip-row"><span class="chip muted">青春</span><span class="chip muted">合租</span><span class="chip muted">老剧</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0760.html" data-filter-card data-search="耶稣受难记 美国 电影 剧情/历史/宗教 聚焦耶稣在人间最后12小时的极致苦难,一场肉体与精神的双重凌迟,以及最终的复活。 基督 信仰 牺牲 震撼" data-cat="欧美作品" data-year="2004">
+  <div class="movie-poster">
+    <img src="assets/covers/0760.svg" alt="耶稣受难记" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">耶稣受难记</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2004</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">聚焦耶稣在人间最后12小时的极致苦难,一场肉体与精神的双重凌迟,以及最终的复活。</p>
+    <div class="chip-row"><span class="chip muted">基督</span><span class="chip muted">信仰</span><span class="chip muted">牺牲</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1040.html" data-filter-card data-search="戴帽子的猫 美国 电影 奇幻/家庭/喜剧 下雨天,一只戴着高帽的猫闯入两个无聊小孩的家,把房子变成了疯狂游乐场。 苏斯博士 捣蛋猫 雨天冒险" data-cat="欧美作品" data-year="2003">
+  <div class="movie-poster">
+    <img src="assets/covers/1040.svg" alt="戴帽子的猫" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">戴帽子的猫</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2003</span>
+      <span>•</span>
+      <span>奇幻</span>
+    </div>
+    <p class="movie-line">下雨天,一只戴着高帽的猫闯入两个无聊小孩的家,把房子变成了疯狂游乐场。</p>
+    <div class="chip-row"><span class="chip muted">苏斯博士</span><span class="chip muted">捣蛋猫</span><span class="chip muted">雨天冒险</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1762.html" data-filter-card data-search="还珠格格第三部 中国大陆,中国台湾 剧集 古装,爱情,剧情 小燕子和五阿哥成婚之后,深宫里的婆媳矛盾、情敌危机以及缅甸战事,让“红尘作伴”的誓言面临严峻考验。 婚后生活 宫廷危机 知画登场" data-cat="国产剧集" data-year="2003">
+  <div class="movie-poster">
+    <img src="assets/covers/1762.svg" alt="还珠格格第三部" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">还珠格格第三部</h3>
+    <div class="movie-meta">
+      <span>中国大陆,中国台湾</span>
+      <span>•</span>
+      <span>2003</span>
+      <span>•</span>
+      <span>古装</span>
+    </div>
+    <p class="movie-line">小燕子和五阿哥成婚之后,深宫里的婆媳矛盾、情敌危机以及缅甸战事,让“红尘作伴”的誓言面临严峻考验。</p>
+    <div class="chip-row"><span class="chip muted">婚后生活</span><span class="chip muted">宫廷危机</span><span class="chip muted">知画登场</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0798.html" data-filter-card data-search="铿锵玫瑰 中国大陆 剧集 剧情/犯罪 九十年代,一群最不像警察的女警察,用最土的办法,在火车站抓最狡猾的人贩子。 女警 纪实风格 打拐 女性群像" data-cat="国产剧集" data-year="2003">
+  <div class="movie-poster">
+    <img src="assets/covers/0798.svg" alt="铿锵玫瑰" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">铿锵玫瑰</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2003</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">九十年代,一群最不像警察的女警察,用最土的办法,在火车站抓最狡猾的人贩子。</p>
+    <div class="chip-row"><span class="chip muted">女警</span><span class="chip muted">纪实风格</span><span class="chip muted">打拐</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0642.html" data-filter-card data-search="宠物小精灵之雷神传说 日本 电影 动画,奇幻,冒险 为了寻找传说中的雷公,少年小健与一只受伤的雷电球结伴,踏上了跨越时空的冒险。 宝可梦 雷公 传说 情感" data-cat="动画动漫" data-year="2001">
+  <div class="movie-poster">
+    <img src="assets/covers/0642.svg" alt="宠物小精灵之雷神传说" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">宠物小精灵之雷神传说</h3>
+    <div class="movie-meta">
+      <span>日本</span>
+      <span>•</span>
+      <span>2001</span>
+      <span>•</span>
+      <span>动画</span>
+    </div>
+    <p class="movie-line">为了寻找传说中的雷公,少年小健与一只受伤的雷电球结伴,踏上了跨越时空的冒险。</p>
+    <div class="chip-row"><span class="chip muted">宝可梦</span><span class="chip muted">雷公</span><span class="chip muted">传说</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1671.html" data-filter-card data-search="巅峰拍档第一季 英国 剧集 真人秀,汽车,喜剧 三个不正经的中年男人,用最离谱的方式测评汽车,顺便炸了几十辆车。 汽车 毒舌 冒险 三个老男孩" data-cat="欧美作品" data-year="2002">
+  <div class="movie-poster">
+    <img src="assets/covers/1671.svg" alt="巅峰拍档第一季" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">巅峰拍档第一季</h3>
+    <div class="movie-meta">
+      <span>英国</span>
+      <span>•</span>
+      <span>2002</span>
+      <span>•</span>
+      <span>真人秀</span>
+    </div>
+    <p class="movie-line">三个不正经的中年男人,用最离谱的方式测评汽车,顺便炸了几十辆车。</p>
+    <div class="chip-row"><span class="chip muted">汽车</span><span class="chip muted">毒舌</span><span class="chip muted">冒险</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1561.html" data-filter-card data-search="想踢沉迷男的女人 日本 电影 喜剧/爱情/女性 一个极度理性的女律师,决定用“踢废柴男友出人生”的方式,完成一场情感上的不动产清算。 独立女性 废柴男友 日式冷幽默 断舍离" data-cat="日韩电影" data-year="2002">
+  <div class="movie-poster">
+    <img src="assets/covers/1561.svg" alt="想踢沉迷男的女人" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">想踢沉迷男的女人</h3>
+    <div class="movie-meta">
+      <span>日本</span>
+      <span>•</span>
+      <span>2002</span>
+      <span>•</span>
+      <span>喜剧</span>
+    </div>
+    <p class="movie-line">一个极度理性的女律师,决定用“踢废柴男友出人生”的方式,完成一场情感上的不动产清算。</p>
+    <div class="chip-row"><span class="chip muted">独立女性</span><span class="chip muted">废柴男友</span><span class="chip muted">日式冷幽默</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1540.html" data-filter-card data-search="兄弟连 美国 剧集 战争,历史 从诺曼底登陆到希特勒的鹰巢,一支美军空降连队用血肉写下的二战欧洲战场亲历记。 二战 美军 写实主义 群像剧" data-cat="欧美作品" data-year="2001">
+  <div class="movie-poster">
+    <img src="assets/covers/1540.svg" alt="兄弟连" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">兄弟连</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2001</span>
+      <span>•</span>
+      <span>战争</span>
+    </div>
+    <p class="movie-line">从诺曼底登陆到希特勒的鹰巢,一支美军空降连队用血肉写下的二战欧洲战场亲历记。</p>
+    <div class="chip-row"><span class="chip muted">二战</span><span class="chip muted">美军</span><span class="chip muted">写实主义</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0992.html" data-filter-card data-search="红石敖包 中国 电影 剧情、历史、战争 草原上最负盛名的驯马手,为了守护一块刻满盟约的红石敖包,与日本军官展开了一场骑士对决。 蒙古草原 抗日 敖包 忠义" data-cat="国产电影" data-year="2001">
+  <div class="movie-poster">
+    <img src="assets/covers/0992.svg" alt="红石敖包" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">红石敖包</h3>
+    <div class="movie-meta">
+      <span>中国</span>
+      <span>•</span>
+      <span>2001</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">草原上最负盛名的驯马手,为了守护一块刻满盟约的红石敖包,与日本军官展开了一场骑士对决。</p>
+    <div class="chip-row"><span class="chip muted">蒙古草原</span><span class="chip muted">抗日</span><span class="chip muted">敖包</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1031.html" data-filter-card data-search="公私恋事多粤语 中国香港 剧集 时装、爱情、职场、喜剧 酒店高管与下属在公事上针锋相对,私下却在相亲中误打误撞成了恋人。 TVB 办公室恋情 欢喜冤家 商场斗争" data-cat="国产剧集" data-year="2001">
+  <div class="movie-poster">
+    <img src="assets/covers/1031.svg" alt="公私恋事多粤语" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">公私恋事多粤语</h3>
+    <div class="movie-meta">
+      <span>中国香港</span>
+      <span>•</span>
+      <span>2001</span>
+      <span>•</span>
+      <span>时装</span>
+    </div>
+    <p class="movie-line">酒店高管与下属在公事上针锋相对,私下却在相亲中误打误撞成了恋人。</p>
+    <div class="chip-row"><span class="chip muted">TVB</span><span class="chip muted">办公室恋情</span><span class="chip muted">欢喜冤家</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0410.html" data-filter-card data-search="星梦潜规则 中国香港 电影 剧情/悬疑 一名怀揣星梦的女孩在娱乐圈屡屡碰壁,最终选择用另一种方式揭开行业的黑暗面。 娱乐圈 潜规则 黑幕 复仇 女性" data-cat="国产电影" data-year="2000">
+  <div class="movie-poster">
+    <img src="assets/covers/0410.svg" alt="星梦潜规则" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">星梦潜规则</h3>
+    <div class="movie-meta">
+      <span>中国香港</span>
+      <span>•</span>
+      <span>2000</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">一名怀揣星梦的女孩在娱乐圈屡屡碰壁,最终选择用另一种方式揭开行业的黑暗面。</p>
+    <div class="chip-row"><span class="chip muted">娱乐圈</span><span class="chip muted">潜规则</span><span class="chip muted">黑幕</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1716.html" data-filter-card data-search="马克思·马路 美国 电影 剧情/犯罪/黑色幽默 纽约夜班出租车司机“马克思”在最后一夜遇到了八个乘客,每个人都是他自己的一种可能。 出租车司机 城市夜行 存在主义 话痨" data-cat="欧美作品" data-year="1999">
+  <div class="movie-poster">
+    <img src="assets/covers/1716.svg" alt="马克思·马路" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">马克思·马路</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>1999</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">纽约夜班出租车司机“马克思”在最后一夜遇到了八个乘客,每个人都是他自己的一种可能。</p>
+    <div class="chip-row"><span class="chip muted">出租车司机</span><span class="chip muted">城市夜行</span><span class="chip muted">存在主义</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1530.html" data-filter-card data-search="凶影 香港 电影 犯罪,悬疑,动作 雨夜连环杀人案重现,刑警发现每具尸体旁都留有自己的旧照片,而真凶竟已“死”了十年。 连环杀手 刑警 雨夜 双重人格 港式暴力美学" data-cat="国产电影" data-year="1998">
+  <div class="movie-poster">
+    <img src="assets/covers/1530.svg" alt="凶影" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">凶影</h3>
+    <div class="movie-meta">
+      <span>香港</span>
+      <span>•</span>
+      <span>1998</span>
+      <span>•</span>
+      <span>犯罪</span>
+    </div>
+    <p class="movie-line">雨夜连环杀人案重现,刑警发现每具尸体旁都留有自己的旧照片,而真凶竟已“死”了十年。</p>
+    <div class="chip-row"><span class="chip muted">连环杀手</span><span class="chip muted">刑警</span><span class="chip muted">雨夜</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1176.html" data-filter-card data-search="飞天小女警第一季 美国 剧集 动画/动作/喜剧 尤教授不小心在配方中加入“化学物X”后,三个还在上幼儿园的小女孩成为了守护 Townsville 的超级英雄。 超级英雄 童年经典 美式卡通 女性力量 化学物X" data-cat="动画动漫" data-year="1998">
+  <div class="movie-poster">
+    <img src="assets/covers/1176.svg" alt="飞天小女警第一季" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">飞天小女警第一季</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>1998</span>
+      <span>•</span>
+      <span>动画</span>
+    </div>
+    <p class="movie-line">尤教授不小心在配方中加入“化学物X”后,三个还在上幼儿园的小女孩成为了守护 Townsville 的超级英雄。</p>
+    <div class="chip-row"><span class="chip muted">超级英雄</span><span class="chip muted">童年经典</span><span class="chip muted">美式卡通</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1318.html" data-filter-card data-search="真情有多远 中国香港 电影 剧情、家庭 父亲假死留下巨额遗产,三个女儿在葬礼上的真情表演,决定谁能拿到钱。 亲情 人性考验 遗产 姐妹恩怨" data-cat="国产电影" data-year="1999">
+  <div class="movie-poster">
+    <img src="assets/covers/1318.svg" alt="真情有多远" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">真情有多远</h3>
+    <div class="movie-meta">
+      <span>中国香港</span>
+      <span>•</span>
+      <span>1999</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">父亲假死留下巨额遗产,三个女儿在葬礼上的真情表演,决定谁能拿到钱。</p>
+    <div class="chip-row"><span class="chip muted">亲情</span><span class="chip muted">人性考验</span><span class="chip muted">遗产</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1233.html" data-filter-card data-search="梦魂颠倒 中国香港 电影 悬疑/爱情/奇幻 失眠心理医生意外进入病人共享的噩梦,发现连环凶杀案的真相藏在自己的前世。 梦境穿梭 宿命轮回 心理惊悚" data-cat="国产电影" data-year="1998">
+  <div class="movie-poster">
+    <img src="assets/covers/1233.svg" alt="梦魂颠倒" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">梦魂颠倒</h3>
+    <div class="movie-meta">
+      <span>中国香港</span>
+      <span>•</span>
+      <span>1998</span>
+      <span>•</span>
+      <span>悬疑</span>
+    </div>
+    <p class="movie-line">失眠心理医生意外进入病人共享的噩梦,发现连环凶杀案的真相藏在自己的前世。</p>
+    <div class="chip-row"><span class="chip muted">梦境穿梭</span><span class="chip muted">宿命轮回</span><span class="chip muted">心理惊悚</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0455.html" data-filter-card data-search="疯狗与格拉瑞小姐 美国 电影 剧情,犯罪,温情 浑身伤疤的黑帮打手“疯狗”被迫照顾仇家七岁的女儿格拉瑞,却在暴力的世界里为她搭建了一个童话避难所。 黑帮 父女情 硬汉柔情 救赎 人质情结" data-cat="欧美作品" data-year="1998">
+  <div class="movie-poster">
+    <img src="assets/covers/0455.svg" alt="疯狗与格拉瑞小姐" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">疯狗与格拉瑞小姐</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>1998</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">浑身伤疤的黑帮打手“疯狗”被迫照顾仇家七岁的女儿格拉瑞,却在暴力的世界里为她搭建了一个童话避难所。</p>
+    <div class="chip-row"><span class="chip muted">黑帮</span><span class="chip muted">父女情</span><span class="chip muted">硬汉柔情</span></div>
+  </div>
+</a>
+      </div>
+      <div class="pagination"><a href="rankings-77.html">上一页</a><a href="rankings.html" class="">1</a><span>…</span><a href="rankings-77.html" class="">77</a><a href="rankings-78.html" class="active">78</a><a href="rankings-79.html" class="">79</a><span>…</span><a href="rankings-84.html" class="">84</a><a href="rankings-79.html">下一页</a></div>
+    </div>
+  </section>
+</main>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <h4>日韩热门视频</h4>
+        <p>日韩热门视频页面整理近期关注较高的视频内容，按类型与热度展示相关分类。</p>
+      </div>
+      <div>
+        <h4>分类入口</h4>
+        <p><a href="categories.html">分类总览</a></p>
+        <p><a href="rankings.html">热度排行榜</a></p>
+        <p><a href="search.html">站内搜索</a></p>
+      </div>
+      <div>
+        <h4>帮助说明</h4>
+        <p><a href="service.html">使用指南</a></p>
+        <p><a href="copyright.html">用户协议</a></p>
+        <p><a href="about.html">关于我们</a></p>
+      </div>
+      <div>
+        <h4>联系信息</h4>
+        <p>工作日 9:00 - 18:00</p>
+        <p>我们将在 24 小时内回复邮件</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 日韩热门视频. 保留所有权利。</span>
+      <span>纯静态 HTML / CSS / JS 构建</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?76b5e2e0f6c84c06f0a7cb7105df054d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>

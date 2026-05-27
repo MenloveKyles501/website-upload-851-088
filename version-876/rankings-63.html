@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>热度排行榜 - 日韩热门视频-热门好看的视频大全-热门片库持续更新</title>
+  <meta name="description" content="热度排行榜页展示按热度与年份排序的影视内容。" />
+  <meta name="keywords" content="排行榜,日韩热门视频,热门好看的视频大全,热门片库持续更新,日韩视频,热门视频,视频大全" />
+  <meta name="theme-color" content="#0b1120" />
+  <meta property="og:title" content="热度排行榜 - 日韩热门视频-热门好看的视频大全-热门片库持续更新" />
+  <meta property="og:description" content="热度排行榜页展示按热度与年份排序的影视内容。" />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="inner">
+      <a class="brand" href="index.html" aria-label="日韩热门视频">
+        <span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 10.5A2.5 2.5 0 1 1 12 7a2.5 2.5 0 0 1 0 5.5z"/></svg></span>
+        <span class="brand-text">
+          <span class="brand-title">日韩热门视频</span>
+          <span class="brand-sub">热门内容整理 · 静态站点</span>
+        </span>
+      </a>
+      <nav class="nav" aria-label="主导航">
+        <a href="index.html" class="">首页</a><a href="categories.html" class="">分类总览</a><a href="rankings.html" class="active">排行榜</a><a href="search.html" class="">搜索</a><a href="about.html" class="">关于我们</a>
+      </nav>
+      <div class="header-actions">
+        <form class="search-pill" action="search.html" method="get" role="search">
+          <span aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4a6 6 0 1 0 3.7 10.7l4.3 4.3 1.4-1.4-4.3-4.3A6 6 0 0 0 10 4zm0 2a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/></svg></span>
+          <input type="search" name="q" placeholder="搜索影片名称、地区、年份、标签" />
+        </form>
+        <button class="icon-btn mobile-toggle" type="button" data-mobile-toggle aria-expanded="false" aria-label="展开菜单">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-nav" data-mobile-nav aria-label="移动端导航">
+      <a href="index.html" class="">首页</a><a href="categories.html" class="">分类总览</a><a href="rankings.html" class="active">排行榜</a><a href="search.html" class="">搜索</a><a href="about.html" class="">关于我们</a>
+      <form class="search-pill" action="search.html" method="get" role="search" style="margin-top:10px; min-width:0;">
+        <span aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4a6 6 0 1 0 3.7 10.7l4.3 4.3 1.4-1.4-4.3-4.3A6 6 0 0 0 10 4zm0 2a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/></svg></span>
+        <input type="search" name="q" placeholder="搜索影片名称、地区、年份、标签" />
+      </form>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">首页</a><span>›</span><span>排行榜</span></div>
+      <h1 class="title">热度排行榜</h1>
+      <p class="sub">根据年份、题材关键词和标题热度生成的静态排行榜，支持分页浏览全部条目。</p>
+    </div>
+  </section>
+  <section class="section" data-live-filter>
+    <div class="container">
+      <div class="filter-bar">
+        <input type="search" placeholder="在本页内搜索影片名称、地区、标签" data-filter-input />
+        <select data-filter-select>
+          <option value="">全部分类</option>
+          <option value="国产电影">国产电影</option><option value="国产剧集">国产剧集</option><option value="日韩电影">日韩电影</option><option value="日韩剧集">日韩剧集</option><option value="欧美作品">欧美作品</option><option value="动画动漫">动画动漫</option><option value="其他热播">其他热播</option>
+        </select>
+        <select data-filter-select>
+          <option value="">全部年份</option>
+          <option value="2023">2023</option><option value="2022">2022</option><option value="2021">2021</option>
+        </select>
+      </div>
+      <div class="card-grid">
+        <a class="movie-card" href="movie-1593.html" data-filter-card data-search="在巨人中间 德国 电影 科幻/剧情 科学家造出仅有十二厘米的文明,并作为“神”旁观其五千年,直到小人国向他发出了战争宣言。 微缩文明 伦理实验 沉默旁观 存在主义" data-cat="欧美作品" data-year="2021">
+  <div class="movie-poster">
+    <img src="assets/covers/1593.svg" alt="在巨人中间" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">在巨人中间</h3>
+    <div class="movie-meta">
+      <span>德国</span>
+      <span>•</span>
+      <span>2021</span>
+      <span>•</span>
+      <span>科幻</span>
+    </div>
+    <p class="movie-line">科学家造出仅有十二厘米的文明,并作为“神”旁观其五千年,直到小人国向他发出了战争宣言。</p>
+    <div class="chip-row"><span class="chip muted">微缩文明</span><span class="chip muted">伦理实验</span><span class="chip muted">沉默旁观</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1403.html" data-filter-card data-search="狼雨 日本 动画剧集 科幻/末世/冒险 末世的狼伪装成人,追寻着能开满世界的“月之花”。 狼 幻境 末世 花之女" data-cat="动画动漫" data-year="2021">
+  <div class="movie-poster">
+    <img src="assets/covers/1403.svg" alt="狼雨" loading="lazy" />
+    <span class="type-badge">动画剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">狼雨</h3>
+    <div class="movie-meta">
+      <span>日本</span>
+      <span>•</span>
+      <span>2021</span>
+      <span>•</span>
+      <span>科幻</span>
+    </div>
+    <p class="movie-line">末世的狼伪装成人,追寻着能开满世界的“月之花”。</p>
+    <div class="chip-row"><span class="chip muted">狼</span><span class="chip muted">幻境</span><span class="chip muted">末世</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0853.html" data-filter-card data-search="乱发日记 法国/比利时 电影 剧情/动画 一个不愿剪发的女孩,用满屋乱发记录了母亲消失的真相。 手绘动画 女性成长 头发隐喻 自闭症 无声叙事" data-cat="动画动漫" data-year="2022">
+  <div class="movie-poster">
+    <img src="assets/covers/0853.svg" alt="乱发日记" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">乱发日记</h3>
+    <div class="movie-meta">
+      <span>法国/比利时</span>
+      <span>•</span>
+      <span>2022</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">一个不愿剪发的女孩,用满屋乱发记录了母亲消失的真相。</p>
+    <div class="chip-row"><span class="chip muted">手绘动画</span><span class="chip muted">女性成长</span><span class="chip muted">头发隐喻</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1713.html" data-filter-card data-search="超极限 日本 动画电影 科幻,动作,体育 在近未来,足球运动员都操纵着巨型机甲进行比赛,一个失去双腿的天才少年,用脑机接口驾驶机甲,向世界宣告他还能踢。 机甲 足球 热血 竞技 2D作画" data-cat="动画动漫" data-year="2021">
+  <div class="movie-poster">
+    <img src="assets/covers/1713.svg" alt="超极限" loading="lazy" />
+    <span class="type-badge">动画电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">超极限</h3>
+    <div class="movie-meta">
+      <span>日本</span>
+      <span>•</span>
+      <span>2021</span>
+      <span>•</span>
+      <span>科幻</span>
+    </div>
+    <p class="movie-line">在近未来,足球运动员都操纵着巨型机甲进行比赛,一个失去双腿的天才少年,用脑机接口驾驶机甲,向世界宣告他还能踢。</p>
+    <div class="chip-row"><span class="chip muted">机甲</span><span class="chip muted">足球</span><span class="chip muted">热血</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1287.html" data-filter-card data-search="狮子山下的故事粤语 中国香港 剧集 剧情,家庭 一间深水埗老茶餐厅,四十年风雨见证小人物如何在金融风暴与回归中守住初心。 时代变迁 茶餐厅 港味 奋斗 粤语原声" data-cat="国产剧集" data-year="2022">
+  <div class="movie-poster">
+    <img src="assets/covers/1287.svg" alt="狮子山下的故事粤语" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">狮子山下的故事粤语</h3>
+    <div class="movie-meta">
+      <span>中国香港</span>
+      <span>•</span>
+      <span>2022</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">一间深水埗老茶餐厅,四十年风雨见证小人物如何在金融风暴与回归中守住初心。</p>
+    <div class="chip-row"><span class="chip muted">时代变迁</span><span class="chip muted">茶餐厅</span><span class="chip muted">港味</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1483.html" data-filter-card data-search="塬上 中国大陆 电影 文艺剧情 塬上最后一个留守老人去世了,全村搬迁前夜,一具白骨被挖出。 黄土高原 环保搬迁 乡愁 空村" data-cat="国产电影" data-year="2022">
+  <div class="movie-poster">
+    <img src="assets/covers/1483.svg" alt="塬上" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">塬上</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2022</span>
+      <span>•</span>
+      <span>文艺剧情</span>
+    </div>
+    <p class="movie-line">塬上最后一个留守老人去世了,全村搬迁前夜,一具白骨被挖出。</p>
+    <div class="chip-row"><span class="chip muted">黄土高原</span><span class="chip muted">环保搬迁</span><span class="chip muted">乡愁</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1848.html" data-filter-card data-search="寻人启事 中国大陆 电影 悬疑剧情片 一觉醒来发现自己被贴满全城寻人启事,而启事上“走失者”的照片,不是现在的他。 失忆 身份迷局 社会派" data-cat="国产电影" data-year="2022">
+  <div class="movie-poster">
+    <img src="assets/covers/1848.svg" alt="寻人启事" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">寻人启事</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2022</span>
+      <span>•</span>
+      <span>悬疑剧情片</span>
+    </div>
+    <p class="movie-line">一觉醒来发现自己被贴满全城寻人启事,而启事上“走失者”的照片,不是现在的他。</p>
+    <div class="chip-row"><span class="chip muted">失忆</span><span class="chip muted">身份迷局</span><span class="chip muted">社会派</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0705.html" data-filter-card data-search="贝尔斯通之狐 英国 剧集 悬疑、剧情、犯罪 英格兰小镇上出现了一只戴面具的狐狸,它揭露每个人的秘密,然后让他们付出代价。 英伦小镇 神秘 复仇" data-cat="欧美作品" data-year="2021">
+  <div class="movie-poster">
+    <img src="assets/covers/0705.svg" alt="贝尔斯通之狐" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">贝尔斯通之狐</h3>
+    <div class="movie-meta">
+      <span>英国</span>
+      <span>•</span>
+      <span>2021</span>
+      <span>•</span>
+      <span>悬疑</span>
+    </div>
+    <p class="movie-line">英格兰小镇上出现了一只戴面具的狐狸,它揭露每个人的秘密,然后让他们付出代价。</p>
+    <div class="chip-row"><span class="chip muted">英伦小镇</span><span class="chip muted">神秘</span><span class="chip muted">复仇</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1623.html" data-filter-card data-search="戏人生 中国大陆 电影 剧情/家庭 一个唱了四十年秦腔的老艺人,儿子却在网上靠恶搞戏曲成了网红,父子台上台下两出戏。 戏曲 传承 父子 传统与现代" data-cat="国产电影" data-year="2021">
+  <div class="movie-poster">
+    <img src="assets/covers/1623.svg" alt="戏人生" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">戏人生</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2021</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">一个唱了四十年秦腔的老艺人,儿子却在网上靠恶搞戏曲成了网红,父子台上台下两出戏。</p>
+    <div class="chip-row"><span class="chip muted">戏曲</span><span class="chip muted">传承</span><span class="chip muted">父子</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0247.html" data-filter-card data-search="生活,高于一切 德国 电影 剧情/哲学 一名哲学教授被诊断只剩三个月生命,他决定用最后的时间教学生“如何好好活着”。 存在主义 绝症 日常 治愈 思考" data-cat="欧美作品" data-year="2022">
+  <div class="movie-poster">
+    <img src="assets/covers/0247.svg" alt="生活,高于一切" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">生活,高于一切</h3>
+    <div class="movie-meta">
+      <span>德国</span>
+      <span>•</span>
+      <span>2022</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">一名哲学教授被诊断只剩三个月生命,他决定用最后的时间教学生“如何好好活着”。</p>
+    <div class="chip-row"><span class="chip muted">存在主义</span><span class="chip muted">绝症</span><span class="chip muted">日常</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0930.html" data-filter-card data-search="冬天的小苍蝇 捷克 电影 剧情,战争 一个男孩在战争中捡到一只怀表,表壳里藏着一整支德军小队的死亡名单。 二战 童年视角 东线战场 残酷与天真 黑白摄影" data-cat="其他热播" data-year="2022">
+  <div class="movie-poster">
+    <img src="assets/covers/0930.svg" alt="冬天的小苍蝇" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">冬天的小苍蝇</h3>
+    <div class="movie-meta">
+      <span>捷克</span>
+      <span>•</span>
+      <span>2022</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">一个男孩在战争中捡到一只怀表,表壳里藏着一整支德军小队的死亡名单。</p>
+    <div class="chip-row"><span class="chip muted">二战</span><span class="chip muted">童年视角</span><span class="chip muted">东线战场</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1658.html" data-filter-card data-search="欢爱小屋第一季 美国 剧集 喜剧,爱情 三对情侣共享一栋度假别墅,规则是每七天换一次伴侣,但有人动了真心。 成人喜剧 开放式关系 群像" data-cat="欧美作品" data-year="2022">
+  <div class="movie-poster">
+    <img src="assets/covers/1658.svg" alt="欢爱小屋第一季" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">欢爱小屋第一季</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2022</span>
+      <span>•</span>
+      <span>喜剧</span>
+    </div>
+    <p class="movie-line">三对情侣共享一栋度假别墅,规则是每七天换一次伴侣,但有人动了真心。</p>
+    <div class="chip-row"><span class="chip muted">成人喜剧</span><span class="chip muted">开放式关系</span><span class="chip muted">群像</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1710.html" data-filter-card data-search="女管家 英国 电视剧 剧情/悬疑 年代剧 一个出身贫寒的女管家在贵族庄园里步步为营,她不是要往上爬,而是要毁掉这个害死她母亲的家族。 贵族 秘密 阶级 女性" data-cat="欧美作品" data-year="2023">
+  <div class="movie-poster">
+    <img src="assets/covers/1710.svg" alt="女管家" loading="lazy" />
+    <span class="type-badge">电视剧 剧情/悬疑</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">女管家</h3>
+    <div class="movie-meta">
+      <span>英国</span>
+      <span>•</span>
+      <span>2023</span>
+      <span>•</span>
+      <span>年代剧</span>
+    </div>
+    <p class="movie-line">一个出身贫寒的女管家在贵族庄园里步步为营,她不是要往上爬,而是要毁掉这个害死她母亲的家族。</p>
+    <div class="chip-row"><span class="chip muted">贵族</span><span class="chip muted">秘密</span><span class="chip muted">阶级</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1182.html" data-filter-card data-search="30枚银币第一季 西班牙 剧集 恐怖,悬疑 犹大出卖耶稣的30枚银币散落人间,每枚都附着一个诅咒,如今一枚出现在西班牙小镇。 宗教 超自然 小镇怪谈" data-cat="欧美作品" data-year="2021">
+  <div class="movie-poster">
+    <img src="assets/covers/1182.svg" alt="30枚银币第一季" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">30枚银币第一季</h3>
+    <div class="movie-meta">
+      <span>西班牙</span>
+      <span>•</span>
+      <span>2021</span>
+      <span>•</span>
+      <span>恐怖</span>
+    </div>
+    <p class="movie-line">犹大出卖耶稣的30枚银币散落人间,每枚都附着一个诅咒,如今一枚出现在西班牙小镇。</p>
+    <div class="chip-row"><span class="chip muted">宗教</span><span class="chip muted">超自然</span><span class="chip muted">小镇怪谈</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1751.html" data-filter-card data-search="凹凸学园第二季 中国大陆 剧集 动画,喜剧,校园 凹凸学园的问题学生军团回归,继续上演无厘头又温馨的爆笑校园日常。 搞笑 日常 青春 泡面番" data-cat="动画动漫" data-year="2022">
+  <div class="movie-poster">
+    <img src="assets/covers/1751.svg" alt="凹凸学园第二季" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">凹凸学园第二季</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2022</span>
+      <span>•</span>
+      <span>动画</span>
+    </div>
+    <p class="movie-line">凹凸学园的问题学生军团回归,继续上演无厘头又温馨的爆笑校园日常。</p>
+    <div class="chip-row"><span class="chip muted">搞笑</span><span class="chip muted">日常</span><span class="chip muted">青春</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0461.html" data-filter-card data-search="雪地奇兵 中国大陆 电影 喜剧,动作,冒险 为了寻找长白山天池下的神秘宝藏,一群不靠谱的“奇兵”在滑雪场上演了一场鸡飞狗跳的闹剧。 滑雪 东北 夺宝 搞笑 兄弟情" data-cat="国产电影" data-year="2021">
+  <div class="movie-poster">
+    <img src="assets/covers/0461.svg" alt="雪地奇兵" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">雪地奇兵</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2021</span>
+      <span>•</span>
+      <span>喜剧</span>
+    </div>
+    <p class="movie-line">为了寻找长白山天池下的神秘宝藏,一群不靠谱的“奇兵”在滑雪场上演了一场鸡飞狗跳的闹剧。</p>
+    <div class="chip-row"><span class="chip muted">滑雪</span><span class="chip muted">东北</span><span class="chip muted">夺宝</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0316.html" data-filter-card data-search="最好 美国 电影 心理、剧情、文艺 一个自恋的整形医生研发出了“最完美人脸算法”,却发现自己才是那张“需要被修复的脸”。 人工智能 完美主义 执念 黑色幽默 换脸" data-cat="欧美作品" data-year="2022">
+  <div class="movie-poster">
+    <img src="assets/covers/0316.svg" alt="最好" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">最好</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2022</span>
+      <span>•</span>
+      <span>心理</span>
+    </div>
+    <p class="movie-line">一个自恋的整形医生研发出了“最完美人脸算法”,却发现自己才是那张“需要被修复的脸”。</p>
+    <div class="chip-row"><span class="chip muted">人工智能</span><span class="chip muted">完美主义</span><span class="chip muted">执念</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0710.html" data-filter-card data-search="贝尔法斯特 英国 电影 剧情,家庭,历史 1969年贝尔法斯特骚乱中,一个九岁男孩用电影和幻想逃避街头的暴力。 北爱尔兰 黑白摄影 童年视角 宗教冲突" data-cat="欧美作品" data-year="2021">
+  <div class="movie-poster">
+    <img src="assets/covers/0710.svg" alt="贝尔法斯特" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">贝尔法斯特</h3>
+    <div class="movie-meta">
+      <span>英国</span>
+      <span>•</span>
+      <span>2021</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">1969年贝尔法斯特骚乱中,一个九岁男孩用电影和幻想逃避街头的暴力。</p>
+    <div class="chip-row"><span class="chip muted">北爱尔兰</span><span class="chip muted">黑白摄影</span><span class="chip muted">童年视角</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0905.html" data-filter-card data-search="鹿魔 美国 电影 恐怖/奇幻 小镇猎手发现一头畸形的鹿,从而牵扯出地底吞噬信仰的古老邪神。 克苏鲁 身体恐怖 小镇怪谈 邪教" data-cat="欧美作品" data-year="2021">
+  <div class="movie-poster">
+    <img src="assets/covers/0905.svg" alt="鹿魔" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">鹿魔</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2021</span>
+      <span>•</span>
+      <span>恐怖</span>
+    </div>
+    <p class="movie-line">小镇猎手发现一头畸形的鹿,从而牵扯出地底吞噬信仰的古老邪神。</p>
+    <div class="chip-row"><span class="chip muted">克苏鲁</span><span class="chip muted">身体恐怖</span><span class="chip muted">小镇怪谈</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0550.html" data-filter-card data-search="幸福山歌 中国大陆 电影 剧情、音乐、乡村 城市说唱歌手回到苗寨继承奶奶的“歌骨”,却发现要把山歌唱火,得先让村里年轻人愿意留下来。 非遗 乡村振兴 民歌 代际" data-cat="国产电影" data-year="2022">
+  <div class="movie-poster">
+    <img src="assets/covers/0550.svg" alt="幸福山歌" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">幸福山歌</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2022</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">城市说唱歌手回到苗寨继承奶奶的“歌骨”,却发现要把山歌唱火,得先让村里年轻人愿意留下来。</p>
+    <div class="chip-row"><span class="chip muted">非遗</span><span class="chip muted">乡村振兴</span><span class="chip muted">民歌</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1469.html" data-filter-card data-search="海女日记 日本 电视剧 剧情/生活/治愈 东京辞职回乡的OL美咲跟着奶奶学做海女,却发现海底藏着一段关于母亲的日记。 海女 故乡 传承 美食 慢节奏" data-cat="日韩剧集" data-year="2022">
+  <div class="movie-poster">
+    <img src="assets/covers/1469.svg" alt="海女日记" loading="lazy" />
+    <span class="type-badge">电视剧</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">海女日记</h3>
+    <div class="movie-meta">
+      <span>日本</span>
+      <span>•</span>
+      <span>2022</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">东京辞职回乡的OL美咲跟着奶奶学做海女,却发现海底藏着一段关于母亲的日记。</p>
+    <div class="chip-row"><span class="chip muted">海女</span><span class="chip muted">故乡</span><span class="chip muted">传承</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0554.html" data-filter-card data-search="鬼迷茱丽叶 马来西亚 电影 恐怖,爱情 一个女演员在排练《罗密欧与茱丽叶》时被茱丽叶的鬼魂附身,开始疯狂寻找她转世的罗密欧。 附身 戏剧 悲剧 华语" data-cat="其他热播" data-year="2021">
+  <div class="movie-poster">
+    <img src="assets/covers/0554.svg" alt="鬼迷茱丽叶" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">鬼迷茱丽叶</h3>
+    <div class="movie-meta">
+      <span>马来西亚</span>
+      <span>•</span>
+      <span>2021</span>
+      <span>•</span>
+      <span>恐怖</span>
+    </div>
+    <p class="movie-line">一个女演员在排练《罗密欧与茱丽叶》时被茱丽叶的鬼魂附身,开始疯狂寻找她转世的罗密欧。</p>
+    <div class="chip-row"><span class="chip muted">附身</span><span class="chip muted">戏剧</span><span class="chip muted">悲剧</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1788.html" data-filter-card data-search="蒙娜丽莎与血月亮 美国/韩国 电影 科幻/惊悚 神秘女孩从精神病院逃出,她用意念操控物体,却被脱衣舞俱乐部奉为摇钱树。 超能力 新奥尔良 都市传说 女巫 异色" data-cat="日韩电影" data-year="2021">
+  <div class="movie-poster">
+    <img src="assets/covers/1788.svg" alt="蒙娜丽莎与血月亮" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">蒙娜丽莎与血月亮</h3>
+    <div class="movie-meta">
+      <span>美国/韩国</span>
+      <span>•</span>
+      <span>2021</span>
+      <span>•</span>
+      <span>科幻</span>
+    </div>
+    <p class="movie-line">神秘女孩从精神病院逃出,她用意念操控物体,却被脱衣舞俱乐部奉为摇钱树。</p>
+    <div class="chip-row"><span class="chip muted">超能力</span><span class="chip muted">新奥尔良</span><span class="chip muted">都市传说</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0248.html" data-filter-card data-search="一宅家族 中国大陆 剧集 喜剧/家庭 疫情封控期间,一栋居民楼里的六户人家被迫关在一起,从互相嫌弃到成为没有血缘的家人。 情景喜剧 宅家日常 邻里关系 轻幽默" data-cat="国产剧集" data-year="2022">
+  <div class="movie-poster">
+    <img src="assets/covers/0248.svg" alt="一宅家族" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">一宅家族</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2022</span>
+      <span>•</span>
+      <span>喜剧</span>
+    </div>
+    <p class="movie-line">疫情封控期间,一栋居民楼里的六户人家被迫关在一起,从互相嫌弃到成为没有血缘的家人。</p>
+    <div class="chip-row"><span class="chip muted">情景喜剧</span><span class="chip muted">宅家日常</span><span class="chip muted">邻里关系</span></div>
+  </div>
+</a>
+      </div>
+      <div class="pagination"><a href="rankings-62.html">上一页</a><a href="rankings.html" class="">1</a><span>…</span><a href="rankings-62.html" class="">62</a><a href="rankings-63.html" class="active">63</a><a href="rankings-64.html" class="">64</a><span>…</span><a href="rankings-84.html" class="">84</a><a href="rankings-64.html">下一页</a></div>
+    </div>
+  </section>
+</main>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <h4>日韩热门视频</h4>
+        <p>日韩热门视频页面整理近期关注较高的视频内容，按类型与热度展示相关分类。</p>
+      </div>
+      <div>
+        <h4>分类入口</h4>
+        <p><a href="categories.html">分类总览</a></p>
+        <p><a href="rankings.html">热度排行榜</a></p>
+        <p><a href="search.html">站内搜索</a></p>
+      </div>
+      <div>
+        <h4>帮助说明</h4>
+        <p><a href="service.html">使用指南</a></p>
+        <p><a href="copyright.html">用户协议</a></p>
+        <p><a href="about.html">关于我们</a></p>
+      </div>
+      <div>
+        <h4>联系信息</h4>
+        <p>工作日 9:00 - 18:00</p>
+        <p>我们将在 24 小时内回复邮件</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 日韩热门视频. 保留所有权利。</span>
+      <span>纯静态 HTML / CSS / JS 构建</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?76b5e2e0f6c84c06f0a7cb7105df054d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>

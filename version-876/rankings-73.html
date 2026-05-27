@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>热度排行榜 - 日韩热门视频-热门好看的视频大全-热门片库持续更新</title>
+  <meta name="description" content="热度排行榜页展示按热度与年份排序的影视内容。" />
+  <meta name="keywords" content="排行榜,日韩热门视频,热门好看的视频大全,热门片库持续更新,日韩视频,热门视频,视频大全" />
+  <meta name="theme-color" content="#0b1120" />
+  <meta property="og:title" content="热度排行榜 - 日韩热门视频-热门好看的视频大全-热门片库持续更新" />
+  <meta property="og:description" content="热度排行榜页展示按热度与年份排序的影视内容。" />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="inner">
+      <a class="brand" href="index.html" aria-label="日韩热门视频">
+        <span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 10.5A2.5 2.5 0 1 1 12 7a2.5 2.5 0 0 1 0 5.5z"/></svg></span>
+        <span class="brand-text">
+          <span class="brand-title">日韩热门视频</span>
+          <span class="brand-sub">热门内容整理 · 静态站点</span>
+        </span>
+      </a>
+      <nav class="nav" aria-label="主导航">
+        <a href="index.html" class="">首页</a><a href="categories.html" class="">分类总览</a><a href="rankings.html" class="active">排行榜</a><a href="search.html" class="">搜索</a><a href="about.html" class="">关于我们</a>
+      </nav>
+      <div class="header-actions">
+        <form class="search-pill" action="search.html" method="get" role="search">
+          <span aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4a6 6 0 1 0 3.7 10.7l4.3 4.3 1.4-1.4-4.3-4.3A6 6 0 0 0 10 4zm0 2a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/></svg></span>
+          <input type="search" name="q" placeholder="搜索影片名称、地区、年份、标签" />
+        </form>
+        <button class="icon-btn mobile-toggle" type="button" data-mobile-toggle aria-expanded="false" aria-label="展开菜单">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-nav" data-mobile-nav aria-label="移动端导航">
+      <a href="index.html" class="">首页</a><a href="categories.html" class="">分类总览</a><a href="rankings.html" class="active">排行榜</a><a href="search.html" class="">搜索</a><a href="about.html" class="">关于我们</a>
+      <form class="search-pill" action="search.html" method="get" role="search" style="margin-top:10px; min-width:0;">
+        <span aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4a6 6 0 1 0 3.7 10.7l4.3 4.3 1.4-1.4-4.3-4.3A6 6 0 0 0 10 4zm0 2a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/></svg></span>
+        <input type="search" name="q" placeholder="搜索影片名称、地区、年份、标签" />
+      </form>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">首页</a><span>›</span><span>排行榜</span></div>
+      <h1 class="title">热度排行榜</h1>
+      <p class="sub">根据年份、题材关键词和标题热度生成的静态排行榜，支持分页浏览全部条目。</p>
+    </div>
+  </section>
+  <section class="section" data-live-filter>
+    <div class="container">
+      <div class="filter-bar">
+        <input type="search" placeholder="在本页内搜索影片名称、地区、标签" data-filter-input />
+        <select data-filter-select>
+          <option value="">全部分类</option>
+          <option value="国产电影">国产电影</option><option value="国产剧集">国产剧集</option><option value="日韩电影">日韩电影</option><option value="日韩剧集">日韩剧集</option><option value="欧美作品">欧美作品</option><option value="动画动漫">动画动漫</option><option value="其他热播">其他热播</option>
+        </select>
+        <select data-filter-select>
+          <option value="">全部年份</option>
+          <option value="2017">2017</option><option value="2016">2016</option><option value="2015">2015</option>
+        </select>
+      </div>
+      <div class="card-grid">
+        <a class="movie-card" href="movie-0024.html" data-filter-card data-search="白领超人 日本 剧集 喜剧/职场 中年上班族被外星射线击中,得到超能力不是战斗,而是能一眼看穿财报漏洞和写出无懈可击的甩锅邮件。 社畜 变身 讽刺" data-cat="日韩剧集" data-year="2016">
+  <div class="movie-poster">
+    <img src="assets/covers/0024.svg" alt="白领超人" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">白领超人</h3>
+    <div class="movie-meta">
+      <span>日本</span>
+      <span>•</span>
+      <span>2016</span>
+      <span>•</span>
+      <span>喜剧</span>
+    </div>
+    <p class="movie-line">中年上班族被外星射线击中,得到超能力不是战斗,而是能一眼看穿财报漏洞和写出无懈可击的甩锅邮件。</p>
+    <div class="chip-row"><span class="chip muted">社畜</span><span class="chip muted">变身</span><span class="chip muted">讽刺</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1988.html" data-filter-card data-search="我哥我嫂 中国大陆 电视剧 家庭、伦理、虐心 亲哥出车祸变植物人,弟媳趁机霸占家产,嫂子被迫嫁给小叔子,却发现这是哥哥设的局。 兄弟 遗产 婚姻 亲情考验" data-cat="国产剧集" data-year="2017">
+  <div class="movie-poster">
+    <img src="assets/covers/1988.svg" alt="我哥我嫂" loading="lazy" />
+    <span class="type-badge">电视剧</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">我哥我嫂</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2017</span>
+      <span>•</span>
+      <span>家庭</span>
+    </div>
+    <p class="movie-line">亲哥出车祸变植物人,弟媳趁机霸占家产,嫂子被迫嫁给小叔子,却发现这是哥哥设的局。</p>
+    <div class="chip-row"><span class="chip muted">兄弟</span><span class="chip muted">遗产</span><span class="chip muted">婚姻</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0258.html" data-filter-card data-search="乌冬面之国的金色毛球 日本 动画剧集 治愈/奇幻 厌倦大城市生活的程序员回到故乡,在父亲遗留的乌冬面店里,发现了一个会变成小孩的狸猫精。 日常系 萌物 回乡 亲情" data-cat="动画动漫" data-year="2016">
+  <div class="movie-poster">
+    <img src="assets/covers/0258.svg" alt="乌冬面之国的金色毛球" loading="lazy" />
+    <span class="type-badge">动画剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">乌冬面之国的金色毛球</h3>
+    <div class="movie-meta">
+      <span>日本</span>
+      <span>•</span>
+      <span>2016</span>
+      <span>•</span>
+      <span>治愈</span>
+    </div>
+    <p class="movie-line">厌倦大城市生活的程序员回到故乡,在父亲遗留的乌冬面店里,发现了一个会变成小孩的狸猫精。</p>
+    <div class="chip-row"><span class="chip muted">日常系</span><span class="chip muted">萌物</span><span class="chip muted">回乡</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1295.html" data-filter-card data-search="席勒:死神与少女 奥地利/卢森堡 电影 剧情 聚焦表现主义大师席勒生命中最后十年,围绕他的缪斯、妹妹与模特,一场关于爱与死的风暴。 传记 艺术 爱情 历史 惊悚" data-cat="其他热播" data-year="2016">
+  <div class="movie-poster">
+    <img src="assets/covers/1295.svg" alt="席勒:死神与少女" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">席勒:死神与少女</h3>
+    <div class="movie-meta">
+      <span>奥地利/卢森堡</span>
+      <span>•</span>
+      <span>2016</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">聚焦表现主义大师席勒生命中最后十年,围绕他的缪斯、妹妹与模特,一场关于爱与死的风暴。</p>
+    <div class="chip-row"><span class="chip muted">传记</span><span class="chip muted">艺术</span><span class="chip muted">爱情</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0132.html" data-filter-card data-search="山之外 罗马尼亚 电影 剧情/文艺 一名患有抑郁症的女子回到深山修道院,修女们认为她被魔鬼附身,决定用“爱”将其活活闷死。 宗教狂热 修道院 驱魔悲剧 真实事件改编" data-cat="其他热播" data-year="2016">
+  <div class="movie-poster">
+    <img src="assets/covers/0132.svg" alt="山之外" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">山之外</h3>
+    <div class="movie-meta">
+      <span>罗马尼亚</span>
+      <span>•</span>
+      <span>2016</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">一名患有抑郁症的女子回到深山修道院,修女们认为她被魔鬼附身,决定用“爱”将其活活闷死。</p>
+    <div class="chip-row"><span class="chip muted">宗教狂热</span><span class="chip muted">修道院</span><span class="chip muted">驱魔悲剧</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0348.html" data-filter-card data-search="摔跤吧!爸爸 印度 电影 剧情/传记/运动 父亲强迫两个女儿学摔跤,全村人都在笑,直到大女儿把嘲笑她的男生摔进了医院。 励志 父女 摔跤 真实改编 女性" data-cat="欧美作品" data-year="2016">
+  <div class="movie-poster">
+    <img src="assets/covers/0348.svg" alt="摔跤吧!爸爸" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">摔跤吧!爸爸</h3>
+    <div class="movie-meta">
+      <span>印度</span>
+      <span>•</span>
+      <span>2016</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">父亲强迫两个女儿学摔跤,全村人都在笑,直到大女儿把嘲笑她的男生摔进了医院。</p>
+    <div class="chip-row"><span class="chip muted">励志</span><span class="chip muted">父女</span><span class="chip muted">摔跤</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1957.html" data-filter-card data-search="女挽狂澜 英国 电影 传记/运动 她是一位三个孩子的母亲,也是历史上第一位完成单人环球帆船赛的女性。 帆船 女性力量 真实事件改编 励志" data-cat="欧美作品" data-year="2016">
+  <div class="movie-poster">
+    <img src="assets/covers/1957.svg" alt="女挽狂澜" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">女挽狂澜</h3>
+    <div class="movie-meta">
+      <span>英国</span>
+      <span>•</span>
+      <span>2016</span>
+      <span>•</span>
+      <span>传记</span>
+    </div>
+    <p class="movie-line">她是一位三个孩子的母亲,也是历史上第一位完成单人环球帆船赛的女性。</p>
+    <div class="chip-row"><span class="chip muted">帆船</span><span class="chip muted">女性力量</span><span class="chip muted">真实事件改编</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0432.html" data-filter-card data-search="马男波杰克第二季 美国 剧集 动画/剧情/喜剧 过气明星马试图写回忆录救赎自我,却不断搞砸身边所有关系。 中年危机 好莱坞讽刺 抑郁症 动物拟人" data-cat="动画动漫" data-year="2015">
+  <div class="movie-poster">
+    <img src="assets/covers/0432.svg" alt="马男波杰克第二季" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">马男波杰克第二季</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2015</span>
+      <span>•</span>
+      <span>动画</span>
+    </div>
+    <p class="movie-line">过气明星马试图写回忆录救赎自我,却不断搞砸身边所有关系。</p>
+    <div class="chip-row"><span class="chip muted">中年危机</span><span class="chip muted">好莱坞讽刺</span><span class="chip muted">抑郁症</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0467.html" data-filter-card data-search="蔬菜海盗历险记 法国 电影 动画/喜剧 一颗西兰花船长带着番茄大副和土豆水手,去深海拯救被垃圾困住的老海龟。 蔬菜 海盗 环保 儿童" data-cat="动画动漫" data-year="2015">
+  <div class="movie-poster">
+    <img src="assets/covers/0467.svg" alt="蔬菜海盗历险记" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">蔬菜海盗历险记</h3>
+    <div class="movie-meta">
+      <span>法国</span>
+      <span>•</span>
+      <span>2015</span>
+      <span>•</span>
+      <span>动画</span>
+    </div>
+    <p class="movie-line">一颗西兰花船长带着番茄大副和土豆水手,去深海拯救被垃圾困住的老海龟。</p>
+    <div class="chip-row"><span class="chip muted">蔬菜</span><span class="chip muted">海盗</span><span class="chip muted">环保</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0781.html" data-filter-card data-search="爸爸父亲爹 中国大陆 TV 剧集 悬疑,家庭,伦理 一张DNA报告让富家千金同时炸出三个爹:养父、生父、捐精爹,每个都想当爸爸。 血缘 亲子鉴定 三父 都市" data-cat="国产剧集" data-year="2015">
+  <div class="movie-poster">
+    <img src="assets/covers/0781.svg" alt="爸爸父亲爹" loading="lazy" />
+    <span class="type-badge">TV 剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">爸爸父亲爹</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2015</span>
+      <span>•</span>
+      <span>悬疑</span>
+    </div>
+    <p class="movie-line">一张DNA报告让富家千金同时炸出三个爹:养父、生父、捐精爹,每个都想当爸爸。</p>
+    <div class="chip-row"><span class="chip muted">血缘</span><span class="chip muted">亲子鉴定</span><span class="chip muted">三父</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0333.html" data-filter-card data-search="亚斯小子 西班牙 电影 剧情/喜剧 患有亚斯伯格综合征的少年被学校足球队开除,哥哥陪他组建了一支“杂牌军”逆袭。 亚斯伯格 足球 兄弟情 治愈" data-cat="欧美作品" data-year="2015">
+  <div class="movie-poster">
+    <img src="assets/covers/0333.svg" alt="亚斯小子" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">亚斯小子</h3>
+    <div class="movie-meta">
+      <span>西班牙</span>
+      <span>•</span>
+      <span>2015</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">患有亚斯伯格综合征的少年被学校足球队开除,哥哥陪他组建了一支“杂牌军”逆袭。</p>
+    <div class="chip-row"><span class="chip muted">亚斯伯格</span><span class="chip muted">足球</span><span class="chip muted">兄弟情</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0669.html" data-filter-card data-search="非常父女档 印度 电影 剧情,家庭 一个懦弱的单亲爸爸为了让女儿不被欺负,把自己训练成地下拳王,却被告知女儿得了绝症。 单亲 摔跤 父爱 逆袭" data-cat="欧美作品" data-year="2016">
+  <div class="movie-poster">
+    <img src="assets/covers/0669.svg" alt="非常父女档" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">非常父女档</h3>
+    <div class="movie-meta">
+      <span>印度</span>
+      <span>•</span>
+      <span>2016</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">一个懦弱的单亲爸爸为了让女儿不被欺负,把自己训练成地下拳王,却被告知女儿得了绝症。</p>
+    <div class="chip-row"><span class="chip muted">单亲</span><span class="chip muted">摔跤</span><span class="chip muted">父爱</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1401.html" data-filter-card data-search="史格芬顿先生 英国 电影 剧情/心理/惊悚 新搬来的邻居史格芬顿先生从不走出家门,但他知道这个街区每一个人的秘密。 神秘老人 邻居 身世之谜 暗黑童话" data-cat="欧美作品" data-year="2015">
+  <div class="movie-poster">
+    <img src="assets/covers/1401.svg" alt="史格芬顿先生" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">史格芬顿先生</h3>
+    <div class="movie-meta">
+      <span>英国</span>
+      <span>•</span>
+      <span>2015</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">新搬来的邻居史格芬顿先生从不走出家门,但他知道这个街区每一个人的秘密。</p>
+    <div class="chip-row"><span class="chip muted">神秘老人</span><span class="chip muted">邻居</span><span class="chip muted">身世之谜</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0110.html" data-filter-card data-search="昂首挺胸 法国 电影 剧情/青少年 少年犯马利克被送到教育中心,遇到了一个比他还固执的女法官和一个快要放弃他的母亲。 问题少年 教育 司法 救赎 写实" data-cat="欧美作品" data-year="2015">
+  <div class="movie-poster">
+    <img src="assets/covers/0110.svg" alt="昂首挺胸" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">昂首挺胸</h3>
+    <div class="movie-meta">
+      <span>法国</span>
+      <span>•</span>
+      <span>2015</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">少年犯马利克被送到教育中心,遇到了一个比他还固执的女法官和一个快要放弃他的母亲。</p>
+    <div class="chip-row"><span class="chip muted">问题少年</span><span class="chip muted">教育</span><span class="chip muted">司法</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0353.html" data-filter-card data-search="大毛狗 法国/比利时 动画电影 动画/家庭/治愈 六岁男孩把外婆做的大毛绒狗弄丢了,这只巨大的笨狗在巴黎街头流浪了一夜,只为找回小主人。 毛绒玩具 孩子 城市 友谊" data-cat="动画动漫" data-year="2015">
+  <div class="movie-poster">
+    <img src="assets/covers/0353.svg" alt="大毛狗" loading="lazy" />
+    <span class="type-badge">动画电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">大毛狗</h3>
+    <div class="movie-meta">
+      <span>法国/比利时</span>
+      <span>•</span>
+      <span>2015</span>
+      <span>•</span>
+      <span>动画</span>
+    </div>
+    <p class="movie-line">六岁男孩把外婆做的大毛绒狗弄丢了,这只巨大的笨狗在巴黎街头流浪了一夜,只为找回小主人。</p>
+    <div class="chip-row"><span class="chip muted">毛绒玩具</span><span class="chip muted">孩子</span><span class="chip muted">城市</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1071.html" data-filter-card data-search="不超过一分钟 法国 短片 剧情/爱情 凌晨的尼斯机场,一对分手七年的恋人在出租车上重逢,而这段车程只有四十七秒。 时间 重逢 出租车 倒计时 错过" data-cat="欧美作品" data-year="2015">
+  <div class="movie-poster">
+    <img src="assets/covers/1071.svg" alt="不超过一分钟" loading="lazy" />
+    <span class="type-badge">短片</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">不超过一分钟</h3>
+    <div class="movie-meta">
+      <span>法国</span>
+      <span>•</span>
+      <span>2015</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">凌晨的尼斯机场,一对分手七年的恋人在出租车上重逢,而这段车程只有四十七秒。</p>
+    <div class="chip-row"><span class="chip muted">时间</span><span class="chip muted">重逢</span><span class="chip muted">出租车</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0714.html" data-filter-card data-search="穿越吧厨房第一季 中国大陆 剧集/综艺 真人秀/美食 明星们穿越回古代,用祖传菜谱PK现代厨艺,输的人要吃“黑暗料理”。 综艺 厨房 穿越 明星 美食考古" data-cat="国产剧集" data-year="2016">
+  <div class="movie-poster">
+    <img src="assets/covers/0714.svg" alt="穿越吧厨房第一季" loading="lazy" />
+    <span class="type-badge">剧集/综艺</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">穿越吧厨房第一季</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2016</span>
+      <span>•</span>
+      <span>真人秀</span>
+    </div>
+    <p class="movie-line">明星们穿越回古代,用祖传菜谱PK现代厨艺,输的人要吃“黑暗料理”。</p>
+    <div class="chip-row"><span class="chip muted">综艺</span><span class="chip muted">厨房</span><span class="chip muted">穿越</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0221.html" data-filter-card data-search="临时奶爸 中国大陆 电影 喜剧,家庭 特种兵退役的冷面硬汉,被迫接受任务:照顾一个古灵精怪的5岁小女孩,而这个小女孩手里握着他战友牺牲前留下的秘密。 萌娃 肌肉硬汉 反差萌 育儿闹剧 温情" data-cat="国产电影" data-year="2015">
+  <div class="movie-poster">
+    <img src="assets/covers/0221.svg" alt="临时奶爸" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">临时奶爸</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2015</span>
+      <span>•</span>
+      <span>喜剧</span>
+    </div>
+    <p class="movie-line">特种兵退役的冷面硬汉,被迫接受任务:照顾一个古灵精怪的5岁小女孩,而这个小女孩手里握着他战友牺牲前留下的秘密。</p>
+    <div class="chip-row"><span class="chip muted">萌娃</span><span class="chip muted">肌肉硬汉</span><span class="chip muted">反差萌</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0668.html" data-filter-card data-search="梦回唐朝 中国 电视剧 古装/爱情/奇幻 现代女考古学家意外穿越成武周时期的宫女,却发现自己能听懂文物说话。 穿越 唐朝 权谋 三角恋" data-cat="国产剧集" data-year="2015">
+  <div class="movie-poster">
+    <img src="assets/covers/0668.svg" alt="梦回唐朝" loading="lazy" />
+    <span class="type-badge">电视剧</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">梦回唐朝</h3>
+    <div class="movie-meta">
+      <span>中国</span>
+      <span>•</span>
+      <span>2015</span>
+      <span>•</span>
+      <span>古装</span>
+    </div>
+    <p class="movie-line">现代女考古学家意外穿越成武周时期的宫女,却发现自己能听懂文物说话。</p>
+    <div class="chip-row"><span class="chip muted">穿越</span><span class="chip muted">唐朝</span><span class="chip muted">权谋</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1304.html" data-filter-card data-search="再会吧!青春小鸟 日本 电影 剧情,音乐 怀孕五个月的音乐老师回到故乡海岛,带领一群问题学生备战全国合唱大赛。 校园 合唱 治愈 青春" data-cat="日韩电影" data-year="2015">
+  <div class="movie-poster">
+    <img src="assets/covers/1304.svg" alt="再会吧!青春小鸟" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">再会吧!青春小鸟</h3>
+    <div class="movie-meta">
+      <span>日本</span>
+      <span>•</span>
+      <span>2015</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">怀孕五个月的音乐老师回到故乡海岛,带领一群问题学生备战全国合唱大赛。</p>
+    <div class="chip-row"><span class="chip muted">校园</span><span class="chip muted">合唱</span><span class="chip muted">治愈</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1215.html" data-filter-card data-search="长岛事件 美国 电影 悬疑/剧情 长岛小镇一桩少女失踪案重开调查,所有邻居都看似清白,却各自藏着一个不可告人的秘密。 真相 小镇 道德困境 罪案" data-cat="欧美作品" data-year="2015">
+  <div class="movie-poster">
+    <img src="assets/covers/1215.svg" alt="长岛事件" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">长岛事件</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2015</span>
+      <span>•</span>
+      <span>悬疑</span>
+    </div>
+    <p class="movie-line">长岛小镇一桩少女失踪案重开调查,所有邻居都看似清白,却各自藏着一个不可告人的秘密。</p>
+    <div class="chip-row"><span class="chip muted">真相</span><span class="chip muted">小镇</span><span class="chip muted">道德困境</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0292.html" data-filter-card data-search="枪之子 美国 电影 犯罪,剧情,传记 澳洲最年轻的枪械走私天才落网后供出所有上线,只为保护自己三岁的儿子不再碰枪。 真实事件 澳洲黑帮 枪支走私 父子 救赎" data-cat="欧美作品" data-year="2015">
+  <div class="movie-poster">
+    <img src="assets/covers/0292.svg" alt="枪之子" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">枪之子</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2015</span>
+      <span>•</span>
+      <span>犯罪</span>
+    </div>
+    <p class="movie-line">澳洲最年轻的枪械走私天才落网后供出所有上线,只为保护自己三岁的儿子不再碰枪。</p>
+    <div class="chip-row"><span class="chip muted">真实事件</span><span class="chip muted">澳洲黑帮</span><span class="chip muted">枪支走私</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1148.html" data-filter-card data-search="鞋子上的光 印度 电影 剧情,运动 一个靠捡垃圾为生的男孩,渴望拥有一双真正的板球钉鞋,并借此敲开国家队的大门。 板球 贫民窟 梦想 阶层突破" data-cat="欧美作品" data-year="2015">
+  <div class="movie-poster">
+    <img src="assets/covers/1148.svg" alt="鞋子上的光" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">鞋子上的光</h3>
+    <div class="movie-meta">
+      <span>印度</span>
+      <span>•</span>
+      <span>2015</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">一个靠捡垃圾为生的男孩,渴望拥有一双真正的板球钉鞋,并借此敲开国家队的大门。</p>
+    <div class="chip-row"><span class="chip muted">板球</span><span class="chip muted">贫民窟</span><span class="chip muted">梦想</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0402.html" data-filter-card data-search="金婕的故事 英国 电影 剧情/传记/音乐 一个患有社交恐惧的女孩,被一只会“跳舞”的金毛犬拯救了人生。 动物保护 女性成长 孤独 治愈系 真实改编" data-cat="欧美作品" data-year="2015">
+  <div class="movie-poster">
+    <img src="assets/covers/0402.svg" alt="金婕的故事" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">金婕的故事</h3>
+    <div class="movie-meta">
+      <span>英国</span>
+      <span>•</span>
+      <span>2015</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">一个患有社交恐惧的女孩,被一只会“跳舞”的金毛犬拯救了人生。</p>
+    <div class="chip-row"><span class="chip muted">动物保护</span><span class="chip muted">女性成长</span><span class="chip muted">孤独</span></div>
+  </div>
+</a>
+      </div>
+      <div class="pagination"><a href="rankings-72.html">上一页</a><a href="rankings.html" class="">1</a><span>…</span><a href="rankings-72.html" class="">72</a><a href="rankings-73.html" class="active">73</a><a href="rankings-74.html" class="">74</a><span>…</span><a href="rankings-84.html" class="">84</a><a href="rankings-74.html">下一页</a></div>
+    </div>
+  </section>
+</main>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <h4>日韩热门视频</h4>
+        <p>日韩热门视频页面整理近期关注较高的视频内容，按类型与热度展示相关分类。</p>
+      </div>
+      <div>
+        <h4>分类入口</h4>
+        <p><a href="categories.html">分类总览</a></p>
+        <p><a href="rankings.html">热度排行榜</a></p>
+        <p><a href="search.html">站内搜索</a></p>
+      </div>
+      <div>
+        <h4>帮助说明</h4>
+        <p><a href="service.html">使用指南</a></p>
+        <p><a href="copyright.html">用户协议</a></p>
+        <p><a href="about.html">关于我们</a></p>
+      </div>
+      <div>
+        <h4>联系信息</h4>
+        <p>工作日 9:00 - 18:00</p>
+        <p>我们将在 24 小时内回复邮件</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 日韩热门视频. 保留所有权利。</span>
+      <span>纯静态 HTML / CSS / JS 构建</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?76b5e2e0f6c84c06f0a7cb7105df054d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>

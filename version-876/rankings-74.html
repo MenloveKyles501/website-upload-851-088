@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>热度排行榜 - 日韩热门视频-热门好看的视频大全-热门片库持续更新</title>
+  <meta name="description" content="热度排行榜页展示按热度与年份排序的影视内容。" />
+  <meta name="keywords" content="排行榜,日韩热门视频,热门好看的视频大全,热门片库持续更新,日韩视频,热门视频,视频大全" />
+  <meta name="theme-color" content="#0b1120" />
+  <meta property="og:title" content="热度排行榜 - 日韩热门视频-热门好看的视频大全-热门片库持续更新" />
+  <meta property="og:description" content="热度排行榜页展示按热度与年份排序的影视内容。" />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="inner">
+      <a class="brand" href="index.html" aria-label="日韩热门视频">
+        <span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 10.5A2.5 2.5 0 1 1 12 7a2.5 2.5 0 0 1 0 5.5z"/></svg></span>
+        <span class="brand-text">
+          <span class="brand-title">日韩热门视频</span>
+          <span class="brand-sub">热门内容整理 · 静态站点</span>
+        </span>
+      </a>
+      <nav class="nav" aria-label="主导航">
+        <a href="index.html" class="">首页</a><a href="categories.html" class="">分类总览</a><a href="rankings.html" class="active">排行榜</a><a href="search.html" class="">搜索</a><a href="about.html" class="">关于我们</a>
+      </nav>
+      <div class="header-actions">
+        <form class="search-pill" action="search.html" method="get" role="search">
+          <span aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4a6 6 0 1 0 3.7 10.7l4.3 4.3 1.4-1.4-4.3-4.3A6 6 0 0 0 10 4zm0 2a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/></svg></span>
+          <input type="search" name="q" placeholder="搜索影片名称、地区、年份、标签" />
+        </form>
+        <button class="icon-btn mobile-toggle" type="button" data-mobile-toggle aria-expanded="false" aria-label="展开菜单">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-nav" data-mobile-nav aria-label="移动端导航">
+      <a href="index.html" class="">首页</a><a href="categories.html" class="">分类总览</a><a href="rankings.html" class="active">排行榜</a><a href="search.html" class="">搜索</a><a href="about.html" class="">关于我们</a>
+      <form class="search-pill" action="search.html" method="get" role="search" style="margin-top:10px; min-width:0;">
+        <span aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4a6 6 0 1 0 3.7 10.7l4.3 4.3 1.4-1.4-4.3-4.3A6 6 0 0 0 10 4zm0 2a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/></svg></span>
+        <input type="search" name="q" placeholder="搜索影片名称、地区、年份、标签" />
+      </form>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">首页</a><span>›</span><span>排行榜</span></div>
+      <h1 class="title">热度排行榜</h1>
+      <p class="sub">根据年份、题材关键词和标题热度生成的静态排行榜，支持分页浏览全部条目。</p>
+    </div>
+  </section>
+  <section class="section" data-live-filter>
+    <div class="container">
+      <div class="filter-bar">
+        <input type="search" placeholder="在本页内搜索影片名称、地区、标签" data-filter-input />
+        <select data-filter-select>
+          <option value="">全部分类</option>
+          <option value="国产电影">国产电影</option><option value="国产剧集">国产剧集</option><option value="日韩电影">日韩电影</option><option value="日韩剧集">日韩剧集</option><option value="欧美作品">欧美作品</option><option value="动画动漫">动画动漫</option><option value="其他热播">其他热播</option>
+        </select>
+        <select data-filter-select>
+          <option value="">全部年份</option>
+          <option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option>
+        </select>
+      </div>
+      <div class="card-grid">
+        <a class="movie-card" href="movie-0125.html" data-filter-card data-search="大地与阴影 哥伦比亚 电影 剧情/家庭 离家十七年的父亲回到濒死的甘蔗田,发现儿子已经变成了这片土地的奴隶,而孙子正在发烧。 乡村 甘蔗田 疾病 回归" data-cat="其他热播" data-year="2015">
+  <div class="movie-poster">
+    <img src="assets/covers/0125.svg" alt="大地与阴影" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">大地与阴影</h3>
+    <div class="movie-meta">
+      <span>哥伦比亚</span>
+      <span>•</span>
+      <span>2015</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">离家十七年的父亲回到濒死的甘蔗田,发现儿子已经变成了这片土地的奴隶,而孙子正在发烧。</p>
+    <div class="chip-row"><span class="chip muted">乡村</span><span class="chip muted">甘蔗田</span><span class="chip muted">疾病</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1986.html" data-filter-card data-search="喋血满洲 中国大陆 电视剧 谍战,动作 满洲铁路上一具尸体牵出三方谍网,他是军统也是共党,更是日本人眼中的忠犬。 东北 抗日 潜伏 双面间谍" data-cat="国产剧集" data-year="2015">
+  <div class="movie-poster">
+    <img src="assets/covers/1986.svg" alt="喋血满洲" loading="lazy" />
+    <span class="type-badge">电视剧</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">喋血满洲</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2015</span>
+      <span>•</span>
+      <span>谍战</span>
+    </div>
+    <p class="movie-line">满洲铁路上一具尸体牵出三方谍网,他是军统也是共党,更是日本人眼中的忠犬。</p>
+    <div class="chip-row"><span class="chip muted">东北</span><span class="chip muted">抗日</span><span class="chip muted">潜伏</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1147.html" data-filter-card data-search="陷阱 韩国 电影 惊悚 女孩在网络交友软件上约到的完美男友,竟是一个专门在密室中直播虐杀的变态设计师。 网络犯罪 封闭空间 偷拍 密室逃脱" data-cat="日韩电影" data-year="2015">
+  <div class="movie-poster">
+    <img src="assets/covers/1147.svg" alt="陷阱" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">陷阱</h3>
+    <div class="movie-meta">
+      <span>韩国</span>
+      <span>•</span>
+      <span>2015</span>
+      <span>•</span>
+      <span>惊悚</span>
+    </div>
+    <p class="movie-line">女孩在网络交友软件上约到的完美男友,竟是一个专门在密室中直播虐杀的变态设计师。</p>
+    <div class="chip-row"><span class="chip muted">网络犯罪</span><span class="chip muted">封闭空间</span><span class="chip muted">偷拍</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1279.html" data-filter-card data-search="沉睡之前 美国 电影 悬疑/惊悚/剧情 每天醒来她都会忘记一切,直到她翻开那本写着“不要相信本”的日记。 失忆 日记 心理 反转 家暴" data-cat="欧美作品" data-year="2014">
+  <div class="movie-poster">
+    <img src="assets/covers/1279.svg" alt="沉睡之前" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">沉睡之前</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2014</span>
+      <span>•</span>
+      <span>悬疑</span>
+    </div>
+    <p class="movie-line">每天醒来她都会忘记一切,直到她翻开那本写着“不要相信本”的日记。</p>
+    <div class="chip-row"><span class="chip muted">失忆</span><span class="chip muted">日记</span><span class="chip muted">心理</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0678.html" data-filter-card data-search="华丽之后粤语 中国香港 电影 剧情/音乐 两位乐坛天后面和心不和二十年,直到一场慈善演唱会后台,录音笔无意间录下所有真话。 娱乐圈沉浮 姐妹反目 粤语原声 天后陨落" data-cat="国产电影" data-year="2015">
+  <div class="movie-poster">
+    <img src="assets/covers/0678.svg" alt="华丽之后粤语" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">华丽之后粤语</h3>
+    <div class="movie-meta">
+      <span>中国香港</span>
+      <span>•</span>
+      <span>2015</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">两位乐坛天后面和心不和二十年,直到一场慈善演唱会后台,录音笔无意间录下所有真话。</p>
+    <div class="chip-row"><span class="chip muted">娱乐圈沉浮</span><span class="chip muted">姐妹反目</span><span class="chip muted">粤语原声</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0318.html" data-filter-card data-search="九命奇冤梁天来 中国大陆 电视剧 古装/悬疑/犯罪 清朝一桩灭门惨案,受害者梁天来竟声称自己“死了八次”,还带着九条命来告状。 公案 奇情 反转 复仇 清代" data-cat="国产剧集" data-year="2014">
+  <div class="movie-poster">
+    <img src="assets/covers/0318.svg" alt="九命奇冤梁天来" loading="lazy" />
+    <span class="type-badge">电视剧</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">九命奇冤梁天来</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2014</span>
+      <span>•</span>
+      <span>古装</span>
+    </div>
+    <p class="movie-line">清朝一桩灭门惨案,受害者梁天来竟声称自己“死了八次”,还带着九条命来告状。</p>
+    <div class="chip-row"><span class="chip muted">公案</span><span class="chip muted">奇情</span><span class="chip muted">反转</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0196.html" data-filter-card data-search="抓住彩虹的男人2015 中国大陆 电视剧 爱情/年代 为父报仇的她潜入仇家,却发现自己深爱的男人竟是仇人之子。 民国 虐恋 复仇" data-cat="国产剧集" data-year="2015">
+  <div class="movie-poster">
+    <img src="assets/covers/0196.svg" alt="抓住彩虹的男人2015" loading="lazy" />
+    <span class="type-badge">电视剧</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">抓住彩虹的男人2015</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2015</span>
+      <span>•</span>
+      <span>爱情</span>
+    </div>
+    <p class="movie-line">为父报仇的她潜入仇家,却发现自己深爱的男人竟是仇人之子。</p>
+    <div class="chip-row"><span class="chip muted">民国</span><span class="chip muted">虐恋</span><span class="chip muted">复仇</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1562.html" data-filter-card data-search="左耳 中国大陆 电影 青春爱情 左耳失聪的乖乖女李珥,无意中偷听到坏男孩许弋的秘密,从此卷入一场危险的青春赌局。 疼痛青春 暗恋 叛逆 多角恋" data-cat="国产电影" data-year="2015">
+  <div class="movie-poster">
+    <img src="assets/covers/1562.svg" alt="左耳" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">左耳</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2015</span>
+      <span>•</span>
+      <span>青春爱情</span>
+    </div>
+    <p class="movie-line">左耳失聪的乖乖女李珥,无意中偷听到坏男孩许弋的秘密,从此卷入一场危险的青春赌局。</p>
+    <div class="chip-row"><span class="chip muted">疼痛青春</span><span class="chip muted">暗恋</span><span class="chip muted">叛逆</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1352.html" data-filter-card data-search="狼(2013) 韩国 电影 惊悚,动作,犯罪 偷渡到韩国的朝鲜族青年被黑帮当作“狼”投进地下斗兽场,在那里他必须杀人或被杀,唯一的希望是找到失踪的妹妹。 朝鲜族 非法移民 黑吃黑 极端生存 人性拷问" data-cat="日韩电影" data-year="2013">
+  <div class="movie-poster">
+    <img src="assets/covers/1352.svg" alt="狼(2013)" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">狼(2013)</h3>
+    <div class="movie-meta">
+      <span>韩国</span>
+      <span>•</span>
+      <span>2013</span>
+      <span>•</span>
+      <span>惊悚</span>
+    </div>
+    <p class="movie-line">偷渡到韩国的朝鲜族青年被黑帮当作“狼”投进地下斗兽场,在那里他必须杀人或被杀,唯一的希望是找到失踪的妹妹。</p>
+    <div class="chip-row"><span class="chip muted">朝鲜族</span><span class="chip muted">非法移民</span><span class="chip muted">黑吃黑</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1543.html" data-filter-card data-search="我的爱比冬天更冷 韩国 电影 爱情/剧情/文艺 身患绝症的男人为了逼女友离开,谎称自己从未爱过她,在那个最冷的冬天。 虐恋 冬季 绝症 宿命感" data-cat="日韩电影" data-year="2014">
+  <div class="movie-poster">
+    <img src="assets/covers/1543.svg" alt="我的爱比冬天更冷" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">我的爱比冬天更冷</h3>
+    <div class="movie-meta">
+      <span>韩国</span>
+      <span>•</span>
+      <span>2014</span>
+      <span>•</span>
+      <span>爱情</span>
+    </div>
+    <p class="movie-line">身患绝症的男人为了逼女友离开,谎称自己从未爱过她,在那个最冷的冬天。</p>
+    <div class="chip-row"><span class="chip muted">虐恋</span><span class="chip muted">冬季</span><span class="chip muted">绝症</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1418.html" data-filter-card data-search="夜莺之歌 法国 电影 战争 纳粹集中营里,犹太囚犯每晚学夜莺叫,用歌声掩盖地道挖掘声。 二战 人性 儿童视角 音乐 诗意" data-cat="欧美作品" data-year="2014">
+  <div class="movie-poster">
+    <img src="assets/covers/1418.svg" alt="夜莺之歌" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">夜莺之歌</h3>
+    <div class="movie-meta">
+      <span>法国</span>
+      <span>•</span>
+      <span>2014</span>
+      <span>•</span>
+      <span>战争</span>
+    </div>
+    <p class="movie-line">纳粹集中营里,犹太囚犯每晚学夜莺叫,用歌声掩盖地道挖掘声。</p>
+    <div class="chip-row"><span class="chip muted">二战</span><span class="chip muted">人性</span><span class="chip muted">儿童视角</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0228.html" data-filter-card data-search="利欲薰心 中国香港 电影 犯罪,悬疑 一块价值连城的鸡血石,让四个原本毫不相干的人陷入连环杀局。 商战 黑吃黑 烧脑 多线叙事" data-cat="国产电影" data-year="2013">
+  <div class="movie-poster">
+    <img src="assets/covers/0228.svg" alt="利欲薰心" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">利欲薰心</h3>
+    <div class="movie-meta">
+      <span>中国香港</span>
+      <span>•</span>
+      <span>2013</span>
+      <span>•</span>
+      <span>犯罪</span>
+    </div>
+    <p class="movie-line">一块价值连城的鸡血石,让四个原本毫不相干的人陷入连环杀局。</p>
+    <div class="chip-row"><span class="chip muted">商战</span><span class="chip muted">黑吃黑</span><span class="chip muted">烧脑</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0851.html" data-filter-card data-search="平常心 美国 剧集/限定剧 剧情/同性/历史 1980年代艾滋危机爆发初期,一个同性恋活动家在眼看着朋友一个个死去的同时,还要与冷漠的政府和恐同的媒体作战。 艾滋危机 80年代纽约 LGBTQ+ activism 死亡教育" data-cat="欧美作品" data-year="2014">
+  <div class="movie-poster">
+    <img src="assets/covers/0851.svg" alt="平常心" loading="lazy" />
+    <span class="type-badge">剧集/限定剧</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">平常心</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2014</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">1980年代艾滋危机爆发初期,一个同性恋活动家在眼看着朋友一个个死去的同时,还要与冷漠的政府和恐同的媒体作战。</p>
+    <div class="chip-row"><span class="chip muted">艾滋危机</span><span class="chip muted">80年代纽约</span><span class="chip muted">LGBTQ+</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0824.html" data-filter-card data-search="幸福请你等等我 中国大陆 电视剧 都市/家庭/喜剧 两个中年女人同时离婚后住在对门,一个急着再婚,一个急着独处,三年后她们的身份完全互换。 中年 女性 再婚 离婚 轻喜" data-cat="国产剧集" data-year="2014">
+  <div class="movie-poster">
+    <img src="assets/covers/0824.svg" alt="幸福请你等等我" loading="lazy" />
+    <span class="type-badge">电视剧</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">幸福请你等等我</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2014</span>
+      <span>•</span>
+      <span>都市</span>
+    </div>
+    <p class="movie-line">两个中年女人同时离婚后住在对门,一个急着再婚,一个急着独处,三年后她们的身份完全互换。</p>
+    <div class="chip-row"><span class="chip muted">中年</span><span class="chip muted">女性</span><span class="chip muted">再婚</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0960.html" data-filter-card data-search="天机:富春山居图 中国 电影 动作,冒险 中国特工奉命护送国宝《富春山居图》赴台合展,却遭到日本黑帮、英国盗贼和神秘女郎的连环截杀。 夺宝 特工 全球化 特效" data-cat="国产电影" data-year="2013">
+  <div class="movie-poster">
+    <img src="assets/covers/0960.svg" alt="天机:富春山居图" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">天机:富春山居图</h3>
+    <div class="movie-meta">
+      <span>中国</span>
+      <span>•</span>
+      <span>2013</span>
+      <span>•</span>
+      <span>动作</span>
+    </div>
+    <p class="movie-line">中国特工奉命护送国宝《富春山居图》赴台合展,却遭到日本黑帮、英国盗贼和神秘女郎的连环截杀。</p>
+    <div class="chip-row"><span class="chip muted">夺宝</span><span class="chip muted">特工</span><span class="chip muted">全球化</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1826.html" data-filter-card data-search="枪镇 中国 电影 西部,动作 西北荒漠里一个无人问津的小镇,一夜之间来了七拨人,他们都带着枪和一个死人的名字。 西部片 沙漠 复仇 枪战 荒野" data-cat="国产电影" data-year="2013">
+  <div class="movie-poster">
+    <img src="assets/covers/1826.svg" alt="枪镇" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">枪镇</h3>
+    <div class="movie-meta">
+      <span>中国</span>
+      <span>•</span>
+      <span>2013</span>
+      <span>•</span>
+      <span>西部</span>
+    </div>
+    <p class="movie-line">西北荒漠里一个无人问津的小镇,一夜之间来了七拨人,他们都带着枪和一个死人的名字。</p>
+    <div class="chip-row"><span class="chip muted">西部片</span><span class="chip muted">沙漠</span><span class="chip muted">复仇</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1537.html" data-filter-card data-search="傲骨贤妻第五季 美国 剧集 剧情,悬疑,律政 威尔死于非命,艾丽西亚与戴安决裂,律师事务所陷入史上最大危机。 律政剧 女性成长 分崩离析 艾美奖" data-cat="欧美作品" data-year="2013">
+  <div class="movie-poster">
+    <img src="assets/covers/1537.svg" alt="傲骨贤妻第五季" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">傲骨贤妻第五季</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2013</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">威尔死于非命,艾丽西亚与戴安决裂,律师事务所陷入史上最大危机。</p>
+    <div class="chip-row"><span class="chip muted">律政剧</span><span class="chip muted">女性成长</span><span class="chip muted">分崩离析</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0739.html" data-filter-card data-search="孤寂 美国 电影 科幻,惊悚 一名宇航员在前往火星的孤独飞船上醒来,发现其余船员都被杀死了,而凶器上只有他自己的指纹。 太空 AI 心理 密室" data-cat="欧美作品" data-year="2013">
+  <div class="movie-poster">
+    <img src="assets/covers/0739.svg" alt="孤寂" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">孤寂</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2013</span>
+      <span>•</span>
+      <span>科幻</span>
+    </div>
+    <p class="movie-line">一名宇航员在前往火星的孤独飞船上醒来,发现其余船员都被杀死了,而凶器上只有他自己的指纹。</p>
+    <div class="chip-row"><span class="chip muted">太空</span><span class="chip muted">AI</span><span class="chip muted">心理</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0725.html" data-filter-card data-search="不二神探 中国香港 电影 喜剧/动作 全警局最倒霉的神探与最话痨的法医组成临时搭档,专破奇葩案件。 神探 港式无厘头 搭档 破案" data-cat="国产电影" data-year="2013">
+  <div class="movie-poster">
+    <img src="assets/covers/0725.svg" alt="不二神探" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">不二神探</h3>
+    <div class="movie-meta">
+      <span>中国香港</span>
+      <span>•</span>
+      <span>2013</span>
+      <span>•</span>
+      <span>喜剧</span>
+    </div>
+    <p class="movie-line">全警局最倒霉的神探与最话痨的法医组成临时搭档,专破奇葩案件。</p>
+    <div class="chip-row"><span class="chip muted">神探</span><span class="chip muted">港式无厘头</span><span class="chip muted">搭档</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1891.html" data-filter-card data-search="我的姥姥我的妈 中国大陆 电视剧 家庭/伦理 一个性格强势的姥姥把外孙女告上法庭,只因外孙女想卖掉老宅送自己去养老院,却牵出六十年前的家族秘密。 隔代亲 婆媳 催泪 年代跨越" data-cat="国产剧集" data-year="2014">
+  <div class="movie-poster">
+    <img src="assets/covers/1891.svg" alt="我的姥姥我的妈" loading="lazy" />
+    <span class="type-badge">电视剧</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">我的姥姥我的妈</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2014</span>
+      <span>•</span>
+      <span>家庭</span>
+    </div>
+    <p class="movie-line">一个性格强势的姥姥把外孙女告上法庭,只因外孙女想卖掉老宅送自己去养老院,却牵出六十年前的家族秘密。</p>
+    <div class="chip-row"><span class="chip muted">隔代亲</span><span class="chip muted">婆媳</span><span class="chip muted">催泪</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0369.html" data-filter-card data-search="玫瑰人生国语 法国/中国大陆(配音) 电影 音乐/传记 国语配音版的法国歌后皮雅芙,用中文唱出了《玫瑰人生》的另一种绝望。 香颂 配音 经典重制 悲剧歌后" data-cat="国产电影" data-year="2014">
+  <div class="movie-poster">
+    <img src="assets/covers/0369.svg" alt="玫瑰人生国语" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">玫瑰人生国语</h3>
+    <div class="movie-meta">
+      <span>法国/中国大陆(配音)</span>
+      <span>•</span>
+      <span>2014</span>
+      <span>•</span>
+      <span>音乐</span>
+    </div>
+    <p class="movie-line">国语配音版的法国歌后皮雅芙,用中文唱出了《玫瑰人生》的另一种绝望。</p>
+    <div class="chip-row"><span class="chip muted">香颂</span><span class="chip muted">配音</span><span class="chip muted">经典重制</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1395.html" data-filter-card data-search="蓝领一生 中国大陆 电视剧 剧情/家庭 一个钳工从1980年到2010年,在东北老工业基地的风雨三十年。 工人 国企改革 下岗 三十年变迁 现实主义" data-cat="国产剧集" data-year="2014">
+  <div class="movie-poster">
+    <img src="assets/covers/1395.svg" alt="蓝领一生" loading="lazy" />
+    <span class="type-badge">电视剧</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">蓝领一生</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2014</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">一个钳工从1980年到2010年,在东北老工业基地的风雨三十年。</p>
+    <div class="chip-row"><span class="chip muted">工人</span><span class="chip muted">国企改革</span><span class="chip muted">下岗</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0680.html" data-filter-card data-search="新天师斗僵尸2 美国 电影 喜剧,恐怖 第一部事件几年后,青少年主角搬到一座新城市,却发现隔壁新搬来的邻居正是那个吸血鬼老对手的吸血鬼儿子。 吸血鬼 青少年 恐怖喜剧 续集 恶搞" data-cat="欧美作品" data-year="2013">
+  <div class="movie-poster">
+    <img src="assets/covers/0680.svg" alt="新天师斗僵尸2" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">新天师斗僵尸2</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2013</span>
+      <span>•</span>
+      <span>喜剧</span>
+    </div>
+    <p class="movie-line">第一部事件几年后,青少年主角搬到一座新城市,却发现隔壁新搬来的邻居正是那个吸血鬼老对手的吸血鬼儿子。</p>
+    <div class="chip-row"><span class="chip muted">吸血鬼</span><span class="chip muted">青少年</span><span class="chip muted">恐怖喜剧</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1715.html" data-filter-card data-search="美好的未来 中国大陆 电影 剧情/家庭 小城三轮车夫被查出绝症后,瞒着女儿拼命拉车,只为攒够她第一年的大学学费。 生病 高考 父爱 小城 希望" data-cat="国产电影" data-year="2013">
+  <div class="movie-poster">
+    <img src="assets/covers/1715.svg" alt="美好的未来" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">美好的未来</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2013</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">小城三轮车夫被查出绝症后,瞒着女儿拼命拉车,只为攒够她第一年的大学学费。</p>
+    <div class="chip-row"><span class="chip muted">生病</span><span class="chip muted">高考</span><span class="chip muted">父爱</span></div>
+  </div>
+</a>
+      </div>
+      <div class="pagination"><a href="rankings-73.html">上一页</a><a href="rankings.html" class="">1</a><span>…</span><a href="rankings-73.html" class="">73</a><a href="rankings-74.html" class="active">74</a><a href="rankings-75.html" class="">75</a><span>…</span><a href="rankings-84.html" class="">84</a><a href="rankings-75.html">下一页</a></div>
+    </div>
+  </section>
+</main>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <h4>日韩热门视频</h4>
+        <p>日韩热门视频页面整理近期关注较高的视频内容，按类型与热度展示相关分类。</p>
+      </div>
+      <div>
+        <h4>分类入口</h4>
+        <p><a href="categories.html">分类总览</a></p>
+        <p><a href="rankings.html">热度排行榜</a></p>
+        <p><a href="search.html">站内搜索</a></p>
+      </div>
+      <div>
+        <h4>帮助说明</h4>
+        <p><a href="service.html">使用指南</a></p>
+        <p><a href="copyright.html">用户协议</a></p>
+        <p><a href="about.html">关于我们</a></p>
+      </div>
+      <div>
+        <h4>联系信息</h4>
+        <p>工作日 9:00 - 18:00</p>
+        <p>我们将在 24 小时内回复邮件</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 日韩热门视频. 保留所有权利。</span>
+      <span>纯静态 HTML / CSS / JS 构建</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?76b5e2e0f6c84c06f0a7cb7105df054d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>

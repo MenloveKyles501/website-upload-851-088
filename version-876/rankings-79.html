@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>热度排行榜 - 日韩热门视频-热门好看的视频大全-热门片库持续更新</title>
+  <meta name="description" content="热度排行榜页展示按热度与年份排序的影视内容。" />
+  <meta name="keywords" content="排行榜,日韩热门视频,热门好看的视频大全,热门片库持续更新,日韩视频,热门视频,视频大全" />
+  <meta name="theme-color" content="#0b1120" />
+  <meta property="og:title" content="热度排行榜 - 日韩热门视频-热门好看的视频大全-热门片库持续更新" />
+  <meta property="og:description" content="热度排行榜页展示按热度与年份排序的影视内容。" />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="inner">
+      <a class="brand" href="index.html" aria-label="日韩热门视频">
+        <span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 10.5A2.5 2.5 0 1 1 12 7a2.5 2.5 0 0 1 0 5.5z"/></svg></span>
+        <span class="brand-text">
+          <span class="brand-title">日韩热门视频</span>
+          <span class="brand-sub">热门内容整理 · 静态站点</span>
+        </span>
+      </a>
+      <nav class="nav" aria-label="主导航">
+        <a href="index.html" class="">首页</a><a href="categories.html" class="">分类总览</a><a href="rankings.html" class="active">排行榜</a><a href="search.html" class="">搜索</a><a href="about.html" class="">关于我们</a>
+      </nav>
+      <div class="header-actions">
+        <form class="search-pill" action="search.html" method="get" role="search">
+          <span aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4a6 6 0 1 0 3.7 10.7l4.3 4.3 1.4-1.4-4.3-4.3A6 6 0 0 0 10 4zm0 2a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/></svg></span>
+          <input type="search" name="q" placeholder="搜索影片名称、地区、年份、标签" />
+        </form>
+        <button class="icon-btn mobile-toggle" type="button" data-mobile-toggle aria-expanded="false" aria-label="展开菜单">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-nav" data-mobile-nav aria-label="移动端导航">
+      <a href="index.html" class="">首页</a><a href="categories.html" class="">分类总览</a><a href="rankings.html" class="active">排行榜</a><a href="search.html" class="">搜索</a><a href="about.html" class="">关于我们</a>
+      <form class="search-pill" action="search.html" method="get" role="search" style="margin-top:10px; min-width:0;">
+        <span aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4a6 6 0 1 0 3.7 10.7l4.3 4.3 1.4-1.4-4.3-4.3A6 6 0 0 0 10 4zm0 2a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/></svg></span>
+        <input type="search" name="q" placeholder="搜索影片名称、地区、年份、标签" />
+      </form>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">首页</a><span>›</span><span>排行榜</span></div>
+      <h1 class="title">热度排行榜</h1>
+      <p class="sub">根据年份、题材关键词和标题热度生成的静态排行榜，支持分页浏览全部条目。</p>
+    </div>
+  </section>
+  <section class="section" data-live-filter>
+    <div class="container">
+      <div class="filter-bar">
+        <input type="search" placeholder="在本页内搜索影片名称、地区、标签" data-filter-input />
+        <select data-filter-select>
+          <option value="">全部分类</option>
+          <option value="国产电影">国产电影</option><option value="国产剧集">国产剧集</option><option value="日韩电影">日韩电影</option><option value="日韩剧集">日韩剧集</option><option value="欧美作品">欧美作品</option><option value="动画动漫">动画动漫</option><option value="其他热播">其他热播</option>
+        </select>
+        <select data-filter-select>
+          <option value="">全部年份</option>
+          <option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995">1995</option>
+        </select>
+      </div>
+      <div class="card-grid">
+        <a class="movie-card" href="movie-1251.html" data-filter-card data-search="风流活宝贝 香港 电视剧 时装/喜剧/爱情 四个性格迥异的都市女性好友约定一起游戏人间,直到其中一个怀孕,她们的“不婚联盟”瞬间崩溃。 TVB 都市情感 多角恋 年代记忆" data-cat="国产剧集" data-year="1999">
+  <div class="movie-poster">
+    <img src="assets/covers/1251.svg" alt="风流活宝贝" loading="lazy" />
+    <span class="type-badge">电视剧</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">风流活宝贝</h3>
+    <div class="movie-meta">
+      <span>香港</span>
+      <span>•</span>
+      <span>1999</span>
+      <span>•</span>
+      <span>时装</span>
+    </div>
+    <p class="movie-line">四个性格迥异的都市女性好友约定一起游戏人间,直到其中一个怀孕,她们的“不婚联盟”瞬间崩溃。</p>
+    <div class="chip-row"><span class="chip muted">TVB</span><span class="chip muted">都市情感</span><span class="chip muted">多角恋</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0288.html" data-filter-card data-search="蛇眼 美国 电影 动作,悬疑 一位腐败的警察在赌场拳击赛现场目睹暗杀,却发现狙击枪的瞄准镜里映出的竟是自己。 赌场 飓风 尼可拉斯凯奇 长镜头" data-cat="欧美作品" data-year="1998">
+  <div class="movie-poster">
+    <img src="assets/covers/0288.svg" alt="蛇眼" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">蛇眼</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>1998</span>
+      <span>•</span>
+      <span>动作</span>
+    </div>
+    <p class="movie-line">一位腐败的警察在赌场拳击赛现场目睹暗杀,却发现狙击枪的瞄准镜里映出的竟是自己。</p>
+    <div class="chip-row"><span class="chip muted">赌场</span><span class="chip muted">飓风</span><span class="chip muted">尼可拉斯凯奇</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0555.html" data-filter-card data-search="在此一群 中国香港 电影 喜剧,动作 七个素不相识的倒霉蛋被误认为抢劫团伙,为了自证清白不得不假戏真做,结果真把金库劫了。 群像 乌龙事件 小人物 港式幽默" data-cat="国产电影" data-year="1998">
+  <div class="movie-poster">
+    <img src="assets/covers/0555.svg" alt="在此一群" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">在此一群</h3>
+    <div class="movie-meta">
+      <span>中国香港</span>
+      <span>•</span>
+      <span>1998</span>
+      <span>•</span>
+      <span>喜剧</span>
+    </div>
+    <p class="movie-line">七个素不相识的倒霉蛋被误认为抢劫团伙,为了自证清白不得不假戏真做,结果真把金库劫了。</p>
+    <div class="chip-row"><span class="chip muted">群像</span><span class="chip muted">乌龙事件</span><span class="chip muted">小人物</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1267.html" data-filter-card data-search="情人你真糗 中国香港 电影 喜剧,爱情 一对热恋中的小情侣,在一连串阴差阳错的“糗事”中,从互相嫌弃到终于懂得包容彼此的不完美。 乌龙 港式幽默 情侣 闹剧 怀旧" data-cat="国产电影" data-year="1998">
+  <div class="movie-poster">
+    <img src="assets/covers/1267.svg" alt="情人你真糗" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">情人你真糗</h3>
+    <div class="movie-meta">
+      <span>中国香港</span>
+      <span>•</span>
+      <span>1998</span>
+      <span>•</span>
+      <span>喜剧</span>
+    </div>
+    <p class="movie-line">一对热恋中的小情侣,在一连串阴差阳错的“糗事”中,从互相嫌弃到终于懂得包容彼此的不完美。</p>
+    <div class="chip-row"><span class="chip muted">乌龙</span><span class="chip muted">港式幽默</span><span class="chip muted">情侣</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1948.html" data-filter-card data-search="欲望科学怪人 日本 电影 恐怖/科幻/情色 为了复活死去的未婚妻,天才医生用机械与活体器官拼凑出一个“完美”的女人。 怪谈 人体实验 疯狂科学家 器官贩卖 日式赛博" data-cat="日韩电影" data-year="1998">
+  <div class="movie-poster">
+    <img src="assets/covers/1948.svg" alt="欲望科学怪人" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">欲望科学怪人</h3>
+    <div class="movie-meta">
+      <span>日本</span>
+      <span>•</span>
+      <span>1998</span>
+      <span>•</span>
+      <span>恐怖</span>
+    </div>
+    <p class="movie-line">为了复活死去的未婚妻,天才医生用机械与活体器官拼凑出一个“完美”的女人。</p>
+    <div class="chip-row"><span class="chip muted">怪谈</span><span class="chip muted">人体实验</span><span class="chip muted">疯狂科学家</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1328.html" data-filter-card data-search="走佬奔芬乐 中国香港 电影 动作喜剧 一个倒霉的古惑仔被黑帮追杀,阴差阳错上了去芬兰的货船,结果在冰天雪地里又惹上了当地的华人黑帮。 黑帮 乌龙 逃亡 兄弟情 无厘头" data-cat="国产电影" data-year="1998">
+  <div class="movie-poster">
+    <img src="assets/covers/1328.svg" alt="走佬奔芬乐" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">走佬奔芬乐</h3>
+    <div class="movie-meta">
+      <span>中国香港</span>
+      <span>•</span>
+      <span>1998</span>
+      <span>•</span>
+      <span>动作喜剧</span>
+    </div>
+    <p class="movie-line">一个倒霉的古惑仔被黑帮追杀,阴差阳错上了去芬兰的货船,结果在冰天雪地里又惹上了当地的华人黑帮。</p>
+    <div class="chip-row"><span class="chip muted">黑帮</span><span class="chip muted">乌龙</span><span class="chip muted">逃亡</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1201.html" data-filter-card data-search="爱与时尚 日本 电影 剧情/情色 十六岁少女为买名牌闯入援交世界,当她在奢侈品中迷失时,一桩命案突然降临。 援交 青春残酷 世纪末 叛逆" data-cat="日韩电影" data-year="1998">
+  <div class="movie-poster">
+    <img src="assets/covers/1201.svg" alt="爱与时尚" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">爱与时尚</h3>
+    <div class="movie-meta">
+      <span>日本</span>
+      <span>•</span>
+      <span>1998</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">十六岁少女为买名牌闯入援交世界,当她在奢侈品中迷失时,一桩命案突然降临。</p>
+    <div class="chip-row"><span class="chip muted">援交</span><span class="chip muted">青春残酷</span><span class="chip muted">世纪末</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1999.html" data-filter-card data-search="杀妻秘笈 美国 电影 喜剧、犯罪、黑色幽默 一本意外流传于主妇圈的《完美杀妻指南》成了畅销书,但书中所有“被杀死”的丈夫,都以书中方式离奇失踪了。 婚姻黑暗面 反套路 女性反击 荒诞" data-cat="欧美作品" data-year="1998">
+  <div class="movie-poster">
+    <img src="assets/covers/1999.svg" alt="杀妻秘笈" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">杀妻秘笈</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>1998</span>
+      <span>•</span>
+      <span>喜剧</span>
+    </div>
+    <p class="movie-line">一本意外流传于主妇圈的《完美杀妻指南》成了畅销书,但书中所有“被杀死”的丈夫,都以书中方式离奇失踪了。</p>
+    <div class="chip-row"><span class="chip muted">婚姻黑暗面</span><span class="chip muted">反套路</span><span class="chip muted">女性反击</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0071.html" data-filter-card data-search="有肥人终成眷属粤语 中国香港 电影 喜剧,爱情 胖墩便利店店员阿肥暗恋女神,兄弟帮他出各种损招追女,却次次搞出大乌龙。 粤语 肥仔 追女仔 搞笑 港式幽默" data-cat="国产电影" data-year="1998">
+  <div class="movie-poster">
+    <img src="assets/covers/0071.svg" alt="有肥人终成眷属粤语" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">有肥人终成眷属粤语</h3>
+    <div class="movie-meta">
+      <span>中国香港</span>
+      <span>•</span>
+      <span>1998</span>
+      <span>•</span>
+      <span>喜剧</span>
+    </div>
+    <p class="movie-line">胖墩便利店店员阿肥暗恋女神,兄弟帮他出各种损招追女,却次次搞出大乌龙。</p>
+    <div class="chip-row"><span class="chip muted">粤语</span><span class="chip muted">肥仔</span><span class="chip muted">追女仔</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1838.html" data-filter-card data-search="灵心妙手 中国香港 电视剧 剧情/奇幻 能看见鬼魂的理发师,每晚十点后为徘徊人间的“客人”修剪执念。 通灵 理发店 单元剧 人情冷暖" data-cat="国产剧集" data-year="1998">
+  <div class="movie-poster">
+    <img src="assets/covers/1838.svg" alt="灵心妙手" loading="lazy" />
+    <span class="type-badge">电视剧</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">灵心妙手</h3>
+    <div class="movie-meta">
+      <span>中国香港</span>
+      <span>•</span>
+      <span>1998</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">能看见鬼魂的理发师,每晚十点后为徘徊人间的“客人”修剪执念。</p>
+    <div class="chip-row"><span class="chip muted">通灵</span><span class="chip muted">理发店</span><span class="chip muted">单元剧</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0314.html" data-filter-card data-search="大喜之家 中国香港 电影 喜剧 一场豪门婚礼前夕,亲家双方因为各种乌龙事件闹得鸡飞狗跳,笑话百出。 婚礼 家庭 乌龙 怀旧 港式幽默" data-cat="国产电影" data-year="1998">
+  <div class="movie-poster">
+    <img src="assets/covers/0314.svg" alt="大喜之家" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">大喜之家</h3>
+    <div class="movie-meta">
+      <span>中国香港</span>
+      <span>•</span>
+      <span>1998</span>
+      <span>•</span>
+      <span>喜剧</span>
+    </div>
+    <p class="movie-line">一场豪门婚礼前夕,亲家双方因为各种乌龙事件闹得鸡飞狗跳,笑话百出。</p>
+    <div class="chip-row"><span class="chip muted">婚礼</span><span class="chip muted">家庭</span><span class="chip muted">乌龙</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0030.html" data-filter-card data-search="莎翁情史 英国/美国 电影 爱情/剧情 穷困潦倒的年轻莎士比亚爱上了贵族小姐维奥拉,而这段禁忌之恋恰好成为了《罗密欧与朱丽叶》的灵感来源。 莎士比亚 戏说历史 文学轶事 奥斯卡" data-cat="欧美作品" data-year="1998">
+  <div class="movie-poster">
+    <img src="assets/covers/0030.svg" alt="莎翁情史" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">莎翁情史</h3>
+    <div class="movie-meta">
+      <span>英国/美国</span>
+      <span>•</span>
+      <span>1998</span>
+      <span>•</span>
+      <span>爱情</span>
+    </div>
+    <p class="movie-line">穷困潦倒的年轻莎士比亚爱上了贵族小姐维奥拉,而这段禁忌之恋恰好成为了《罗密欧与朱丽叶》的灵感来源。</p>
+    <div class="chip-row"><span class="chip muted">莎士比亚</span><span class="chip muted">戏说历史</span><span class="chip muted">文学轶事</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0062.html" data-filter-card data-search="乌鸦 中国香港 电影 犯罪,悬疑,惊悚 白天是法援律师,夜晚化身代号“乌鸦”的暗黑执法者。 杀手 法律灰色地带 复仇 亦正亦邪" data-cat="国产电影" data-year="1996">
+  <div class="movie-poster">
+    <img src="assets/covers/0062.svg" alt="乌鸦" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">乌鸦</h3>
+    <div class="movie-meta">
+      <span>中国香港</span>
+      <span>•</span>
+      <span>1996</span>
+      <span>•</span>
+      <span>犯罪</span>
+    </div>
+    <p class="movie-line">白天是法援律师,夜晚化身代号“乌鸦”的暗黑执法者。</p>
+    <div class="chip-row"><span class="chip muted">杀手</span><span class="chip muted">法律灰色地带</span><span class="chip muted">复仇</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1259.html" data-filter-card data-search="斗气鸳鸯 中国香港 电视剧 古装/喜剧/爱情 长安城首富之女与西域香料商人之子,从互相砸店到联手打造“一带一路”商业帝国。 欢喜冤家 唐朝 经商 斗嘴 轻喜剧" data-cat="国产剧集" data-year="1998">
+  <div class="movie-poster">
+    <img src="assets/covers/1259.svg" alt="斗气鸳鸯" loading="lazy" />
+    <span class="type-badge">电视剧</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">斗气鸳鸯</h3>
+    <div class="movie-meta">
+      <span>中国香港</span>
+      <span>•</span>
+      <span>1998</span>
+      <span>•</span>
+      <span>古装</span>
+    </div>
+    <p class="movie-line">长安城首富之女与西域香料商人之子,从互相砸店到联手打造“一带一路”商业帝国。</p>
+    <div class="chip-row"><span class="chip muted">欢喜冤家</span><span class="chip muted">唐朝</span><span class="chip muted">经商</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1037.html" data-filter-card data-search="邂逅 日本 电影 爱情,文艺 两个陌生人在十年间不断错过,所有想说的话都写在从未寄出的信里。 错过 书信 命运" data-cat="日韩电影" data-year="1998">
+  <div class="movie-poster">
+    <img src="assets/covers/1037.svg" alt="邂逅" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">邂逅</h3>
+    <div class="movie-meta">
+      <span>日本</span>
+      <span>•</span>
+      <span>1998</span>
+      <span>•</span>
+      <span>爱情</span>
+    </div>
+    <p class="movie-line">两个陌生人在十年间不断错过,所有想说的话都写在从未寄出的信里。</p>
+    <div class="chip-row"><span class="chip muted">错过</span><span class="chip muted">书信</span><span class="chip muted">命运</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0349.html" data-filter-card data-search="少女革命 日本 动画剧集 奇幻,剧情,百合 女扮男装的“王子”进入贵族学院,为拯救“蔷薇新娘”而挑战学生会决斗者。 几原邦彦 象征主义 蔷薇新娘 决斗 革命" data-cat="动画动漫" data-year="1997">
+  <div class="movie-poster">
+    <img src="assets/covers/0349.svg" alt="少女革命" loading="lazy" />
+    <span class="type-badge">动画剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">少女革命</h3>
+    <div class="movie-meta">
+      <span>日本</span>
+      <span>•</span>
+      <span>1997</span>
+      <span>•</span>
+      <span>奇幻</span>
+    </div>
+    <p class="movie-line">女扮男装的“王子”进入贵族学院,为拯救“蔷薇新娘”而挑战学生会决斗者。</p>
+    <div class="chip-row"><span class="chip muted">几原邦彦</span><span class="chip muted">象征主义</span><span class="chip muted">蔷薇新娘</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0254.html" data-filter-card data-search="变形黑侠3 美国 电影 动作/科幻/惊悚 失去容貌的复仇者黑曼,这次面对的是一个能随意改变外貌、渗透进警方高层的变脸杀手。 超级英雄 黑暗风格 复仇 低成本" data-cat="欧美作品" data-year="1996">
+  <div class="movie-poster">
+    <img src="assets/covers/0254.svg" alt="变形黑侠3" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">变形黑侠3</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>1996</span>
+      <span>•</span>
+      <span>动作</span>
+    </div>
+    <p class="movie-line">失去容貌的复仇者黑曼,这次面对的是一个能随意改变外貌、渗透进警方高层的变脸杀手。</p>
+    <div class="chip-row"><span class="chip muted">超级英雄</span><span class="chip muted">黑暗风格</span><span class="chip muted">复仇</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0279.html" data-filter-card data-search="赛琳娜 墨西哥/美国 电影 传记/音乐 她被叫作“特哈诺音乐女王”,23岁被歌迷枪杀,死后三天全美为她降半旗——这是赛琳娜的传奇与悲剧。 拉丁天后 传奇人生 音乐传记 悲剧谢幕" data-cat="欧美作品" data-year="1997">
+  <div class="movie-poster">
+    <img src="assets/covers/0279.svg" alt="赛琳娜" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">赛琳娜</h3>
+    <div class="movie-meta">
+      <span>墨西哥/美国</span>
+      <span>•</span>
+      <span>1997</span>
+      <span>•</span>
+      <span>传记</span>
+    </div>
+    <p class="movie-line">她被叫作“特哈诺音乐女王”,23岁被歌迷枪杀,死后三天全美为她降半旗——这是赛琳娜的传奇与悲剧。</p>
+    <div class="chip-row"><span class="chip muted">拉丁天后</span><span class="chip muted">传奇人生</span><span class="chip muted">音乐传记</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1301.html" data-filter-card data-search="男欢女爱 中国香港 电影 爱情,剧情 四对男女、四段交错的情感,在香港回归前夕,所有人都必须在爱与欲望之间做出选择。 都市情感 多线叙事 九十年代 港风 欲望与婚姻" data-cat="国产电影" data-year="1996">
+  <div class="movie-poster">
+    <img src="assets/covers/1301.svg" alt="男欢女爱" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">男欢女爱</h3>
+    <div class="movie-meta">
+      <span>中国香港</span>
+      <span>•</span>
+      <span>1996</span>
+      <span>•</span>
+      <span>爱情</span>
+    </div>
+    <p class="movie-line">四对男女、四段交错的情感,在香港回归前夕,所有人都必须在爱与欲望之间做出选择。</p>
+    <div class="chip-row"><span class="chip muted">都市情感</span><span class="chip muted">多线叙事</span><span class="chip muted">九十年代</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1420.html" data-filter-card data-search="对不起,多谢你 中国香港 电影 剧情/家庭 一个不负责任的父亲为了还债去当“职业挨打师”,却在被痛打中理解了儿子一直被校园霸凌的痛苦。 父子 亲情 港片 催泪" data-cat="国产电影" data-year="1997">
+  <div class="movie-poster">
+    <img src="assets/covers/1420.svg" alt="对不起,多谢你" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">对不起,多谢你</h3>
+    <div class="movie-meta">
+      <span>中国香港</span>
+      <span>•</span>
+      <span>1997</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">一个不负责任的父亲为了还债去当“职业挨打师”,却在被痛打中理解了儿子一直被校园霸凌的痛苦。</p>
+    <div class="chip-row"><span class="chip muted">父子</span><span class="chip muted">亲情</span><span class="chip muted">港片</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1927.html" data-filter-card data-search="欲海飘萍 中国香港 电影 剧情,爱情 澳门赌场里,三个女人被同一个男人欺骗,她们决定联手设下必赢的局。 情欲 赌城 命运 悲剧 女性" data-cat="国产电影" data-year="1996">
+  <div class="movie-poster">
+    <img src="assets/covers/1927.svg" alt="欲海飘萍" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">欲海飘萍</h3>
+    <div class="movie-meta">
+      <span>中国香港</span>
+      <span>•</span>
+      <span>1996</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">澳门赌场里,三个女人被同一个男人欺骗,她们决定联手设下必赢的局。</p>
+    <div class="chip-row"><span class="chip muted">情欲</span><span class="chip muted">赌城</span><span class="chip muted">命运</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0906.html" data-filter-card data-search="谜城杀机 中国香港 电影 动作,惊悚,犯罪 九龙城寨拆除前夕,一名妓女杀手引发血案,退休警探与黑帮大佬被迫联手缉凶。 连环杀手 九龙城寨 警匪 暴力美学 强强对决" data-cat="国产电影" data-year="1995">
+  <div class="movie-poster">
+    <img src="assets/covers/0906.svg" alt="谜城杀机" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">谜城杀机</h3>
+    <div class="movie-meta">
+      <span>中国香港</span>
+      <span>•</span>
+      <span>1995</span>
+      <span>•</span>
+      <span>动作</span>
+    </div>
+    <p class="movie-line">九龙城寨拆除前夕,一名妓女杀手引发血案,退休警探与黑帮大佬被迫联手缉凶。</p>
+    <div class="chip-row"><span class="chip muted">连环杀手</span><span class="chip muted">九龙城寨</span><span class="chip muted">警匪</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1664.html" data-filter-card data-search="糊涂人多糊涂福 中国香港 电影 喜剧、家庭、生活 全港“最倒霉”的一家五口,做什么错什么,却因为一次次糊涂事,阴差阳错攒下了一整条街的福气。 港式喜剧 小人物 乌龙事件 邻里温情 福气" data-cat="国产电影" data-year="1996">
+  <div class="movie-poster">
+    <img src="assets/covers/1664.svg" alt="糊涂人多糊涂福" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">糊涂人多糊涂福</h3>
+    <div class="movie-meta">
+      <span>中国香港</span>
+      <span>•</span>
+      <span>1996</span>
+      <span>•</span>
+      <span>喜剧</span>
+    </div>
+    <p class="movie-line">全港“最倒霉”的一家五口,做什么错什么,却因为一次次糊涂事,阴差阳错攒下了一整条街的福气。</p>
+    <div class="chip-row"><span class="chip muted">港式喜剧</span><span class="chip muted">小人物</span><span class="chip muted">乌龙事件</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0043.html" data-filter-card data-search="轰天杀手 中国香港 电影 动作/犯罪 第一杀手金盆洗手前接了最后一单,目标竟是失散十年的亲生女儿。 杀手 双雄对决 港式枪战 悲剧英雄" data-cat="国产电影" data-year="1995">
+  <div class="movie-poster">
+    <img src="assets/covers/0043.svg" alt="轰天杀手" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">轰天杀手</h3>
+    <div class="movie-meta">
+      <span>中国香港</span>
+      <span>•</span>
+      <span>1995</span>
+      <span>•</span>
+      <span>动作</span>
+    </div>
+    <p class="movie-line">第一杀手金盆洗手前接了最后一单,目标竟是失散十年的亲生女儿。</p>
+    <div class="chip-row"><span class="chip muted">杀手</span><span class="chip muted">双雄对决</span><span class="chip muted">港式枪战</span></div>
+  </div>
+</a>
+      </div>
+      <div class="pagination"><a href="rankings-78.html">上一页</a><a href="rankings.html" class="">1</a><span>…</span><a href="rankings-78.html" class="">78</a><a href="rankings-79.html" class="active">79</a><a href="rankings-80.html" class="">80</a><span>…</span><a href="rankings-84.html" class="">84</a><a href="rankings-80.html">下一页</a></div>
+    </div>
+  </section>
+</main>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <h4>日韩热门视频</h4>
+        <p>日韩热门视频页面整理近期关注较高的视频内容，按类型与热度展示相关分类。</p>
+      </div>
+      <div>
+        <h4>分类入口</h4>
+        <p><a href="categories.html">分类总览</a></p>
+        <p><a href="rankings.html">热度排行榜</a></p>
+        <p><a href="search.html">站内搜索</a></p>
+      </div>
+      <div>
+        <h4>帮助说明</h4>
+        <p><a href="service.html">使用指南</a></p>
+        <p><a href="copyright.html">用户协议</a></p>
+        <p><a href="about.html">关于我们</a></p>
+      </div>
+      <div>
+        <h4>联系信息</h4>
+        <p>工作日 9:00 - 18:00</p>
+        <p>我们将在 24 小时内回复邮件</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 日韩热门视频. 保留所有权利。</span>
+      <span>纯静态 HTML / CSS / JS 构建</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?76b5e2e0f6c84c06f0a7cb7105df054d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>

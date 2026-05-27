@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>热度排行榜 - 日韩热门视频-热门好看的视频大全-热门片库持续更新</title>
+  <meta name="description" content="热度排行榜页展示按热度与年份排序的影视内容。" />
+  <meta name="keywords" content="排行榜,日韩热门视频,热门好看的视频大全,热门片库持续更新,日韩视频,热门视频,视频大全" />
+  <meta name="theme-color" content="#0b1120" />
+  <meta property="og:title" content="热度排行榜 - 日韩热门视频-热门好看的视频大全-热门片库持续更新" />
+  <meta property="og:description" content="热度排行榜页展示按热度与年份排序的影视内容。" />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="inner">
+      <a class="brand" href="index.html" aria-label="日韩热门视频">
+        <span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 10.5A2.5 2.5 0 1 1 12 7a2.5 2.5 0 0 1 0 5.5z"/></svg></span>
+        <span class="brand-text">
+          <span class="brand-title">日韩热门视频</span>
+          <span class="brand-sub">热门内容整理 · 静态站点</span>
+        </span>
+      </a>
+      <nav class="nav" aria-label="主导航">
+        <a href="index.html" class="">首页</a><a href="categories.html" class="">分类总览</a><a href="rankings.html" class="active">排行榜</a><a href="search.html" class="">搜索</a><a href="about.html" class="">关于我们</a>
+      </nav>
+      <div class="header-actions">
+        <form class="search-pill" action="search.html" method="get" role="search">
+          <span aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4a6 6 0 1 0 3.7 10.7l4.3 4.3 1.4-1.4-4.3-4.3A6 6 0 0 0 10 4zm0 2a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/></svg></span>
+          <input type="search" name="q" placeholder="搜索影片名称、地区、年份、标签" />
+        </form>
+        <button class="icon-btn mobile-toggle" type="button" data-mobile-toggle aria-expanded="false" aria-label="展开菜单">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-nav" data-mobile-nav aria-label="移动端导航">
+      <a href="index.html" class="">首页</a><a href="categories.html" class="">分类总览</a><a href="rankings.html" class="active">排行榜</a><a href="search.html" class="">搜索</a><a href="about.html" class="">关于我们</a>
+      <form class="search-pill" action="search.html" method="get" role="search" style="margin-top:10px; min-width:0;">
+        <span aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4a6 6 0 1 0 3.7 10.7l4.3 4.3 1.4-1.4-4.3-4.3A6 6 0 0 0 10 4zm0 2a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/></svg></span>
+        <input type="search" name="q" placeholder="搜索影片名称、地区、年份、标签" />
+      </form>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">首页</a><span>›</span><span>排行榜</span></div>
+      <h1 class="title">热度排行榜</h1>
+      <p class="sub">根据年份、题材关键词和标题热度生成的静态排行榜，支持分页浏览全部条目。</p>
+    </div>
+  </section>
+  <section class="section" data-live-filter>
+    <div class="container">
+      <div class="filter-bar">
+        <input type="search" placeholder="在本页内搜索影片名称、地区、标签" data-filter-input />
+        <select data-filter-select>
+          <option value="">全部分类</option>
+          <option value="国产电影">国产电影</option><option value="国产剧集">国产剧集</option><option value="日韩电影">日韩电影</option><option value="日韩剧集">日韩剧集</option><option value="欧美作品">欧美作品</option><option value="动画动漫">动画动漫</option><option value="其他热播">其他热播</option>
+        </select>
+        <select data-filter-select>
+          <option value="">全部年份</option>
+          <option value="2026">2026</option><option value="2025">2025</option><option value="2024">2024</option>
+        </select>
+      </div>
+      <div class="card-grid">
+        <a class="movie-card" href="movie-1898.html" data-filter-card data-search="文艺复兴教父:美第奇家族 意大利/英国 电视剧 历史/剧情/权谋 洛伦佐·美第奇不仅是艺术赞助人,更用银行家的手段操控了整个欧洲的战争与和平。 美第奇 达芬奇 银行战争" data-cat="欧美作品" data-year="2025">
+  <div class="movie-poster">
+    <img src="assets/covers/1898.svg" alt="文艺复兴教父:美第奇家族" loading="lazy" />
+    <span class="type-badge">电视剧</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">文艺复兴教父:美第奇家族</h3>
+    <div class="movie-meta">
+      <span>意大利/英国</span>
+      <span>•</span>
+      <span>2025</span>
+      <span>•</span>
+      <span>历史</span>
+    </div>
+    <p class="movie-line">洛伦佐·美第奇不仅是艺术赞助人,更用银行家的手段操控了整个欧洲的战争与和平。</p>
+    <div class="chip-row"><span class="chip muted">美第奇</span><span class="chip muted">达芬奇</span><span class="chip muted">银行战争</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0162.html" data-filter-card data-search="山河血泪美人恩 中国大陆 剧集 剧情、爱情、战争 抗战烽火中,一个青楼女子与一个军阀之子,背负着家仇国恨,上演了一段极致虐恋。 民国 虐恋 家国情怀 女性史诗" data-cat="国产剧集" data-year="2025">
+  <div class="movie-poster">
+    <img src="assets/covers/0162.svg" alt="山河血泪美人恩" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">山河血泪美人恩</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2025</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">抗战烽火中,一个青楼女子与一个军阀之子,背负着家仇国恨,上演了一段极致虐恋。</p>
+    <div class="chip-row"><span class="chip muted">民国</span><span class="chip muted">虐恋</span><span class="chip muted">家国情怀</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0903.html" data-filter-card data-search="王者天下 命运之炎 日本 电影 动作,历史 在秦赵决战前夕,信收到了一封来自未来战士的挑战书,对方扬言要用高科技改变历史。 战国 战争 热血 漫改" data-cat="日韩电影" data-year="2025">
+  <div class="movie-poster">
+    <img src="assets/covers/0903.svg" alt="王者天下 命运之炎" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">王者天下 命运之炎</h3>
+    <div class="movie-meta">
+      <span>日本</span>
+      <span>•</span>
+      <span>2025</span>
+      <span>•</span>
+      <span>动作</span>
+    </div>
+    <p class="movie-line">在秦赵决战前夕,信收到了一封来自未来战士的挑战书,对方扬言要用高科技改变历史。</p>
+    <div class="chip-row"><span class="chip muted">战国</span><span class="chip muted">战争</span><span class="chip muted">热血</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1591.html" data-filter-card data-search="一不住二不休 美国 电影 喜剧/惊悚 刚搬进梦想公寓的年轻人发现,合租室友正在一个个消失,而房东笑着说“一不住,二不休”。 合租 黑色幽默 反转" data-cat="欧美作品" data-year="2025">
+  <div class="movie-poster">
+    <img src="assets/covers/1591.svg" alt="一不住二不休" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">一不住二不休</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2025</span>
+      <span>•</span>
+      <span>喜剧</span>
+    </div>
+    <p class="movie-line">刚搬进梦想公寓的年轻人发现,合租室友正在一个个消失,而房东笑着说“一不住,二不休”。</p>
+    <div class="chip-row"><span class="chip muted">合租</span><span class="chip muted">黑色幽默</span><span class="chip muted">反转</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1505.html" data-filter-card data-search="低沉的天空 英国 剧集 科幻,悬疑,惊悚 天空突然永久降至六米高,所有飞行器失效,小镇上的孩子开始无故漂浮。 低空禁区 气候异常 小镇疑云" data-cat="欧美作品" data-year="2024">
+  <div class="movie-poster">
+    <img src="assets/covers/1505.svg" alt="低沉的天空" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">低沉的天空</h3>
+    <div class="movie-meta">
+      <span>英国</span>
+      <span>•</span>
+      <span>2024</span>
+      <span>•</span>
+      <span>科幻</span>
+    </div>
+    <p class="movie-line">天空突然永久降至六米高,所有飞行器失效,小镇上的孩子开始无故漂浮。</p>
+    <div class="chip-row"><span class="chip muted">低空禁区</span><span class="chip muted">气候异常</span><span class="chip muted">小镇疑云</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0968.html" data-filter-card data-search="中国之役 法国,中国 电影 战争,历史,剧情 一战期间,十四万中国劳工在法国战场挖战壕、搬炮弹,而他们死后连名字都没有留下。 一战 华工 旅法 跨文化 遗忘的历史" data-cat="国产电影" data-year="2025">
+  <div class="movie-poster">
+    <img src="assets/covers/0968.svg" alt="中国之役" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">中国之役</h3>
+    <div class="movie-meta">
+      <span>法国,中国</span>
+      <span>•</span>
+      <span>2025</span>
+      <span>•</span>
+      <span>战争</span>
+    </div>
+    <p class="movie-line">一战期间,十四万中国劳工在法国战场挖战壕、搬炮弹,而他们死后连名字都没有留下。</p>
+    <div class="chip-row"><span class="chip muted">一战</span><span class="chip muted">华工</span><span class="chip muted">旅法</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1085.html" data-filter-card data-search="乱伦 西班牙 电影 剧情,惊悚 一对失散二十年的兄妹重逢后相爱,却揭开了一场精心设计的复仇骗局。 禁忌 心理创伤 家族秘密 暗黑美学" data-cat="欧美作品" data-year="2025">
+  <div class="movie-poster">
+    <img src="assets/covers/1085.svg" alt="乱伦" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">乱伦</h3>
+    <div class="movie-meta">
+      <span>西班牙</span>
+      <span>•</span>
+      <span>2025</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">一对失散二十年的兄妹重逢后相爱,却揭开了一场精心设计的复仇骗局。</p>
+    <div class="chip-row"><span class="chip muted">禁忌</span><span class="chip muted">心理创伤</span><span class="chip muted">家族秘密</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1794.html" data-filter-card data-search="入侵美国 美国 电视剧 科幻,战争,政治 当外星人用“民主与自由”的话术征服美国人心时,一支地下抵抗组织发现对方真正的武器不是枪炮,而是共识。 外星入侵 游击战 意识形态 反叛军 宏大叙事" data-cat="欧美作品" data-year="2025">
+  <div class="movie-poster">
+    <img src="assets/covers/1794.svg" alt="入侵美国" loading="lazy" />
+    <span class="type-badge">电视剧</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">入侵美国</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2025</span>
+      <span>•</span>
+      <span>科幻</span>
+    </div>
+    <p class="movie-line">当外星人用“民主与自由”的话术征服美国人心时,一支地下抵抗组织发现对方真正的武器不是枪炮,而是共识。</p>
+    <div class="chip-row"><span class="chip muted">外星入侵</span><span class="chip muted">游击战</span><span class="chip muted">意识形态</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0989.html" data-filter-card data-search="魔魅俱乐部 日本 电影 悬疑惊悚 女记者卧底调查一家高级俱乐部,发现会员们接二连三失踪,而俱乐部的“解压疗程”竟是植入虚假记忆。 俱乐部 催眠 集体失踪 心理操控" data-cat="日韩电影" data-year="2025">
+  <div class="movie-poster">
+    <img src="assets/covers/0989.svg" alt="魔魅俱乐部" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">魔魅俱乐部</h3>
+    <div class="movie-meta">
+      <span>日本</span>
+      <span>•</span>
+      <span>2025</span>
+      <span>•</span>
+      <span>悬疑惊悚</span>
+    </div>
+    <p class="movie-line">女记者卧底调查一家高级俱乐部,发现会员们接二连三失踪,而俱乐部的“解压疗程”竟是植入虚假记忆。</p>
+    <div class="chip-row"><span class="chip muted">俱乐部</span><span class="chip muted">催眠</span><span class="chip muted">集体失踪</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1639.html" data-filter-card data-search="机密行动 中国香港 电影 动作,警匪,悬疑 警队精英被派潜入黑帮,却发现黑帮老大也是卧底,而自己真正的上司是内鬼。 卧底 双面间谍 局中局" data-cat="国产电影" data-year="2025">
+  <div class="movie-poster">
+    <img src="assets/covers/1639.svg" alt="机密行动" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">机密行动</h3>
+    <div class="movie-meta">
+      <span>中国香港</span>
+      <span>•</span>
+      <span>2025</span>
+      <span>•</span>
+      <span>动作</span>
+    </div>
+    <p class="movie-line">警队精英被派潜入黑帮,却发现黑帮老大也是卧底,而自己真正的上司是内鬼。</p>
+    <div class="chip-row"><span class="chip muted">卧底</span><span class="chip muted">双面间谍</span><span class="chip muted">局中局</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1644.html" data-filter-card data-search="妖猫传 中国大陆 电影 奇幻悬疑 一只口吐人言的黑猫出现在长安城,每夜吟唱一首未写完的怨诗,听者三日内必离奇暴毙。 盛唐 猫妖 复仇 东方奇幻" data-cat="国产电影" data-year="2025">
+  <div class="movie-poster">
+    <img src="assets/covers/1644.svg" alt="妖猫传" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">妖猫传</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2025</span>
+      <span>•</span>
+      <span>奇幻悬疑</span>
+    </div>
+    <p class="movie-line">一只口吐人言的黑猫出现在长安城,每夜吟唱一首未写完的怨诗,听者三日内必离奇暴毙。</p>
+    <div class="chip-row"><span class="chip muted">盛唐</span><span class="chip muted">猫妖</span><span class="chip muted">复仇</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0245.html" data-filter-card data-search="哥吉拉对黑多拉 日本 电影 动作,科幻,灾难 当代表自然愤怒的哥吉拉遇上由人类污染诞生的黑多拉,东京沦为两大怪兽意识形态的终极战场。 怪兽对决 环保 特摄 视觉奇观" data-cat="日韩电影" data-year="2025">
+  <div class="movie-poster">
+    <img src="assets/covers/0245.svg" alt="哥吉拉对黑多拉" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">哥吉拉对黑多拉</h3>
+    <div class="movie-meta">
+      <span>日本</span>
+      <span>•</span>
+      <span>2025</span>
+      <span>•</span>
+      <span>动作</span>
+    </div>
+    <p class="movie-line">当代表自然愤怒的哥吉拉遇上由人类污染诞生的黑多拉,东京沦为两大怪兽意识形态的终极战场。</p>
+    <div class="chip-row"><span class="chip muted">怪兽对决</span><span class="chip muted">环保</span><span class="chip muted">特摄</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0047.html" data-filter-card data-search="心敌 中国香港 电影 犯罪,悬疑,动作 当卧底警察发现自己的亲弟弟就是追查多年的毒枭,这场猫鼠游戏从此刻开始撕裂。 卧底 双雄 反转 心理博弈" data-cat="国产电影" data-year="2024">
+  <div class="movie-poster">
+    <img src="assets/covers/0047.svg" alt="心敌" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">心敌</h3>
+    <div class="movie-meta">
+      <span>中国香港</span>
+      <span>•</span>
+      <span>2024</span>
+      <span>•</span>
+      <span>犯罪</span>
+    </div>
+    <p class="movie-line">当卧底警察发现自己的亲弟弟就是追查多年的毒枭,这场猫鼠游戏从此刻开始撕裂。</p>
+    <div class="chip-row"><span class="chip muted">卧底</span><span class="chip muted">双雄</span><span class="chip muted">反转</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0123.html" data-filter-card data-search="地下特警 美国 电影 动作,犯罪,剧情 一名被诬陷的前特警,躲进城市地下隧道网络,化身地铁侠客追查真凶。 卧底 地铁系统 连环案 复仇" data-cat="欧美作品" data-year="2024">
+  <div class="movie-poster">
+    <img src="assets/covers/0123.svg" alt="地下特警" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">地下特警</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2024</span>
+      <span>•</span>
+      <span>动作</span>
+    </div>
+    <p class="movie-line">一名被诬陷的前特警,躲进城市地下隧道网络,化身地铁侠客追查真凶。</p>
+    <div class="chip-row"><span class="chip muted">卧底</span><span class="chip muted">地铁系统</span><span class="chip muted">连环案</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0436.html" data-filter-card data-search="曹雪芹与红楼梦 中国 剧集 传记、历史、剧情 穷困潦倒的曹雪芹在北京西郊著书,他笔下的“红楼梦”与现实中的江宁织造曹家被抄的往事,在剧中虚实交织。 文学巨匠 清史 创作之路 家族兴衰" data-cat="国产剧集" data-year="2026">
+  <div class="movie-poster">
+    <img src="assets/covers/0436.svg" alt="曹雪芹与红楼梦" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">曹雪芹与红楼梦</h3>
+    <div class="movie-meta">
+      <span>中国</span>
+      <span>•</span>
+      <span>2026</span>
+      <span>•</span>
+      <span>传记</span>
+    </div>
+    <p class="movie-line">穷困潦倒的曹雪芹在北京西郊著书,他笔下的“红楼梦”与现实中的江宁织造曹家被抄的往事,在剧中虚实交织。</p>
+    <div class="chip-row"><span class="chip muted">文学巨匠</span><span class="chip muted">清史</span><span class="chip muted">创作之路</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1882.html" data-filter-card data-search="欧洲三亿年 英国/德国 纪录片 自然/地质/历史 利用前沿CGI还原三亿年前欧洲是一片赤道附近的沼泽雨林,看大陆如何撕裂成今天的版图。 大陆漂移 化石 进化 视觉奇观" data-cat="欧美作品" data-year="2026">
+  <div class="movie-poster">
+    <img src="assets/covers/1882.svg" alt="欧洲三亿年" loading="lazy" />
+    <span class="type-badge">纪录片</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">欧洲三亿年</h3>
+    <div class="movie-meta">
+      <span>英国/德国</span>
+      <span>•</span>
+      <span>2026</span>
+      <span>•</span>
+      <span>自然</span>
+    </div>
+    <p class="movie-line">利用前沿CGI还原三亿年前欧洲是一片赤道附近的沼泽雨林,看大陆如何撕裂成今天的版图。</p>
+    <div class="chip-row"><span class="chip muted">大陆漂移</span><span class="chip muted">化石</span><span class="chip muted">进化</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0130.html" data-filter-card data-search="红罂粟 中国大陆 电影 爱情/历史/战争 1941年的上海,一位歌女与地下党员相爱,却不知两人效忠于不同阵营。 民国 间谍 虐恋 牺牲 家国情怀" data-cat="国产电影" data-year="2025">
+  <div class="movie-poster">
+    <img src="assets/covers/0130.svg" alt="红罂粟" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">红罂粟</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2025</span>
+      <span>•</span>
+      <span>爱情</span>
+    </div>
+    <p class="movie-line">1941年的上海,一位歌女与地下党员相爱,却不知两人效忠于不同阵营。</p>
+    <div class="chip-row"><span class="chip muted">民国</span><span class="chip muted">间谍</span><span class="chip muted">虐恋</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0253.html" data-filter-card data-search="大菩萨岭 龙神之卷 日本 电影 时代剧/动作 幕末的大菩萨岭,一名无名浪人背上纹着传说中的龙神,而他挥刀时,龙会睁开眼睛。 武士 剑戟片 宿命 龙神传说" data-cat="日韩电影" data-year="2025">
+  <div class="movie-poster">
+    <img src="assets/covers/0253.svg" alt="大菩萨岭 龙神之卷" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">大菩萨岭 龙神之卷</h3>
+    <div class="movie-meta">
+      <span>日本</span>
+      <span>•</span>
+      <span>2025</span>
+      <span>•</span>
+      <span>时代剧</span>
+    </div>
+    <p class="movie-line">幕末的大菩萨岭,一名无名浪人背上纹着传说中的龙神,而他挥刀时,龙会睁开眼睛。</p>
+    <div class="chip-row"><span class="chip muted">武士</span><span class="chip muted">剑戟片</span><span class="chip muted">宿命</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1237.html" data-filter-card data-search="岁月神偷 中国香港 电影 剧情,奇幻 一个小混混意外获得能偷取他人“时间”的超能力,却发现自己用命换来的时间,永远填不满亲情的空洞。 时间回溯 亲情救赎 市井烟火" data-cat="国产电影" data-year="2025">
+  <div class="movie-poster">
+    <img src="assets/covers/1237.svg" alt="岁月神偷" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">岁月神偷</h3>
+    <div class="movie-meta">
+      <span>中国香港</span>
+      <span>•</span>
+      <span>2025</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">一个小混混意外获得能偷取他人“时间”的超能力,却发现自己用命换来的时间,永远填不满亲情的空洞。</p>
+    <div class="chip-row"><span class="chip muted">时间回溯</span><span class="chip muted">亲情救赎</span><span class="chip muted">市井烟火</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1526.html" data-filter-card data-search="情系洛川红苹果 中国大陆 电影 剧情,爱情,乡村 一个种苹果的陕北糙汉,和一个失意的上海女建筑师,在果园里互相治愈。 乡村振兴 陕北 爱情 支教" data-cat="国产电影" data-year="2025">
+  <div class="movie-poster">
+    <img src="assets/covers/1526.svg" alt="情系洛川红苹果" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">情系洛川红苹果</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2025</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">一个种苹果的陕北糙汉,和一个失意的上海女建筑师,在果园里互相治愈。</p>
+    <div class="chip-row"><span class="chip muted">乡村振兴</span><span class="chip muted">陕北</span><span class="chip muted">爱情</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0924.html" data-filter-card data-search="妙人齐家 英国 剧集 黑色幽默/家庭伦理 脾气古怪的老太太死后给七个子女留下一卷录音带,宣布遗产由“最擅长撒谎的人”继承,全家人被迫开始一场大型说谎锦标赛。 葬礼 假遗嘱 家族秘密 乡村庄园 讽刺" data-cat="欧美作品" data-year="2026">
+  <div class="movie-poster">
+    <img src="assets/covers/0924.svg" alt="妙人齐家" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">妙人齐家</h3>
+    <div class="movie-meta">
+      <span>英国</span>
+      <span>•</span>
+      <span>2026</span>
+      <span>•</span>
+      <span>黑色幽默</span>
+    </div>
+    <p class="movie-line">脾气古怪的老太太死后给七个子女留下一卷录音带,宣布遗产由“最擅长撒谎的人”继承,全家人被迫开始一场大型说谎锦标赛。</p>
+    <div class="chip-row"><span class="chip muted">葬礼</span><span class="chip muted">假遗嘱</span><span class="chip muted">家族秘密</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0460.html" data-filter-card data-search="斗争人生 法国 电影 剧情,传记,历史 他一生都在与纳粹、斯大林以及戴高乐斗争,临死前却发现,自己最大的敌人,是内心对权力的欲望。 政治 理想主义 冷战 独角戏" data-cat="欧美作品" data-year="2026">
+  <div class="movie-poster">
+    <img src="assets/covers/0460.svg" alt="斗争人生" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">斗争人生</h3>
+    <div class="movie-meta">
+      <span>法国</span>
+      <span>•</span>
+      <span>2026</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">他一生都在与纳粹、斯大林以及戴高乐斗争,临死前却发现,自己最大的敌人,是内心对权力的欲望。</p>
+    <div class="chip-row"><span class="chip muted">政治</span><span class="chip muted">理想主义</span><span class="chip muted">冷战</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0015.html" data-filter-card data-search="玉战士 中国/芬兰 电影 动作/奇幻 芬兰铁匠意外发现自己是中国玉战士转世,千年宿敌从极地追到了长城。 武侠 北欧神话 转世 冷兵器" data-cat="国产电影" data-year="2025">
+  <div class="movie-poster">
+    <img src="assets/covers/0015.svg" alt="玉战士" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">玉战士</h3>
+    <div class="movie-meta">
+      <span>中国/芬兰</span>
+      <span>•</span>
+      <span>2025</span>
+      <span>•</span>
+      <span>动作</span>
+    </div>
+    <p class="movie-line">芬兰铁匠意外发现自己是中国玉战士转世,千年宿敌从极地追到了长城。</p>
+    <div class="chip-row"><span class="chip muted">武侠</span><span class="chip muted">北欧神话</span><span class="chip muted">转世</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0843.html" data-filter-card data-search="阴阳守山人 中国大陆 网络电影 悬疑,恐怖 长白山深处的守山人临死前留下遗言:千万别在雨夜敲那棵老槐树,否则会听见自己的死期。 民俗 盗墓 灵异 东北传说" data-cat="国产电影" data-year="2025">
+  <div class="movie-poster">
+    <img src="assets/covers/0843.svg" alt="阴阳守山人" loading="lazy" />
+    <span class="type-badge">网络电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">阴阳守山人</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2025</span>
+      <span>•</span>
+      <span>悬疑</span>
+    </div>
+    <p class="movie-line">长白山深处的守山人临死前留下遗言:千万别在雨夜敲那棵老槐树,否则会听见自己的死期。</p>
+    <div class="chip-row"><span class="chip muted">民俗</span><span class="chip muted">盗墓</span><span class="chip muted">灵异</span></div>
+  </div>
+</a>
+      </div>
+      <div class="pagination"><a href="rankings-16.html">上一页</a><a href="rankings.html" class="">1</a><span>…</span><a href="rankings-16.html" class="">16</a><a href="rankings-17.html" class="active">17</a><a href="rankings-18.html" class="">18</a><span>…</span><a href="rankings-84.html" class="">84</a><a href="rankings-18.html">下一页</a></div>
+    </div>
+  </section>
+</main>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <h4>日韩热门视频</h4>
+        <p>日韩热门视频页面整理近期关注较高的视频内容，按类型与热度展示相关分类。</p>
+      </div>
+      <div>
+        <h4>分类入口</h4>
+        <p><a href="categories.html">分类总览</a></p>
+        <p><a href="rankings.html">热度排行榜</a></p>
+        <p><a href="search.html">站内搜索</a></p>
+      </div>
+      <div>
+        <h4>帮助说明</h4>
+        <p><a href="service.html">使用指南</a></p>
+        <p><a href="copyright.html">用户协议</a></p>
+        <p><a href="about.html">关于我们</a></p>
+      </div>
+      <div>
+        <h4>联系信息</h4>
+        <p>工作日 9:00 - 18:00</p>
+        <p>我们将在 24 小时内回复邮件</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 日韩热门视频. 保留所有权利。</span>
+      <span>纯静态 HTML / CSS / JS 构建</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?76b5e2e0f6c84c06f0a7cb7105df054d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>

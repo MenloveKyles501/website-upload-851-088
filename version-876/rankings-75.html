@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>热度排行榜 - 日韩热门视频-热门好看的视频大全-热门片库持续更新</title>
+  <meta name="description" content="热度排行榜页展示按热度与年份排序的影视内容。" />
+  <meta name="keywords" content="排行榜,日韩热门视频,热门好看的视频大全,热门片库持续更新,日韩视频,热门视频,视频大全" />
+  <meta name="theme-color" content="#0b1120" />
+  <meta property="og:title" content="热度排行榜 - 日韩热门视频-热门好看的视频大全-热门片库持续更新" />
+  <meta property="og:description" content="热度排行榜页展示按热度与年份排序的影视内容。" />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="inner">
+      <a class="brand" href="index.html" aria-label="日韩热门视频">
+        <span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 10.5A2.5 2.5 0 1 1 12 7a2.5 2.5 0 0 1 0 5.5z"/></svg></span>
+        <span class="brand-text">
+          <span class="brand-title">日韩热门视频</span>
+          <span class="brand-sub">热门内容整理 · 静态站点</span>
+        </span>
+      </a>
+      <nav class="nav" aria-label="主导航">
+        <a href="index.html" class="">首页</a><a href="categories.html" class="">分类总览</a><a href="rankings.html" class="active">排行榜</a><a href="search.html" class="">搜索</a><a href="about.html" class="">关于我们</a>
+      </nav>
+      <div class="header-actions">
+        <form class="search-pill" action="search.html" method="get" role="search">
+          <span aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4a6 6 0 1 0 3.7 10.7l4.3 4.3 1.4-1.4-4.3-4.3A6 6 0 0 0 10 4zm0 2a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/></svg></span>
+          <input type="search" name="q" placeholder="搜索影片名称、地区、年份、标签" />
+        </form>
+        <button class="icon-btn mobile-toggle" type="button" data-mobile-toggle aria-expanded="false" aria-label="展开菜单">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-nav" data-mobile-nav aria-label="移动端导航">
+      <a href="index.html" class="">首页</a><a href="categories.html" class="">分类总览</a><a href="rankings.html" class="active">排行榜</a><a href="search.html" class="">搜索</a><a href="about.html" class="">关于我们</a>
+      <form class="search-pill" action="search.html" method="get" role="search" style="margin-top:10px; min-width:0;">
+        <span aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4a6 6 0 1 0 3.7 10.7l4.3 4.3 1.4-1.4-4.3-4.3A6 6 0 0 0 10 4zm0 2a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/></svg></span>
+        <input type="search" name="q" placeholder="搜索影片名称、地区、年份、标签" />
+      </form>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">首页</a><span>›</span><span>排行榜</span></div>
+      <h1 class="title">热度排行榜</h1>
+      <p class="sub">根据年份、题材关键词和标题热度生成的静态排行榜，支持分页浏览全部条目。</p>
+    </div>
+  </section>
+  <section class="section" data-live-filter>
+    <div class="container">
+      <div class="filter-bar">
+        <input type="search" placeholder="在本页内搜索影片名称、地区、标签" data-filter-input />
+        <select data-filter-select>
+          <option value="">全部分类</option>
+          <option value="国产电影">国产电影</option><option value="国产剧集">国产剧集</option><option value="日韩电影">日韩电影</option><option value="日韩剧集">日韩剧集</option><option value="欧美作品">欧美作品</option><option value="动画动漫">动画动漫</option><option value="其他热播">其他热播</option>
+        </select>
+        <select data-filter-select>
+          <option value="">全部年份</option>
+          <option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option>
+        </select>
+      </div>
+      <div class="card-grid">
+        <a class="movie-card" href="movie-1647.html" data-filter-card data-search="青春雷锋 中国大陆 电影 剧情,传记 影片聚焦雷锋从湖南望城到鞍钢、再到部队的青年时期,展现了他如何从一个普通孤儿成长为时代榜样。 主旋律 偶像化表达 年代怀旧 青年人 无私奉献" data-cat="国产电影" data-year="2013">
+  <div class="movie-poster">
+    <img src="assets/covers/1647.svg" alt="青春雷锋" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">青春雷锋</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2013</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">影片聚焦雷锋从湖南望城到鞍钢、再到部队的青年时期,展现了他如何从一个普通孤儿成长为时代榜样。</p>
+    <div class="chip-row"><span class="chip muted">主旋律</span><span class="chip muted">偶像化表达</span><span class="chip muted">年代怀旧</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1983.html" data-filter-card data-search="咱们结婚吧2013 中国大陆 电视剧 爱情,家庭,喜剧 婚纱店店长和离婚登记处调解员,一对死对头在各种催婚闹剧中被迫假扮情侣。 剩女 逼婚 都市情感" data-cat="国产剧集" data-year="2013">
+  <div class="movie-poster">
+    <img src="assets/covers/1983.svg" alt="咱们结婚吧2013" loading="lazy" />
+    <span class="type-badge">电视剧</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">咱们结婚吧2013</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2013</span>
+      <span>•</span>
+      <span>爱情</span>
+    </div>
+    <p class="movie-line">婚纱店店长和离婚登记处调解员,一对死对头在各种催婚闹剧中被迫假扮情侣。</p>
+    <div class="chip-row"><span class="chip muted">剩女</span><span class="chip muted">逼婚</span><span class="chip muted">都市情感</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1083.html" data-filter-card data-search="凶间雪山 中国大陆 电影 悬疑/惊悚 一支登山队在雪山上遭遇暴风雪,返回营地后发现,消失的同伴已经回来了。 登山 雪域 同伴失踪 心理悬疑" data-cat="国产电影" data-year="2012">
+  <div class="movie-poster">
+    <img src="assets/covers/1083.svg" alt="凶间雪山" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">凶间雪山</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2012</span>
+      <span>•</span>
+      <span>悬疑</span>
+    </div>
+    <p class="movie-line">一支登山队在雪山上遭遇暴风雪,返回营地后发现,消失的同伴已经回来了。</p>
+    <div class="chip-row"><span class="chip muted">登山</span><span class="chip muted">雪域</span><span class="chip muted">同伴失踪</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0791.html" data-filter-card data-search="极地大冒险2 芬兰 电影 动画/冒险/家庭 小驯鹿尼科为救回被秃鹰绑架的父亲,独自穿越暴风雪踏上飞行特训之旅。 驯鹿 极光 北极圈 飞行 成长" data-cat="动画动漫" data-year="2012">
+  <div class="movie-poster">
+    <img src="assets/covers/0791.svg" alt="极地大冒险2" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">极地大冒险2</h3>
+    <div class="movie-meta">
+      <span>芬兰</span>
+      <span>•</span>
+      <span>2012</span>
+      <span>•</span>
+      <span>动画</span>
+    </div>
+    <p class="movie-line">小驯鹿尼科为救回被秃鹰绑架的父亲,独自穿越暴风雪踏上飞行特训之旅。</p>
+    <div class="chip-row"><span class="chip muted">驯鹿</span><span class="chip muted">极光</span><span class="chip muted">北极圈</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0745.html" data-filter-card data-search="无法传递的三通信件 日本 电影 剧情,爱情,奇幻 三封写给已故之人的信,在三年后奇迹般地收到了回信。 书信 错位时空 遗憾 治愈 东日本大地震" data-cat="日韩电影" data-year="2012">
+  <div class="movie-poster">
+    <img src="assets/covers/0745.svg" alt="无法传递的三通信件" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">无法传递的三通信件</h3>
+    <div class="movie-meta">
+      <span>日本</span>
+      <span>•</span>
+      <span>2012</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">三封写给已故之人的信,在三年后奇迹般地收到了回信。</p>
+    <div class="chip-row"><span class="chip muted">书信</span><span class="chip muted">错位时空</span><span class="chip muted">遗憾</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0895.html" data-filter-card data-search="猫侍 日本 电影/剧集 喜剧/时代剧 一名落魄的浪人剑客接到任务去杀一只猫,结果却被这只猫彻底改变了人生。 猫奴 治愈 武士 搞笑" data-cat="日韩剧集" data-year="2013">
+  <div class="movie-poster">
+    <img src="assets/covers/0895.svg" alt="猫侍" loading="lazy" />
+    <span class="type-badge">电影/剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">猫侍</h3>
+    <div class="movie-meta">
+      <span>日本</span>
+      <span>•</span>
+      <span>2013</span>
+      <span>•</span>
+      <span>喜剧</span>
+    </div>
+    <p class="movie-line">一名落魄的浪人剑客接到任务去杀一只猫,结果却被这只猫彻底改变了人生。</p>
+    <div class="chip-row"><span class="chip muted">猫奴</span><span class="chip muted">治愈</span><span class="chip muted">武士</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0808.html" data-filter-card data-search="樱花庄的宠物女孩 日本 剧集 动画/喜剧/爱情 普通高中生被迫住进满是怪人的“樱花庄”,负责照顾一位生活九级残障、只会画画的绝世美少女。 校园 同居 天才与凡人" data-cat="动画动漫" data-year="2012">
+  <div class="movie-poster">
+    <img src="assets/covers/0808.svg" alt="樱花庄的宠物女孩" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">樱花庄的宠物女孩</h3>
+    <div class="movie-meta">
+      <span>日本</span>
+      <span>•</span>
+      <span>2012</span>
+      <span>•</span>
+      <span>动画</span>
+    </div>
+    <p class="movie-line">普通高中生被迫住进满是怪人的“樱花庄”,负责照顾一位生活九级残障、只会画画的绝世美少女。</p>
+    <div class="chip-row"><span class="chip muted">校园</span><span class="chip muted">同居</span><span class="chip muted">天才与凡人</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0871.html" data-filter-card data-search="丛林大反攻2 美国 动画电影 喜剧/冒险 上一部被赶出森林的动物反派们集结成“复仇者联盟”,却发现森林里的“好动物”正在集体自导自演一场危机。 动物 搞笑 森林 反派逆袭 合家欢" data-cat="动画动漫" data-year="2012">
+  <div class="movie-poster">
+    <img src="assets/covers/0871.svg" alt="丛林大反攻2" loading="lazy" />
+    <span class="type-badge">动画电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">丛林大反攻2</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2012</span>
+      <span>•</span>
+      <span>喜剧</span>
+    </div>
+    <p class="movie-line">上一部被赶出森林的动物反派们集结成“复仇者联盟”,却发现森林里的“好动物”正在集体自导自演一场危机。</p>
+    <div class="chip-row"><span class="chip muted">动物</span><span class="chip muted">搞笑</span><span class="chip muted">森林</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1862.html" data-filter-card data-search="寻找薇薇安·迈尔 美国 电影 纪录片/传记 一个从不去照相馆洗照片的古怪保姆,死后留下了十万张未被世人见过的顶级街头摄影作品。 摄影 街头 神秘 天才 真实故事" data-cat="欧美作品" data-year="2013">
+  <div class="movie-poster">
+    <img src="assets/covers/1862.svg" alt="寻找薇薇安·迈尔" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">寻找薇薇安·迈尔</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2013</span>
+      <span>•</span>
+      <span>纪录片</span>
+    </div>
+    <p class="movie-line">一个从不去照相馆洗照片的古怪保姆,死后留下了十万张未被世人见过的顶级街头摄影作品。</p>
+    <div class="chip-row"><span class="chip muted">摄影</span><span class="chip muted">街头</span><span class="chip muted">神秘</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1468.html" data-filter-card data-search="燃烧的夜晚 法国 电影 惊悚/剧情/犯罪 一对旧情人在一个被暴乱点燃的夜晚重逢,为了护送一个小女孩穿越危险的黑夜,他们的爱情也在余烬中复燃。 黑色电影 一夜逃亡 情感纠葛" data-cat="欧美作品" data-year="2011">
+  <div class="movie-poster">
+    <img src="assets/covers/1468.svg" alt="燃烧的夜晚" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">燃烧的夜晚</h3>
+    <div class="movie-meta">
+      <span>法国</span>
+      <span>•</span>
+      <span>2011</span>
+      <span>•</span>
+      <span>惊悚</span>
+    </div>
+    <p class="movie-line">一对旧情人在一个被暴乱点燃的夜晚重逢,为了护送一个小女孩穿越危险的黑夜,他们的爱情也在余烬中复燃。</p>
+    <div class="chip-row"><span class="chip muted">黑色电影</span><span class="chip muted">一夜逃亡</span><span class="chip muted">情感纠葛</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1681.html" data-filter-card data-search="变形金刚3:月黑之时 美国 电影 动作/科幻 汽车人发现1969年阿波罗登月计划实则是为调查一艘坠毁在月球背面的方舟飞船。 机器人 地球危机 3D" data-cat="欧美作品" data-year="2011">
+  <div class="movie-poster">
+    <img src="assets/covers/1681.svg" alt="变形金刚3:月黑之时" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">变形金刚3:月黑之时</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2011</span>
+      <span>•</span>
+      <span>动作</span>
+    </div>
+    <p class="movie-line">汽车人发现1969年阿波罗登月计划实则是为调查一艘坠毁在月球背面的方舟飞船。</p>
+    <div class="chip-row"><span class="chip muted">机器人</span><span class="chip muted">地球危机</span><span class="chip muted">3D</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0641.html" data-filter-card data-search="当你熟睡 西班牙 电影 恐怖,惊悚 一个孤独的公寓管理员,每晚都会潜入住户的家中,在你熟睡时对你微笑。 公寓噩梦 心理变态 入侵" data-cat="欧美作品" data-year="2011">
+  <div class="movie-poster">
+    <img src="assets/covers/0641.svg" alt="当你熟睡" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">当你熟睡</h3>
+    <div class="movie-meta">
+      <span>西班牙</span>
+      <span>•</span>
+      <span>2011</span>
+      <span>•</span>
+      <span>恐怖</span>
+    </div>
+    <p class="movie-line">一个孤独的公寓管理员,每晚都会潜入住户的家中,在你熟睡时对你微笑。</p>
+    <div class="chip-row"><span class="chip muted">公寓噩梦</span><span class="chip muted">心理变态</span><span class="chip muted">入侵</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0363.html" data-filter-card data-search="但丁的地狱之旅:动画史诗 美国 电影 动画,奇幻,冒险,惊悚 战士但丁为救爱人穿越地狱九圈,每一层都要面对自己生前犯下的罪孽。 但丁 神曲 地狱九圈 血腥美学" data-cat="动画动漫" data-year="2010">
+  <div class="movie-poster">
+    <img src="assets/covers/0363.svg" alt="但丁的地狱之旅:动画史诗" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">但丁的地狱之旅:动画史诗</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2010</span>
+      <span>•</span>
+      <span>动画</span>
+    </div>
+    <p class="movie-line">战士但丁为救爱人穿越地狱九圈,每一层都要面对自己生前犯下的罪孽。</p>
+    <div class="chip-row"><span class="chip muted">但丁</span><span class="chip muted">神曲</span><span class="chip muted">地狱九圈</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0929.html" data-filter-card data-search="戒烟不戒酒 中国大陆 电影 喜剧,剧情 一个烟瘾极大的中年销售总监被迫戒烟,却发现不抽烟后,自己在酒桌上不仅保住了业绩,还惹来了杀身之祸。 酒桌文化 中年危机 友情 戒断反应" data-cat="国产电影" data-year="2012">
+  <div class="movie-poster">
+    <img src="assets/covers/0929.svg" alt="戒烟不戒酒" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">戒烟不戒酒</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2012</span>
+      <span>•</span>
+      <span>喜剧</span>
+    </div>
+    <p class="movie-line">一个烟瘾极大的中年销售总监被迫戒烟,却发现不抽烟后,自己在酒桌上不仅保住了业绩,还惹来了杀身之祸。</p>
+    <div class="chip-row"><span class="chip muted">酒桌文化</span><span class="chip muted">中年危机</span><span class="chip muted">友情</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1012.html" data-filter-card data-search="浪客剑心 日本 电影 动作/历史 曾经的刽子手“拔刀斋”发誓不再杀人,却被迫重出江湖,保护一个被军火商盯上的女子。 明治维新 逆刃刀 杀手赎罪 漫改 剑戟" data-cat="日韩电影" data-year="2012">
+  <div class="movie-poster">
+    <img src="assets/covers/1012.svg" alt="浪客剑心" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">浪客剑心</h3>
+    <div class="movie-meta">
+      <span>日本</span>
+      <span>•</span>
+      <span>2012</span>
+      <span>•</span>
+      <span>动作</span>
+    </div>
+    <p class="movie-line">曾经的刽子手“拔刀斋”发誓不再杀人,却被迫重出江湖,保护一个被军火商盯上的女子。</p>
+    <div class="chip-row"><span class="chip muted">明治维新</span><span class="chip muted">逆刃刀</span><span class="chip muted">杀手赎罪</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0213.html" data-filter-card data-search="戎肯 中国大陆 电影 剧情,历史 云南傈僳族最后一个猎人与日军狙击手在原始森林展开了一场关于“狩猎之魂”的决斗。 少数民族 抗战 信仰 史诗" data-cat="国产电影" data-year="2012">
+  <div class="movie-poster">
+    <img src="assets/covers/0213.svg" alt="戎肯" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">戎肯</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2012</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">云南傈僳族最后一个猎人与日军狙击手在原始森林展开了一场关于“狩猎之魂”的决斗。</p>
+    <div class="chip-row"><span class="chip muted">少数民族</span><span class="chip muted">抗战</span><span class="chip muted">信仰</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1092.html" data-filter-card data-search="守望的天空 中国大陆 电视剧 家庭 母亲离世后,少女放弃大学梦,独自扛起照料自闭症哥哥和年幼弟弟的重担。 自闭症 亲情 成长 治愈 青春" data-cat="国产剧集" data-year="2012">
+  <div class="movie-poster">
+    <img src="assets/covers/1092.svg" alt="守望的天空" loading="lazy" />
+    <span class="type-badge">电视剧</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">守望的天空</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2012</span>
+      <span>•</span>
+      <span>家庭</span>
+    </div>
+    <p class="movie-line">母亲离世后,少女放弃大学梦,独自扛起照料自闭症哥哥和年幼弟弟的重担。</p>
+    <div class="chip-row"><span class="chip muted">自闭症</span><span class="chip muted">亲情</span><span class="chip muted">成长</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0136.html" data-filter-card data-search="名声大噪 美国 电视剧 歌舞/剧情 一部关于百老汇新音乐剧选角背后的野心、泪水与华丽厮杀。 百老汇 选角 梦想 女性斗争" data-cat="欧美作品" data-year="2012">
+  <div class="movie-poster">
+    <img src="assets/covers/0136.svg" alt="名声大噪" loading="lazy" />
+    <span class="type-badge">电视剧</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">名声大噪</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2012</span>
+      <span>•</span>
+      <span>歌舞</span>
+    </div>
+    <p class="movie-line">一部关于百老汇新音乐剧选角背后的野心、泪水与华丽厮杀。</p>
+    <div class="chip-row"><span class="chip muted">百老汇</span><span class="chip muted">选角</span><span class="chip muted">梦想</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0164.html" data-filter-card data-search="小黄历险记 中国大陆 动画片 动画/冒险/家庭 一只被遗弃的小黄狗跟着陌生卡车跑了三百公里,只为找回那个在收费站给它半根火腿肠的女孩。 小狗 流浪 回家 励志 儿童" data-cat="动画动漫" data-year="2011">
+  <div class="movie-poster">
+    <img src="assets/covers/0164.svg" alt="小黄历险记" loading="lazy" />
+    <span class="type-badge">动画片</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">小黄历险记</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2011</span>
+      <span>•</span>
+      <span>动画</span>
+    </div>
+    <p class="movie-line">一只被遗弃的小黄狗跟着陌生卡车跑了三百公里,只为找回那个在收费站给它半根火腿肠的女孩。</p>
+    <div class="chip-row"><span class="chip muted">小狗</span><span class="chip muted">流浪</span><span class="chip muted">回家</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0735.html" data-filter-card data-search="天堂:爱 奥地利/法国 电影 剧情/伦理 一名50岁的奥地利妇女前往肯尼亚寻找爱情,却发现自己只是海滩男孩们的“糖妈妈”。 性旅游 肯尼亚 中年女性" data-cat="欧美作品" data-year="2012">
+  <div class="movie-poster">
+    <img src="assets/covers/0735.svg" alt="天堂:爱" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">天堂:爱</h3>
+    <div class="movie-meta">
+      <span>奥地利/法国</span>
+      <span>•</span>
+      <span>2012</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">一名50岁的奥地利妇女前往肯尼亚寻找爱情,却发现自己只是海滩男孩们的“糖妈妈”。</p>
+    <div class="chip-row"><span class="chip muted">性旅游</span><span class="chip muted">肯尼亚</span><span class="chip muted">中年女性</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1973.html" data-filter-card data-search="血色玫瑰2之女子别动队 中国大陆 剧集 战争,动作 抗日战争时期,五名身怀绝技且背负国仇家恨的年轻女子,组成一支令日寇闻风丧胆的秘密别动队。 抗日 女性 复仇" data-cat="国产剧集" data-year="2011">
+  <div class="movie-poster">
+    <img src="assets/covers/1973.svg" alt="血色玫瑰2之女子别动队" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">血色玫瑰2之女子别动队</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2011</span>
+      <span>•</span>
+      <span>战争</span>
+    </div>
+    <p class="movie-line">抗日战争时期,五名身怀绝技且背负国仇家恨的年轻女子,组成一支令日寇闻风丧胆的秘密别动队。</p>
+    <div class="chip-row"><span class="chip muted">抗日</span><span class="chip muted">女性</span><span class="chip muted">复仇</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0428.html" data-filter-card data-search="无敌当家6:明星贝多芬 美国 电影 喜剧/家庭 圣伯纳犬贝多芬被星探发掘成为好莱坞巨星,却因思乡而策划大逃亡。 圣伯纳犬 狗明星 好莱坞 合家欢" data-cat="欧美作品" data-year="2011">
+  <div class="movie-poster">
+    <img src="assets/covers/0428.svg" alt="无敌当家6:明星贝多芬" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">无敌当家6:明星贝多芬</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2011</span>
+      <span>•</span>
+      <span>喜剧</span>
+    </div>
+    <p class="movie-line">圣伯纳犬贝多芬被星探发掘成为好莱坞巨星,却因思乡而策划大逃亡。</p>
+    <div class="chip-row"><span class="chip muted">圣伯纳犬</span><span class="chip muted">狗明星</span><span class="chip muted">好莱坞</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0427.html" data-filter-card data-search="桃姐 中国香港 电影 剧情,家庭 侍奉了梁家四代的老佣人桃姐中风后,少爷罗杰亲自照顾她走完人生最后一程。 主仆情 养老 真实事件改编 平淡见真情" data-cat="国产电影" data-year="2012">
+  <div class="movie-poster">
+    <img src="assets/covers/0427.svg" alt="桃姐" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">桃姐</h3>
+    <div class="movie-meta">
+      <span>中国香港</span>
+      <span>•</span>
+      <span>2012</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">侍奉了梁家四代的老佣人桃姐中风后,少爷罗杰亲自照顾她走完人生最后一程。</p>
+    <div class="chip-row"><span class="chip muted">主仆情</span><span class="chip muted">养老</span><span class="chip muted">真实事件改编</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0386.html" data-filter-card data-search="明治天皇和日俄战争 日本 电影 剧情,历史,战争 一个体弱多病的年轻天皇,如何赌上国运,击败欧洲巨熊,震惊世界。 明治维新 帝国 海战 政治 变革" data-cat="日韩电影" data-year="2011">
+  <div class="movie-poster">
+    <img src="assets/covers/0386.svg" alt="明治天皇和日俄战争" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">明治天皇和日俄战争</h3>
+    <div class="movie-meta">
+      <span>日本</span>
+      <span>•</span>
+      <span>2011</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">一个体弱多病的年轻天皇,如何赌上国运,击败欧洲巨熊,震惊世界。</p>
+    <div class="chip-row"><span class="chip muted">明治维新</span><span class="chip muted">帝国</span><span class="chip muted">海战</span></div>
+  </div>
+</a>
+      </div>
+      <div class="pagination"><a href="rankings-74.html">上一页</a><a href="rankings.html" class="">1</a><span>…</span><a href="rankings-74.html" class="">74</a><a href="rankings-75.html" class="active">75</a><a href="rankings-76.html" class="">76</a><span>…</span><a href="rankings-84.html" class="">84</a><a href="rankings-76.html">下一页</a></div>
+    </div>
+  </section>
+</main>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <h4>日韩热门视频</h4>
+        <p>日韩热门视频页面整理近期关注较高的视频内容，按类型与热度展示相关分类。</p>
+      </div>
+      <div>
+        <h4>分类入口</h4>
+        <p><a href="categories.html">分类总览</a></p>
+        <p><a href="rankings.html">热度排行榜</a></p>
+        <p><a href="search.html">站内搜索</a></p>
+      </div>
+      <div>
+        <h4>帮助说明</h4>
+        <p><a href="service.html">使用指南</a></p>
+        <p><a href="copyright.html">用户协议</a></p>
+        <p><a href="about.html">关于我们</a></p>
+      </div>
+      <div>
+        <h4>联系信息</h4>
+        <p>工作日 9:00 - 18:00</p>
+        <p>我们将在 24 小时内回复邮件</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 日韩热门视频. 保留所有权利。</span>
+      <span>纯静态 HTML / CSS / JS 构建</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?76b5e2e0f6c84c06f0a7cb7105df054d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>

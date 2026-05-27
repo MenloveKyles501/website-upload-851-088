@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>热度排行榜 - 日韩热门视频-热门好看的视频大全-热门片库持续更新</title>
+  <meta name="description" content="热度排行榜页展示按热度与年份排序的影视内容。" />
+  <meta name="keywords" content="排行榜,日韩热门视频,热门好看的视频大全,热门片库持续更新,日韩视频,热门视频,视频大全" />
+  <meta name="theme-color" content="#0b1120" />
+  <meta property="og:title" content="热度排行榜 - 日韩热门视频-热门好看的视频大全-热门片库持续更新" />
+  <meta property="og:description" content="热度排行榜页展示按热度与年份排序的影视内容。" />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="inner">
+      <a class="brand" href="index.html" aria-label="日韩热门视频">
+        <span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 10.5A2.5 2.5 0 1 1 12 7a2.5 2.5 0 0 1 0 5.5z"/></svg></span>
+        <span class="brand-text">
+          <span class="brand-title">日韩热门视频</span>
+          <span class="brand-sub">热门内容整理 · 静态站点</span>
+        </span>
+      </a>
+      <nav class="nav" aria-label="主导航">
+        <a href="index.html" class="">首页</a><a href="categories.html" class="">分类总览</a><a href="rankings.html" class="active">排行榜</a><a href="search.html" class="">搜索</a><a href="about.html" class="">关于我们</a>
+      </nav>
+      <div class="header-actions">
+        <form class="search-pill" action="search.html" method="get" role="search">
+          <span aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4a6 6 0 1 0 3.7 10.7l4.3 4.3 1.4-1.4-4.3-4.3A6 6 0 0 0 10 4zm0 2a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/></svg></span>
+          <input type="search" name="q" placeholder="搜索影片名称、地区、年份、标签" />
+        </form>
+        <button class="icon-btn mobile-toggle" type="button" data-mobile-toggle aria-expanded="false" aria-label="展开菜单">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-nav" data-mobile-nav aria-label="移动端导航">
+      <a href="index.html" class="">首页</a><a href="categories.html" class="">分类总览</a><a href="rankings.html" class="active">排行榜</a><a href="search.html" class="">搜索</a><a href="about.html" class="">关于我们</a>
+      <form class="search-pill" action="search.html" method="get" role="search" style="margin-top:10px; min-width:0;">
+        <span aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4a6 6 0 1 0 3.7 10.7l4.3 4.3 1.4-1.4-4.3-4.3A6 6 0 0 0 10 4zm0 2a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/></svg></span>
+        <input type="search" name="q" placeholder="搜索影片名称、地区、年份、标签" />
+      </form>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">首页</a><span>›</span><span>排行榜</span></div>
+      <h1 class="title">热度排行榜</h1>
+      <p class="sub">根据年份、题材关键词和标题热度生成的静态排行榜，支持分页浏览全部条目。</p>
+    </div>
+  </section>
+  <section class="section" data-live-filter>
+    <div class="container">
+      <div class="filter-bar">
+        <input type="search" placeholder="在本页内搜索影片名称、地区、标签" data-filter-input />
+        <select data-filter-select>
+          <option value="">全部分类</option>
+          <option value="国产电影">国产电影</option><option value="国产剧集">国产剧集</option><option value="日韩电影">日韩电影</option><option value="日韩剧集">日韩剧集</option><option value="欧美作品">欧美作品</option><option value="动画动漫">动画动漫</option><option value="其他热播">其他热播</option>
+        </select>
+        <select data-filter-select>
+          <option value="">全部年份</option>
+          <option value="2018">2018</option><option value="2017">2017</option><option value="2016">2016</option><option value="2015">2015</option>
+        </select>
+      </div>
+      <div class="card-grid">
+        <a class="movie-card" href="movie-0085.html" data-filter-card data-search="骨之谷 美国 电影 西部/悬疑/惊悚 一名古生物学家在荒凉的蒙大拿州挖到一具完整的霸王龙化石,但化石中包裹着人类的骸骨。 古生物 盗墓 荒漠" data-cat="欧美作品" data-year="2017">
+  <div class="movie-poster">
+    <img src="assets/covers/0085.svg" alt="骨之谷" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">骨之谷</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2017</span>
+      <span>•</span>
+      <span>西部</span>
+    </div>
+    <p class="movie-line">一名古生物学家在荒凉的蒙大拿州挖到一具完整的霸王龙化石,但化石中包裹着人类的骸骨。</p>
+    <div class="chip-row"><span class="chip muted">古生物</span><span class="chip muted">盗墓</span><span class="chip muted">荒漠</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0412.html" data-filter-card data-search="大爆怒 韩国 电影 动作,惊悚,犯罪 患有人格障碍的男主被同事欺负了十年,某天他决定不生气了,他决定直接炸掉整栋公司大楼。 复仇狂人 暴力美学 情绪失控" data-cat="日韩电影" data-year="2016">
+  <div class="movie-poster">
+    <img src="assets/covers/0412.svg" alt="大爆怒" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">大爆怒</h3>
+    <div class="movie-meta">
+      <span>韩国</span>
+      <span>•</span>
+      <span>2016</span>
+      <span>•</span>
+      <span>动作</span>
+    </div>
+    <p class="movie-line">患有人格障碍的男主被同事欺负了十年,某天他决定不生气了,他决定直接炸掉整栋公司大楼。</p>
+    <div class="chip-row"><span class="chip muted">复仇狂人</span><span class="chip muted">暴力美学</span><span class="chip muted">情绪失控</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1355.html" data-filter-card data-search="阿姐万万醉 中国香港 电影 喜剧/动作/女性 菜市场卖鱼阿姐练就“醉拳刀法”,一喝醉就打遍深水埗无敌手,直到黑帮绑架了她的儿子。 女版醉拳 师奶 黑帮 市井英雄 无厘头" data-cat="国产电影" data-year="2017">
+  <div class="movie-poster">
+    <img src="assets/covers/1355.svg" alt="阿姐万万醉" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">阿姐万万醉</h3>
+    <div class="movie-meta">
+      <span>中国香港</span>
+      <span>•</span>
+      <span>2017</span>
+      <span>•</span>
+      <span>喜剧</span>
+    </div>
+    <p class="movie-line">菜市场卖鱼阿姐练就“醉拳刀法”,一喝醉就打遍深水埗无敌手,直到黑帮绑架了她的儿子。</p>
+    <div class="chip-row"><span class="chip muted">女版醉拳</span><span class="chip muted">师奶</span><span class="chip muted">黑帮</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1444.html" data-filter-card data-search="圣诞星 美国 动画电影 喜剧/冒险/宗教 一只倔强的小驴子逃出磨坊,意外成为了玛利亚和约瑟夫的“坐骑”,踏上了前往伯利恒的旅程。 动物 圣经故事 公路片 音乐" data-cat="动画动漫" data-year="2017">
+  <div class="movie-poster">
+    <img src="assets/covers/1444.svg" alt="圣诞星" loading="lazy" />
+    <span class="type-badge">动画电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">圣诞星</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2017</span>
+      <span>•</span>
+      <span>喜剧</span>
+    </div>
+    <p class="movie-line">一只倔强的小驴子逃出磨坊,意外成为了玛利亚和约瑟夫的“坐骑”,踏上了前往伯利恒的旅程。</p>
+    <div class="chip-row"><span class="chip muted">动物</span><span class="chip muted">圣经故事</span><span class="chip muted">公路片</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0863.html" data-filter-card data-search="平凡的足球 中国大陆 电影 体育 一个不会踢球的体育老师,带着一群山里娃挑战省城冠军。 底层励志 足球梦想 师生情 乡村教育" data-cat="国产电影" data-year="2018">
+  <div class="movie-poster">
+    <img src="assets/covers/0863.svg" alt="平凡的足球" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">平凡的足球</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2018</span>
+      <span>•</span>
+      <span>体育</span>
+    </div>
+    <p class="movie-line">一个不会踢球的体育老师,带着一群山里娃挑战省城冠军。</p>
+    <div class="chip-row"><span class="chip muted">底层励志</span><span class="chip muted">足球梦想</span><span class="chip muted">师生情</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1437.html" data-filter-card data-search="错误的地方 西班牙 电影 惊悚/犯罪 两名入室盗窃的小贼,在一座别墅的地下室里发现了一个被锁链囚禁的男人,而别墅主人正在外面追捕他们。 密室逃脱 单一场景 心理博弈" data-cat="欧美作品" data-year="2016">
+  <div class="movie-poster">
+    <img src="assets/covers/1437.svg" alt="错误的地方" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">错误的地方</h3>
+    <div class="movie-meta">
+      <span>西班牙</span>
+      <span>•</span>
+      <span>2016</span>
+      <span>•</span>
+      <span>惊悚</span>
+    </div>
+    <p class="movie-line">两名入室盗窃的小贼,在一座别墅的地下室里发现了一个被锁链囚禁的男人,而别墅主人正在外面追捕他们。</p>
+    <div class="chip-row"><span class="chip muted">密室逃脱</span><span class="chip muted">单一场景</span><span class="chip muted">心理博弈</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0998.html" data-filter-card data-search="超次元学院2 中国大陆 剧集 奇幻,校园,青春 打败了黑巫师之后,司徒莫言以为能消停了,没想到平行宇宙的自己穿越来当插班生。 异能学院 次元壁 热血 搞笑" data-cat="国产剧集" data-year="2017">
+  <div class="movie-poster">
+    <img src="assets/covers/0998.svg" alt="超次元学院2" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">超次元学院2</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2017</span>
+      <span>•</span>
+      <span>奇幻</span>
+    </div>
+    <p class="movie-line">打败了黑巫师之后,司徒莫言以为能消停了,没想到平行宇宙的自己穿越来当插班生。</p>
+    <div class="chip-row"><span class="chip muted">异能学院</span><span class="chip muted">次元壁</span><span class="chip muted">热血</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0652.html" data-filter-card data-search="留夏 中国大陆 电影 剧情/儿童 七岁的留守男孩石头,在夏天即将结束时接到通知:在外打工十年的父母要回来接他去城市了。 留守儿童 乡村 童年 成长 温情" data-cat="国产电影" data-year="2017">
+  <div class="movie-poster">
+    <img src="assets/covers/0652.svg" alt="留夏" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">留夏</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2017</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">七岁的留守男孩石头,在夏天即将结束时接到通知:在外打工十年的父母要回来接他去城市了。</p>
+    <div class="chip-row"><span class="chip muted">留守儿童</span><span class="chip muted">乡村</span><span class="chip muted">童年</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1718.html" data-filter-card data-search="铁幕性事 波兰 电影 爱情/历史/政治 冷战期间,一名波兰女翻译与苏联克格勃军官相爱,他们的每一次肌肤相亲都是政治立场的背叛。 冷战背景 禁忌之恋 大尺度 克格勃" data-cat="其他热播" data-year="2017">
+  <div class="movie-poster">
+    <img src="assets/covers/1718.svg" alt="铁幕性事" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">铁幕性事</h3>
+    <div class="movie-meta">
+      <span>波兰</span>
+      <span>•</span>
+      <span>2017</span>
+      <span>•</span>
+      <span>爱情</span>
+    </div>
+    <p class="movie-line">冷战期间,一名波兰女翻译与苏联克格勃军官相爱,他们的每一次肌肤相亲都是政治立场的背叛。</p>
+    <div class="chip-row"><span class="chip muted">冷战背景</span><span class="chip muted">禁忌之恋</span><span class="chip muted">大尺度</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0068.html" data-filter-card data-search="糟糕的夏天 西班牙 电影 喜剧/剧情/青春 15岁少年原本只想在暑假破处,却意外发现了父亲出轨、母亲负债和姐姐怀孕的一系列烂事。 夏日假期 家庭秘密 成长疼痛 地中海 黑色幽默" data-cat="欧美作品" data-year="2017">
+  <div class="movie-poster">
+    <img src="assets/covers/0068.svg" alt="糟糕的夏天" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">糟糕的夏天</h3>
+    <div class="movie-meta">
+      <span>西班牙</span>
+      <span>•</span>
+      <span>2017</span>
+      <span>•</span>
+      <span>喜剧</span>
+    </div>
+    <p class="movie-line">15岁少年原本只想在暑假破处,却意外发现了父亲出轨、母亲负债和姐姐怀孕的一系列烂事。</p>
+    <div class="chip-row"><span class="chip muted">夏日假期</span><span class="chip muted">家庭秘密</span><span class="chip muted">成长疼痛</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1990.html" data-filter-card data-search="苦乐村官 中国大陆 电视剧 剧情,乡村,喜剧 一名被迫返乡的年轻歌手当上村官,用互联网思维把贫困村折腾得鸡飞狗跳,却意外成功了。 扶贫 基层干部 写实 诙谐" data-cat="国产剧集" data-year="2017">
+  <div class="movie-poster">
+    <img src="assets/covers/1990.svg" alt="苦乐村官" loading="lazy" />
+    <span class="type-badge">电视剧</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">苦乐村官</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2017</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">一名被迫返乡的年轻歌手当上村官,用互联网思维把贫困村折腾得鸡飞狗跳,却意外成功了。</p>
+    <div class="chip-row"><span class="chip muted">扶贫</span><span class="chip muted">基层干部</span><span class="chip muted">写实</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0183.html" data-filter-card data-search="你好,树公主 泰国 电影 奇幻/爱情 护林员爱上了森林里的一棵古树,而古树里住着一位等待恋人三百年的公主。 民间传说 环保 人树恋 泰式小清新 悲剧" data-cat="其他热播" data-year="2016">
+  <div class="movie-poster">
+    <img src="assets/covers/0183.svg" alt="你好,树公主" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">你好,树公主</h3>
+    <div class="movie-meta">
+      <span>泰国</span>
+      <span>•</span>
+      <span>2016</span>
+      <span>•</span>
+      <span>奇幻</span>
+    </div>
+    <p class="movie-line">护林员爱上了森林里的一棵古树,而古树里住着一位等待恋人三百年的公主。</p>
+    <div class="chip-row"><span class="chip muted">民间传说</span><span class="chip muted">环保</span><span class="chip muted">人树恋</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1825.html" data-filter-card data-search="山2 土耳其 电影 动作/战争 一支土耳其特种部队被困深山,面对百倍叛军,他们唯一的武器是彼此与这座山。 山地作战 狙击手 兄弟情 反恐 战术小队" data-cat="其他热播" data-year="2016">
+  <div class="movie-poster">
+    <img src="assets/covers/1825.svg" alt="山2" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">山2</h3>
+    <div class="movie-meta">
+      <span>土耳其</span>
+      <span>•</span>
+      <span>2016</span>
+      <span>•</span>
+      <span>动作</span>
+    </div>
+    <p class="movie-line">一支土耳其特种部队被困深山,面对百倍叛军,他们唯一的武器是彼此与这座山。</p>
+    <div class="chip-row"><span class="chip muted">山地作战</span><span class="chip muted">狙击手</span><span class="chip muted">兄弟情</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1592.html" data-filter-card data-search="极限挑战第二季 中国大陆 综艺 真人秀/喜剧/冒险 六个男人继续在城市里“作妖”,这一次他们玩得更疯,也哭得更狠。 综艺 极限男人帮 搞笑 户外" data-cat="国产电影" data-year="2016">
+  <div class="movie-poster">
+    <img src="assets/covers/1592.svg" alt="极限挑战第二季" loading="lazy" />
+    <span class="type-badge">综艺</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">极限挑战第二季</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2016</span>
+      <span>•</span>
+      <span>真人秀</span>
+    </div>
+    <p class="movie-line">六个男人继续在城市里“作妖”,这一次他们玩得更疯,也哭得更狠。</p>
+    <div class="chip-row"><span class="chip muted">综艺</span><span class="chip muted">极限男人帮</span><span class="chip muted">搞笑</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1996.html" data-filter-card data-search="小镇疑云 第二季 英国 剧集 犯罪,悬疑,剧情 丹尼之死的凶手虽已入狱,但一封匿名信的出现,让整个小镇的伤口再次被狠狠撕开。 谋杀 社区 法庭剧 心理创伤 真相" data-cat="欧美作品" data-year="2015">
+  <div class="movie-poster">
+    <img src="assets/covers/1996.svg" alt="小镇疑云 第二季" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">小镇疑云 第二季</h3>
+    <div class="movie-meta">
+      <span>英国</span>
+      <span>•</span>
+      <span>2015</span>
+      <span>•</span>
+      <span>犯罪</span>
+    </div>
+    <p class="movie-line">丹尼之死的凶手虽已入狱,但一封匿名信的出现,让整个小镇的伤口再次被狠狠撕开。</p>
+    <div class="chip-row"><span class="chip muted">谋杀</span><span class="chip muted">社区</span><span class="chip muted">法庭剧</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1458.html" data-filter-card data-search="外来媳妇本地郎6 中国大陆 电视剧 喜剧,家庭 康家娶进第六个外地媳妇,这次是个金发碧眼的乌克兰姑娘。 情景喜剧 粤语 文化冲突 家长里短" data-cat="国产剧集" data-year="2017">
+  <div class="movie-poster">
+    <img src="assets/covers/1458.svg" alt="外来媳妇本地郎6" loading="lazy" />
+    <span class="type-badge">电视剧</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">外来媳妇本地郎6</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2017</span>
+      <span>•</span>
+      <span>喜剧</span>
+    </div>
+    <p class="movie-line">康家娶进第六个外地媳妇,这次是个金发碧眼的乌克兰姑娘。</p>
+    <div class="chip-row"><span class="chip muted">情景喜剧</span><span class="chip muted">粤语</span><span class="chip muted">文化冲突</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1612.html" data-filter-card data-search="勇敢的爱 泰国 电影 爱情/剧情 泰国乡村高中的两个男孩相爱了,一个的父亲是当地最有声望的僧侣,另一个的母亲是基督徒。 LGBT 校园 出柜 家庭冲突" data-cat="其他热播" data-year="2016">
+  <div class="movie-poster">
+    <img src="assets/covers/1612.svg" alt="勇敢的爱" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">勇敢的爱</h3>
+    <div class="movie-meta">
+      <span>泰国</span>
+      <span>•</span>
+      <span>2016</span>
+      <span>•</span>
+      <span>爱情</span>
+    </div>
+    <p class="movie-line">泰国乡村高中的两个男孩相爱了,一个的父亲是当地最有声望的僧侣,另一个的母亲是基督徒。</p>
+    <div class="chip-row"><span class="chip muted">LGBT</span><span class="chip muted">校园</span><span class="chip muted">出柜</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0092.html" data-filter-card data-search="亚瑟米勒:作家的养成 美国 电影 传记,历史,剧情 在创作《推销员之死》之前,亚瑟·米勒曾在大萧条时期做过货车司机、面包师和农场工人。 作家传记 麦卡锡主义 创作心路 戏剧改编" data-cat="欧美作品" data-year="2017">
+  <div class="movie-poster">
+    <img src="assets/covers/0092.svg" alt="亚瑟米勒:作家的养成" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">亚瑟米勒:作家的养成</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2017</span>
+      <span>•</span>
+      <span>传记</span>
+    </div>
+    <p class="movie-line">在创作《推销员之死》之前,亚瑟·米勒曾在大萧条时期做过货车司机、面包师和农场工人。</p>
+    <div class="chip-row"><span class="chip muted">作家传记</span><span class="chip muted">麦卡锡主义</span><span class="chip muted">创作心路</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0443.html" data-filter-card data-search="德州崛起 美国 剧集 西部/历史 19世纪初,一群冒险者深入墨西哥领土德克萨斯,为土地和自由掀起独立战争。 德州独立 西部拓荒 战争 真实历史 史诗" data-cat="欧美作品" data-year="2015">
+  <div class="movie-poster">
+    <img src="assets/covers/0443.svg" alt="德州崛起" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">德州崛起</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2015</span>
+      <span>•</span>
+      <span>西部</span>
+    </div>
+    <p class="movie-line">19世纪初,一群冒险者深入墨西哥领土德克萨斯,为土地和自由掀起独立战争。</p>
+    <div class="chip-row"><span class="chip muted">德州独立</span><span class="chip muted">西部拓荒</span><span class="chip muted">战争</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1843.html" data-filter-card data-search="长毛象欢度圣诞 加拿大/法国 电影 动画/家庭/喜剧 一群科学家复活了一只长毛象,却发现它必须在圣诞节前找到同伴,否则就会孤独死去。 史前 圣诞节 基因复活 温情" data-cat="动画动漫" data-year="2016">
+  <div class="movie-poster">
+    <img src="assets/covers/1843.svg" alt="长毛象欢度圣诞" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">长毛象欢度圣诞</h3>
+    <div class="movie-meta">
+      <span>加拿大/法国</span>
+      <span>•</span>
+      <span>2016</span>
+      <span>•</span>
+      <span>动画</span>
+    </div>
+    <p class="movie-line">一群科学家复活了一只长毛象,却发现它必须在圣诞节前找到同伴,否则就会孤独死去。</p>
+    <div class="chip-row"><span class="chip muted">史前</span><span class="chip muted">圣诞节</span><span class="chip muted">基因复活</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0128.html" data-filter-card data-search="心智游戏 英国 电影 科幻/悬疑/心理 失去妻女的程序员自愿接受记忆删除实验,却在虚拟意识中发现:自己的记忆被人为改写三次以上。 记忆植入 伦理困境 大脑实验" data-cat="欧美作品" data-year="2015">
+  <div class="movie-poster">
+    <img src="assets/covers/0128.svg" alt="心智游戏" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">心智游戏</h3>
+    <div class="movie-meta">
+      <span>英国</span>
+      <span>•</span>
+      <span>2015</span>
+      <span>•</span>
+      <span>科幻</span>
+    </div>
+    <p class="movie-line">失去妻女的程序员自愿接受记忆删除实验,却在虚拟意识中发现:自己的记忆被人为改写三次以上。</p>
+    <div class="chip-row"><span class="chip muted">记忆植入</span><span class="chip muted">伦理困境</span><span class="chip muted">大脑实验</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1578.html" data-filter-card data-search="饭前祷告 美国 电影 剧情/家庭 从小在无神论家庭长大的少女,去虔诚的祖母家过暑假时,发现每天的饭前祷告竟是一场家族秘密的防御战。 宗教信仰 母女关系 文化冲突 成长阵痛" data-cat="欧美作品" data-year="2016">
+  <div class="movie-poster">
+    <img src="assets/covers/1578.svg" alt="饭前祷告" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">饭前祷告</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2016</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">从小在无神论家庭长大的少女,去虔诚的祖母家过暑假时,发现每天的饭前祷告竟是一场家族秘密的防御战。</p>
+    <div class="chip-row"><span class="chip muted">宗教信仰</span><span class="chip muted">母女关系</span><span class="chip muted">文化冲突</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0081.html" data-filter-card data-search="全家度蜜月 西班牙 电影 喜剧,家庭,公路 一对新婚夫妻带双方父母和前任们一起度蜜月,只为争夺遗产,不料全车人都有不可告人的目的。 奇葩家庭 蜜月变修罗场 女儿们的秘密" data-cat="欧美作品" data-year="2016">
+  <div class="movie-poster">
+    <img src="assets/covers/0081.svg" alt="全家度蜜月" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">全家度蜜月</h3>
+    <div class="movie-meta">
+      <span>西班牙</span>
+      <span>•</span>
+      <span>2016</span>
+      <span>•</span>
+      <span>喜剧</span>
+    </div>
+    <p class="movie-line">一对新婚夫妻带双方父母和前任们一起度蜜月,只为争夺遗产,不料全车人都有不可告人的目的。</p>
+    <div class="chip-row"><span class="chip muted">奇葩家庭</span><span class="chip muted">蜜月变修罗场</span><span class="chip muted">女儿们的秘密</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0356.html" data-filter-card data-search="追鹰日记 奥地利/德国 电影 剧情,冒险,家庭 失去父亲的孤独少年在阿尔卑斯山救下一只幼鹰,一人一鹰在绝境中互相学习生存,最终一起翱翔天际。 阿尔卑斯山 少年与鹰 自然治愈" data-cat="欧美作品" data-year="2016">
+  <div class="movie-poster">
+    <img src="assets/covers/0356.svg" alt="追鹰日记" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">追鹰日记</h3>
+    <div class="movie-meta">
+      <span>奥地利/德国</span>
+      <span>•</span>
+      <span>2016</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">失去父亲的孤独少年在阿尔卑斯山救下一只幼鹰,一人一鹰在绝境中互相学习生存,最终一起翱翔天际。</p>
+    <div class="chip-row"><span class="chip muted">阿尔卑斯山</span><span class="chip muted">少年与鹰</span><span class="chip muted">自然治愈</span></div>
+  </div>
+</a>
+      </div>
+      <div class="pagination"><a href="rankings-71.html">上一页</a><a href="rankings.html" class="">1</a><span>…</span><a href="rankings-71.html" class="">71</a><a href="rankings-72.html" class="active">72</a><a href="rankings-73.html" class="">73</a><span>…</span><a href="rankings-84.html" class="">84</a><a href="rankings-73.html">下一页</a></div>
+    </div>
+  </section>
+</main>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <h4>日韩热门视频</h4>
+        <p>日韩热门视频页面整理近期关注较高的视频内容，按类型与热度展示相关分类。</p>
+      </div>
+      <div>
+        <h4>分类入口</h4>
+        <p><a href="categories.html">分类总览</a></p>
+        <p><a href="rankings.html">热度排行榜</a></p>
+        <p><a href="search.html">站内搜索</a></p>
+      </div>
+      <div>
+        <h4>帮助说明</h4>
+        <p><a href="service.html">使用指南</a></p>
+        <p><a href="copyright.html">用户协议</a></p>
+        <p><a href="about.html">关于我们</a></p>
+      </div>
+      <div>
+        <h4>联系信息</h4>
+        <p>工作日 9:00 - 18:00</p>
+        <p>我们将在 24 小时内回复邮件</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 日韩热门视频. 保留所有权利。</span>
+      <span>纯静态 HTML / CSS / JS 构建</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?76b5e2e0f6c84c06f0a7cb7105df054d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>

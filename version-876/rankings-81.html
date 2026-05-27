@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>热度排行榜 - 日韩热门视频-热门好看的视频大全-热门片库持续更新</title>
+  <meta name="description" content="热度排行榜页展示按热度与年份排序的影视内容。" />
+  <meta name="keywords" content="排行榜,日韩热门视频,热门好看的视频大全,热门片库持续更新,日韩视频,热门视频,视频大全" />
+  <meta name="theme-color" content="#0b1120" />
+  <meta property="og:title" content="热度排行榜 - 日韩热门视频-热门好看的视频大全-热门片库持续更新" />
+  <meta property="og:description" content="热度排行榜页展示按热度与年份排序的影视内容。" />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="inner">
+      <a class="brand" href="index.html" aria-label="日韩热门视频">
+        <span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 10.5A2.5 2.5 0 1 1 12 7a2.5 2.5 0 0 1 0 5.5z"/></svg></span>
+        <span class="brand-text">
+          <span class="brand-title">日韩热门视频</span>
+          <span class="brand-sub">热门内容整理 · 静态站点</span>
+        </span>
+      </a>
+      <nav class="nav" aria-label="主导航">
+        <a href="index.html" class="">首页</a><a href="categories.html" class="">分类总览</a><a href="rankings.html" class="active">排行榜</a><a href="search.html" class="">搜索</a><a href="about.html" class="">关于我们</a>
+      </nav>
+      <div class="header-actions">
+        <form class="search-pill" action="search.html" method="get" role="search">
+          <span aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4a6 6 0 1 0 3.7 10.7l4.3 4.3 1.4-1.4-4.3-4.3A6 6 0 0 0 10 4zm0 2a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/></svg></span>
+          <input type="search" name="q" placeholder="搜索影片名称、地区、年份、标签" />
+        </form>
+        <button class="icon-btn mobile-toggle" type="button" data-mobile-toggle aria-expanded="false" aria-label="展开菜单">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-nav" data-mobile-nav aria-label="移动端导航">
+      <a href="index.html" class="">首页</a><a href="categories.html" class="">分类总览</a><a href="rankings.html" class="active">排行榜</a><a href="search.html" class="">搜索</a><a href="about.html" class="">关于我们</a>
+      <form class="search-pill" action="search.html" method="get" role="search" style="margin-top:10px; min-width:0;">
+        <span aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4a6 6 0 1 0 3.7 10.7l4.3 4.3 1.4-1.4-4.3-4.3A6 6 0 0 0 10 4zm0 2a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/></svg></span>
+        <input type="search" name="q" placeholder="搜索影片名称、地区、年份、标签" />
+      </form>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">首页</a><span>›</span><span>排行榜</span></div>
+      <h1 class="title">热度排行榜</h1>
+      <p class="sub">根据年份、题材关键词和标题热度生成的静态排行榜，支持分页浏览全部条目。</p>
+    </div>
+  </section>
+  <section class="section" data-live-filter>
+    <div class="container">
+      <div class="filter-bar">
+        <input type="search" placeholder="在本页内搜索影片名称、地区、标签" data-filter-input />
+        <select data-filter-select>
+          <option value="">全部分类</option>
+          <option value="国产电影">国产电影</option><option value="国产剧集">国产剧集</option><option value="日韩电影">日韩电影</option><option value="日韩剧集">日韩剧集</option><option value="欧美作品">欧美作品</option><option value="动画动漫">动画动漫</option><option value="其他热播">其他热播</option>
+        </select>
+        <select data-filter-select>
+          <option value="">全部年份</option>
+          <option value="1991">1991</option><option value="1990">1990</option><option value="1989">1989</option><option value="1988">1988</option><option value="1987">1987</option><option value="1986">1986</option><option value="1984">1984</option>
+        </select>
+      </div>
+      <div class="card-grid">
+        <a class="movie-card" href="movie-0962.html" data-filter-card data-search="双城故事1991 中国香港 电影 爱情/剧情 1991年,上海弄堂的送报员与香港中环的女文员通过共用一只信鸽交换日记,鸽子的航线却越飞越偏。 时代变迁 单车送报 沪港双城" data-cat="国产电影" data-year="1991">
+  <div class="movie-poster">
+    <img src="assets/covers/0962.svg" alt="双城故事1991" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">双城故事1991</h3>
+    <div class="movie-meta">
+      <span>中国香港</span>
+      <span>•</span>
+      <span>1991</span>
+      <span>•</span>
+      <span>爱情</span>
+    </div>
+    <p class="movie-line">1991年,上海弄堂的送报员与香港中环的女文员通过共用一只信鸽交换日记,鸽子的航线却越飞越偏。</p>
+    <div class="chip-row"><span class="chip muted">时代变迁</span><span class="chip muted">单车送报</span><span class="chip muted">沪港双城</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1196.html" data-filter-card data-search="幼儿园警探 美国 电影 喜剧,动作,警匪 一名五大三粗的警探为了追捕毒贩,不得不卧底成幼儿园教师,却惨遭小朋友们“统治”。 硬汉教师 乌龙卧底 儿童喜剧 阿诺反差萌" data-cat="欧美作品" data-year="1990">
+  <div class="movie-poster">
+    <img src="assets/covers/1196.svg" alt="幼儿园警探" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">幼儿园警探</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>1990</span>
+      <span>•</span>
+      <span>喜剧</span>
+    </div>
+    <p class="movie-line">一名五大三粗的警探为了追捕毒贩,不得不卧底成幼儿园教师,却惨遭小朋友们“统治”。</p>
+    <div class="chip-row"><span class="chip muted">硬汉教师</span><span class="chip muted">乌龙卧底</span><span class="chip muted">儿童喜剧</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1460.html" data-filter-card data-search="马路英雄 中国香港 电影 动作,剧情 一个热爱赛车的底层青年为了替死去的兄弟报仇,在午夜的地下赛道上向权力发起了死亡冲刺。 飞车 黑帮 兄弟情 港产片" data-cat="国产电影" data-year="1991">
+  <div class="movie-poster">
+    <img src="assets/covers/1460.svg" alt="马路英雄" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">马路英雄</h3>
+    <div class="movie-meta">
+      <span>中国香港</span>
+      <span>•</span>
+      <span>1991</span>
+      <span>•</span>
+      <span>动作</span>
+    </div>
+    <p class="movie-line">一个热爱赛车的底层青年为了替死去的兄弟报仇,在午夜的地下赛道上向权力发起了死亡冲刺。</p>
+    <div class="chip-row"><span class="chip muted">飞车</span><span class="chip muted">黑帮</span><span class="chip muted">兄弟情</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1519.html" data-filter-card data-search="男盗女差粤语 中国香港 剧集 喜剧,爱情,时装 一个是专偷名画的雅贼,一个是专抓小偷的女警,两人在同一屋檐下上演猫鼠游戏。 欢喜冤家 斗气 市井 轻松搞笑 TVB" data-cat="国产剧集" data-year="1991">
+  <div class="movie-poster">
+    <img src="assets/covers/1519.svg" alt="男盗女差粤语" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">男盗女差粤语</h3>
+    <div class="movie-meta">
+      <span>中国香港</span>
+      <span>•</span>
+      <span>1991</span>
+      <span>•</span>
+      <span>喜剧</span>
+    </div>
+    <p class="movie-line">一个是专偷名画的雅贼,一个是专抓小偷的女警,两人在同一屋檐下上演猫鼠游戏。</p>
+    <div class="chip-row"><span class="chip muted">欢喜冤家</span><span class="chip muted">斗气</span><span class="chip muted">市井</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1590.html" data-filter-card data-search="黄土恩情粤语 中国香港 电视剧 剧情 一段被黄土地埋藏三十年的血海深仇,因一口棺材的出土而重新浮出水面。 乡土 恩仇 粤语 家族" data-cat="国产剧集" data-year="1991">
+  <div class="movie-poster">
+    <img src="assets/covers/1590.svg" alt="黄土恩情粤语" loading="lazy" />
+    <span class="type-badge">电视剧</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">黄土恩情粤语</h3>
+    <div class="movie-meta">
+      <span>中国香港</span>
+      <span>•</span>
+      <span>1991</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">一段被黄土地埋藏三十年的血海深仇,因一口棺材的出土而重新浮出水面。</p>
+    <div class="chip-row"><span class="chip muted">乡土</span><span class="chip muted">恩仇</span><span class="chip muted">粤语</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0541.html" data-filter-card data-search="4度空间大师 美国 电影 科幻,悬疑 一个发明了四度空间仪的天才,发现自己在每个平行宇宙中都是疯子。 平行宇宙 穿越 邪典 脑洞" data-cat="欧美作品" data-year="1990">
+  <div class="movie-poster">
+    <img src="assets/covers/0541.svg" alt="4度空间大师" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">4度空间大师</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>1990</span>
+      <span>•</span>
+      <span>科幻</span>
+    </div>
+    <p class="movie-line">一个发明了四度空间仪的天才,发现自己在每个平行宇宙中都是疯子。</p>
+    <div class="chip-row"><span class="chip muted">平行宇宙</span><span class="chip muted">穿越</span><span class="chip muted">邪典</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1197.html" data-filter-card data-search="乱世浮生 中国香港 电影 剧情/爱情/战争 一个小人物在战火中同时失去了家园与爱人,却捡到了一个敌方的婴儿。 动荡年代 命运纠葛 底层视角" data-cat="国产电影" data-year="1989">
+  <div class="movie-poster">
+    <img src="assets/covers/1197.svg" alt="乱世浮生" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">乱世浮生</h3>
+    <div class="movie-meta">
+      <span>中国香港</span>
+      <span>•</span>
+      <span>1989</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">一个小人物在战火中同时失去了家园与爱人,却捡到了一个敌方的婴儿。</p>
+    <div class="chip-row"><span class="chip muted">动荡年代</span><span class="chip muted">命运纠葛</span><span class="chip muted">底层视角</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1711.html" data-filter-card data-search="霓裳鬼影 中国香港 电影 恐怖,惊悚 深水埗老裁缝接单缝制一件歌女旗袍,每缝一针,镜子里的倒影就多出一个勒痕。 旗袍 裁缝 凶宅 还魂 针线" data-cat="国产电影" data-year="1989">
+  <div class="movie-poster">
+    <img src="assets/covers/1711.svg" alt="霓裳鬼影" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">霓裳鬼影</h3>
+    <div class="movie-meta">
+      <span>中国香港</span>
+      <span>•</span>
+      <span>1989</span>
+      <span>•</span>
+      <span>恐怖</span>
+    </div>
+    <p class="movie-line">深水埗老裁缝接单缝制一件歌女旗袍,每缝一针,镜子里的倒影就多出一个勒痕。</p>
+    <div class="chip-row"><span class="chip muted">旗袍</span><span class="chip muted">裁缝</span><span class="chip muted">凶宅</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0178.html" data-filter-card data-search="拼命三郎 中国香港 电影 动作,犯罪,剧情 一个只有“勇”字的警察,为了给枉死的同事报仇,独闯金三角毒巢。 警匪 兄弟情 港式暴力美学" data-cat="国产电影" data-year="1989">
+  <div class="movie-poster">
+    <img src="assets/covers/0178.svg" alt="拼命三郎" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">拼命三郎</h3>
+    <div class="movie-meta">
+      <span>中国香港</span>
+      <span>•</span>
+      <span>1989</span>
+      <span>•</span>
+      <span>动作</span>
+    </div>
+    <p class="movie-line">一个只有“勇”字的警察,为了给枉死的同事报仇,独闯金三角毒巢。</p>
+    <div class="chip-row"><span class="chip muted">警匪</span><span class="chip muted">兄弟情</span><span class="chip muted">港式暴力美学</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1876.html" data-filter-card data-search="月光光心慌慌5 美国 电影 恐怖惊悚 在万圣节前夜,恶魔面具杀手迈克尔·迈尔斯从医院停尸房苏醒,开始新一波屠杀。 面具杀手 医院 万圣节 复仇" data-cat="欧美作品" data-year="1989">
+  <div class="movie-poster">
+    <img src="assets/covers/1876.svg" alt="月光光心慌慌5" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">月光光心慌慌5</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>1989</span>
+      <span>•</span>
+      <span>恐怖惊悚</span>
+    </div>
+    <p class="movie-line">在万圣节前夜,恶魔面具杀手迈克尔·迈尔斯从医院停尸房苏醒,开始新一波屠杀。</p>
+    <div class="chip-row"><span class="chip muted">面具杀手</span><span class="chip muted">医院</span><span class="chip muted">万圣节</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0233.html" data-filter-card data-search="我未成年1989 中国香港 电影 剧情/青春/犯罪 三个被判进女童院的未成年少女,在绝望中找到了比家庭更坚固的友情。 少女 边缘群体 社会问题 怀旧" data-cat="国产电影" data-year="1989">
+  <div class="movie-poster">
+    <img src="assets/covers/0233.svg" alt="我未成年1989" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">我未成年1989</h3>
+    <div class="movie-meta">
+      <span>中国香港</span>
+      <span>•</span>
+      <span>1989</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">三个被判进女童院的未成年少女,在绝望中找到了比家庭更坚固的友情。</p>
+    <div class="chip-row"><span class="chip muted">少女</span><span class="chip muted">边缘群体</span><span class="chip muted">社会问题</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0654.html" data-filter-card data-search="顽童春心 中国台湾 电影 喜剧、剧情、家庭 七十年代台湾乡村,调皮鬼阿炮为了追隔壁班的女生,闹出了一连串啼笑皆非的糗事。 童年 初恋 乡村 成长烦恼 老电影" data-cat="国产电影" data-year="1989">
+  <div class="movie-poster">
+    <img src="assets/covers/0654.svg" alt="顽童春心" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">顽童春心</h3>
+    <div class="movie-meta">
+      <span>中国台湾</span>
+      <span>•</span>
+      <span>1989</span>
+      <span>•</span>
+      <span>喜剧</span>
+    </div>
+    <p class="movie-line">七十年代台湾乡村,调皮鬼阿炮为了追隔壁班的女生,闹出了一连串啼笑皆非的糗事。</p>
+    <div class="chip-row"><span class="chip muted">童年</span><span class="chip muted">初恋</span><span class="chip muted">乡村</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0340.html" data-filter-card data-search="荡女痴男 中国台湾 电影 爱情、剧情、古装 她是青楼头牌,他是落魄书生,一场始于皮肉交易的爱情最终席卷了整个时代。 虐恋 风月场 命运纠葛 女权意识" data-cat="国产电影" data-year="1989">
+  <div class="movie-poster">
+    <img src="assets/covers/0340.svg" alt="荡女痴男" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">荡女痴男</h3>
+    <div class="movie-meta">
+      <span>中国台湾</span>
+      <span>•</span>
+      <span>1989</span>
+      <span>•</span>
+      <span>爱情</span>
+    </div>
+    <p class="movie-line">她是青楼头牌,他是落魄书生,一场始于皮肉交易的爱情最终席卷了整个时代。</p>
+    <div class="chip-row"><span class="chip muted">虐恋</span><span class="chip muted">风月场</span><span class="chip muted">命运纠葛</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0220.html" data-filter-card data-search="毛衣女郎 中国香港 电影 爱情/文艺/都市 一位失业的毛衣设计师,在给陌生顾客织补毛衣时,从针脚里读出了三段被遗忘的恋情。 毛衣 错位爱情 香港移民潮 手作温度" data-cat="国产电影" data-year="1989">
+  <div class="movie-poster">
+    <img src="assets/covers/0220.svg" alt="毛衣女郎" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">毛衣女郎</h3>
+    <div class="movie-meta">
+      <span>中国香港</span>
+      <span>•</span>
+      <span>1989</span>
+      <span>•</span>
+      <span>爱情</span>
+    </div>
+    <p class="movie-line">一位失业的毛衣设计师,在给陌生顾客织补毛衣时,从针脚里读出了三段被遗忘的恋情。</p>
+    <div class="chip-row"><span class="chip muted">毛衣</span><span class="chip muted">错位爱情</span><span class="chip muted">香港移民潮</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0717.html" data-filter-card data-search="心不在焉的服务生 法国 电影 喜剧,爱情 一个总在走神的服务生,因为上错菜而成就了十对情侣,自己却错过了女神。 浪漫 巴黎 误会 温馨" data-cat="欧美作品" data-year="1988">
+  <div class="movie-poster">
+    <img src="assets/covers/0717.svg" alt="心不在焉的服务生" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">心不在焉的服务生</h3>
+    <div class="movie-meta">
+      <span>法国</span>
+      <span>•</span>
+      <span>1988</span>
+      <span>•</span>
+      <span>喜剧</span>
+    </div>
+    <p class="movie-line">一个总在走神的服务生,因为上错菜而成就了十对情侣,自己却错过了女神。</p>
+    <div class="chip-row"><span class="chip muted">浪漫</span><span class="chip muted">巴黎</span><span class="chip muted">误会</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1091.html" data-filter-card data-search="孖宝闯七关 香港 电影 动作,喜剧 一对在海关失散的孪生兄弟,一个成了警队神枪手,一个成了街头魔术师,三十年后因一个黑帮U盘被迫联手闯过七个关卡。 孪生兄弟 失散 冒险闯关 误打误撞 八九十年代港味" data-cat="国产电影" data-year="1988">
+  <div class="movie-poster">
+    <img src="assets/covers/1091.svg" alt="孖宝闯七关" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">孖宝闯七关</h3>
+    <div class="movie-meta">
+      <span>香港</span>
+      <span>•</span>
+      <span>1988</span>
+      <span>•</span>
+      <span>动作</span>
+    </div>
+    <p class="movie-line">一对在海关失散的孪生兄弟,一个成了警队神枪手,一个成了街头魔术师,三十年后因一个黑帮U盘被迫联手闯过七个关卡。</p>
+    <div class="chip-row"><span class="chip muted">孪生兄弟</span><span class="chip muted">失散</span><span class="chip muted">冒险闯关</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1541.html" data-filter-card data-search="鬼马小灵精 香港 剧集 喜剧、儿童 一个古怪的小男孩能看见别人看不见的“小精灵”,他用这份超能力帮街坊邻里解决各种奇葩麻烦。 儿童奇幻 合家欢 怀旧童星" data-cat="国产剧集" data-year="1989">
+  <div class="movie-poster">
+    <img src="assets/covers/1541.svg" alt="鬼马小灵精" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">鬼马小灵精</h3>
+    <div class="movie-meta">
+      <span>香港</span>
+      <span>•</span>
+      <span>1989</span>
+      <span>•</span>
+      <span>喜剧</span>
+    </div>
+    <p class="movie-line">一个古怪的小男孩能看见别人看不见的“小精灵”,他用这份超能力帮街坊邻里解决各种奇葩麻烦。</p>
+    <div class="chip-row"><span class="chip muted">儿童奇幻</span><span class="chip muted">合家欢</span><span class="chip muted">怀旧童星</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0653.html" data-filter-card data-search="旗正飘飘 中国台湾 电影 战争/历史/爱情 抗战末期,一支孤军深入敌后的特遣队,为了护送一面军旗穿越火线,全员牺牲。 抗日战争 军旅爱情 悲壮 爱国情怀" data-cat="国产电影" data-year="1987">
+  <div class="movie-poster">
+    <img src="assets/covers/0653.svg" alt="旗正飘飘" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">旗正飘飘</h3>
+    <div class="movie-meta">
+      <span>中国台湾</span>
+      <span>•</span>
+      <span>1987</span>
+      <span>•</span>
+      <span>战争</span>
+    </div>
+    <p class="movie-line">抗战末期,一支孤军深入敌后的特遣队,为了护送一面军旗穿越火线,全员牺牲。</p>
+    <div class="chip-row"><span class="chip muted">抗日战争</span><span class="chip muted">军旅爱情</span><span class="chip muted">悲壮</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0327.html" data-filter-card data-search="鳄鱼头黑煞星 香港 电影 动作/犯罪 鳄鱼头老大出狱后发现地盘被吞,他决定用最原始的拳头说话。 黑帮复仇 硬汉风格 港产cult片 兄弟情" data-cat="国产电影" data-year="1987">
+  <div class="movie-poster">
+    <img src="assets/covers/0327.svg" alt="鳄鱼头黑煞星" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">鳄鱼头黑煞星</h3>
+    <div class="movie-meta">
+      <span>香港</span>
+      <span>•</span>
+      <span>1987</span>
+      <span>•</span>
+      <span>动作</span>
+    </div>
+    <p class="movie-line">鳄鱼头老大出狱后发现地盘被吞,他决定用最原始的拳头说话。</p>
+    <div class="chip-row"><span class="chip muted">黑帮复仇</span><span class="chip muted">硬汉风格</span><span class="chip muted">港产cult片</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1113.html" data-filter-card data-search="天空之城 日本 电影 动画,冒险,奇幻 少女从天空坠落,带着飞行石的秘密,与少年一起寻找传说中的漂浮帝国。 宫崎骏 飞行石 机器人 拉普达" data-cat="动画动漫" data-year="1986">
+  <div class="movie-poster">
+    <img src="assets/covers/1113.svg" alt="天空之城" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">天空之城</h3>
+    <div class="movie-meta">
+      <span>日本</span>
+      <span>•</span>
+      <span>1986</span>
+      <span>•</span>
+      <span>动画</span>
+    </div>
+    <p class="movie-line">少女从天空坠落,带着飞行石的秘密,与少年一起寻找传说中的漂浮帝国。</p>
+    <div class="chip-row"><span class="chip muted">宫崎骏</span><span class="chip muted">飞行石</span><span class="chip muted">机器人</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0457.html" data-filter-card data-search="美国豚鼠2:血腥冲击 美国 电影 恐怖/血腥/实验 一个地下组织用活人进行极端疼痛测试,摄像机记录下了所有画面。 邪典 禁片 伪纪录片 身体恐怖" data-cat="欧美作品" data-year="1987">
+  <div class="movie-poster">
+    <img src="assets/covers/0457.svg" alt="美国豚鼠2:血腥冲击" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">美国豚鼠2:血腥冲击</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>1987</span>
+      <span>•</span>
+      <span>恐怖</span>
+    </div>
+    <p class="movie-line">一个地下组织用活人进行极端疼痛测试,摄像机记录下了所有画面。</p>
+    <div class="chip-row"><span class="chip muted">邪典</span><span class="chip muted">禁片</span><span class="chip muted">伪纪录片</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1024.html" data-filter-card data-search="情波 中国台湾 电影 爱情,剧情,家庭 两个世仇家族的子女,在海边用摩斯密码敲出了一段禁忌之恋。 家族恩怨 海滩 虐恋 时代" data-cat="国产电影" data-year="1986">
+  <div class="movie-poster">
+    <img src="assets/covers/1024.svg" alt="情波" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">情波</h3>
+    <div class="movie-meta">
+      <span>中国台湾</span>
+      <span>•</span>
+      <span>1986</span>
+      <span>•</span>
+      <span>爱情</span>
+    </div>
+    <p class="movie-line">两个世仇家族的子女,在海边用摩斯密码敲出了一段禁忌之恋。</p>
+    <div class="chip-row"><span class="chip muted">家族恩怨</span><span class="chip muted">海滩</span><span class="chip muted">虐恋</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0591.html" data-filter-card data-search="一家巧多事 中国香港 电影 喜剧,家庭 除夕夜,三代同堂的陈家因一盒被送错的年糕,引发了一连串啼笑皆非的家庭风波。 港式贺岁 乌龙 邻里纠纷 团圆 爆笑" data-cat="国产电影" data-year="1986">
+  <div class="movie-poster">
+    <img src="assets/covers/0591.svg" alt="一家巧多事" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">一家巧多事</h3>
+    <div class="movie-meta">
+      <span>中国香港</span>
+      <span>•</span>
+      <span>1986</span>
+      <span>•</span>
+      <span>喜剧</span>
+    </div>
+    <p class="movie-line">除夕夜,三代同堂的陈家因一盒被送错的年糕,引发了一连串啼笑皆非的家庭风波。</p>
+    <div class="chip-row"><span class="chip muted">港式贺岁</span><span class="chip muted">乌龙</span><span class="chip muted">邻里纠纷</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0866.html" data-filter-card data-search="中东大追杀 美国 电影 动作,冒险 摩萨德特工为追杀“黑九月”恐怖分子,从中东一路杀到欧洲,却发现名单是假的。 以色列 特工 复仇 冷战" data-cat="欧美作品" data-year="1984">
+  <div class="movie-poster">
+    <img src="assets/covers/0866.svg" alt="中东大追杀" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">中东大追杀</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>1984</span>
+      <span>•</span>
+      <span>动作</span>
+    </div>
+    <p class="movie-line">摩萨德特工为追杀“黑九月”恐怖分子,从中东一路杀到欧洲,却发现名单是假的。</p>
+    <div class="chip-row"><span class="chip muted">以色列</span><span class="chip muted">特工</span><span class="chip muted">复仇</span></div>
+  </div>
+</a>
+      </div>
+      <div class="pagination"><a href="rankings-80.html">上一页</a><a href="rankings.html" class="">1</a><span>…</span><a href="rankings-80.html" class="">80</a><a href="rankings-81.html" class="active">81</a><a href="rankings-82.html" class="">82</a><span>…</span><a href="rankings-84.html" class="">84</a><a href="rankings-82.html">下一页</a></div>
+    </div>
+  </section>
+</main>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <h4>日韩热门视频</h4>
+        <p>日韩热门视频页面整理近期关注较高的视频内容，按类型与热度展示相关分类。</p>
+      </div>
+      <div>
+        <h4>分类入口</h4>
+        <p><a href="categories.html">分类总览</a></p>
+        <p><a href="rankings.html">热度排行榜</a></p>
+        <p><a href="search.html">站内搜索</a></p>
+      </div>
+      <div>
+        <h4>帮助说明</h4>
+        <p><a href="service.html">使用指南</a></p>
+        <p><a href="copyright.html">用户协议</a></p>
+        <p><a href="about.html">关于我们</a></p>
+      </div>
+      <div>
+        <h4>联系信息</h4>
+        <p>工作日 9:00 - 18:00</p>
+        <p>我们将在 24 小时内回复邮件</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 日韩热门视频. 保留所有权利。</span>
+      <span>纯静态 HTML / CSS / JS 构建</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?76b5e2e0f6c84c06f0a7cb7105df054d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>

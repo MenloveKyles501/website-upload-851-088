@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>热度排行榜 - 日韩热门视频-热门好看的视频大全-热门片库持续更新</title>
+  <meta name="description" content="热度排行榜页展示按热度与年份排序的影视内容。" />
+  <meta name="keywords" content="排行榜,日韩热门视频,热门好看的视频大全,热门片库持续更新,日韩视频,热门视频,视频大全" />
+  <meta name="theme-color" content="#0b1120" />
+  <meta property="og:title" content="热度排行榜 - 日韩热门视频-热门好看的视频大全-热门片库持续更新" />
+  <meta property="og:description" content="热度排行榜页展示按热度与年份排序的影视内容。" />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="inner">
+      <a class="brand" href="index.html" aria-label="日韩热门视频">
+        <span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 10.5A2.5 2.5 0 1 1 12 7a2.5 2.5 0 0 1 0 5.5z"/></svg></span>
+        <span class="brand-text">
+          <span class="brand-title">日韩热门视频</span>
+          <span class="brand-sub">热门内容整理 · 静态站点</span>
+        </span>
+      </a>
+      <nav class="nav" aria-label="主导航">
+        <a href="index.html" class="">首页</a><a href="categories.html" class="">分类总览</a><a href="rankings.html" class="active">排行榜</a><a href="search.html" class="">搜索</a><a href="about.html" class="">关于我们</a>
+      </nav>
+      <div class="header-actions">
+        <form class="search-pill" action="search.html" method="get" role="search">
+          <span aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4a6 6 0 1 0 3.7 10.7l4.3 4.3 1.4-1.4-4.3-4.3A6 6 0 0 0 10 4zm0 2a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/></svg></span>
+          <input type="search" name="q" placeholder="搜索影片名称、地区、年份、标签" />
+        </form>
+        <button class="icon-btn mobile-toggle" type="button" data-mobile-toggle aria-expanded="false" aria-label="展开菜单">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-nav" data-mobile-nav aria-label="移动端导航">
+      <a href="index.html" class="">首页</a><a href="categories.html" class="">分类总览</a><a href="rankings.html" class="active">排行榜</a><a href="search.html" class="">搜索</a><a href="about.html" class="">关于我们</a>
+      <form class="search-pill" action="search.html" method="get" role="search" style="margin-top:10px; min-width:0;">
+        <span aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4a6 6 0 1 0 3.7 10.7l4.3 4.3 1.4-1.4-4.3-4.3A6 6 0 0 0 10 4zm0 2a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/></svg></span>
+        <input type="search" name="q" placeholder="搜索影片名称、地区、年份、标签" />
+      </form>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">首页</a><span>›</span><span>排行榜</span></div>
+      <h1 class="title">热度排行榜</h1>
+      <p class="sub">根据年份、题材关键词和标题热度生成的静态排行榜，支持分页浏览全部条目。</p>
+    </div>
+  </section>
+  <section class="section" data-live-filter>
+    <div class="container">
+      <div class="filter-bar">
+        <input type="search" placeholder="在本页内搜索影片名称、地区、标签" data-filter-input />
+        <select data-filter-select>
+          <option value="">全部分类</option>
+          <option value="国产电影">国产电影</option><option value="国产剧集">国产剧集</option><option value="日韩电影">日韩电影</option><option value="日韩剧集">日韩剧集</option><option value="欧美作品">欧美作品</option><option value="动画动漫">动画动漫</option><option value="其他热播">其他热播</option>
+        </select>
+        <select data-filter-select>
+          <option value="">全部年份</option>
+          <option value="2027">2027</option><option value="2026">2026</option><option value="2025">2025</option>
+        </select>
+      </div>
+      <div class="card-grid">
+        <a class="movie-card" href="movie-0965.html" data-filter-card data-search="生命速写 中国大陆 电影 剧情,家庭,文艺 叛逆的艺考生女儿回到病危的父亲身边,用一页页速写,画下了父亲迟到的道歉与自己崩塌的信仰。 绝症 临终关怀 代际沟通 速写簿" data-cat="国产电影" data-year="2027">
+  <div class="movie-poster">
+    <img src="assets/covers/0965.svg" alt="生命速写" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">生命速写</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2027</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">叛逆的艺考生女儿回到病危的父亲身边,用一页页速写,画下了父亲迟到的道歉与自己崩塌的信仰。</p>
+    <div class="chip-row"><span class="chip muted">绝症</span><span class="chip muted">临终关怀</span><span class="chip muted">代际沟通</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1222.html" data-filter-card data-search="雪人往事 美国 动画片 喜剧,奇幻,冒险 在遇见艾莎之前,搞笑的雪宝在魔法森林里有一群同样不靠谱的“非正常”怪物朋友。 衍生前传 友情 欢乐" data-cat="动画动漫" data-year="2025">
+  <div class="movie-poster">
+    <img src="assets/covers/1222.svg" alt="雪人往事" loading="lazy" />
+    <span class="type-badge">动画片</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">雪人往事</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2025</span>
+      <span>•</span>
+      <span>喜剧</span>
+    </div>
+    <p class="movie-line">在遇见艾莎之前,搞笑的雪宝在魔法森林里有一群同样不靠谱的“非正常”怪物朋友。</p>
+    <div class="chip-row"><span class="chip muted">衍生前传</span><span class="chip muted">友情</span><span class="chip muted">欢乐</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1608.html" data-filter-card data-search="狂暴者 美国 电影 动作/科幻 他被改造成只会战斗的完美兵器,但脑控芯片损坏后,他发现自己杀的第一个目标居然是亲生父亲。 超级士兵 失控 硬核打斗 反英雄" data-cat="欧美作品" data-year="2026">
+  <div class="movie-poster">
+    <img src="assets/covers/1608.svg" alt="狂暴者" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">狂暴者</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2026</span>
+      <span>•</span>
+      <span>动作</span>
+    </div>
+    <p class="movie-line">他被改造成只会战斗的完美兵器,但脑控芯片损坏后,他发现自己杀的第一个目标居然是亲生父亲。</p>
+    <div class="chip-row"><span class="chip muted">超级士兵</span><span class="chip muted">失控</span><span class="chip muted">硬核打斗</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0257.html" data-filter-card data-search="湖海恩仇 中国香港 电影 剧情,动作,犯罪 两个情同手足的码头工人,因一次意外的凶杀案踏上截然不同的人生路,十年后,一个是警察,一个是悍匪。 江湖 兄弟情 宿命" data-cat="国产电影" data-year="2025">
+  <div class="movie-poster">
+    <img src="assets/covers/0257.svg" alt="湖海恩仇" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">湖海恩仇</h3>
+    <div class="movie-meta">
+      <span>中国香港</span>
+      <span>•</span>
+      <span>2025</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">两个情同手足的码头工人,因一次意外的凶杀案踏上截然不同的人生路,十年后,一个是警察,一个是悍匪。</p>
+    <div class="chip-row"><span class="chip muted">江湖</span><span class="chip muted">兄弟情</span><span class="chip muted">宿命</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0506.html" data-filter-card data-search="永远忠诚 美国 电影 战争/剧情 阿富汗战场上,海军陆战队员与他的军犬同时受伤,回国后人与狗都患上了严重的PTSD。 海军陆战队 军犬 战后创伤" data-cat="欧美作品" data-year="2026">
+  <div class="movie-poster">
+    <img src="assets/covers/0506.svg" alt="永远忠诚" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">永远忠诚</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2026</span>
+      <span>•</span>
+      <span>战争</span>
+    </div>
+    <p class="movie-line">阿富汗战场上,海军陆战队员与他的军犬同时受伤,回国后人与狗都患上了严重的PTSD。</p>
+    <div class="chip-row"><span class="chip muted">海军陆战队</span><span class="chip muted">军犬</span><span class="chip muted">战后创伤</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1535.html" data-filter-card data-search="狂飙摩托 中国大陆 剧集 动作,犯罪 一名卧底警察为摧毁地下赛车集团,必须在生死时速中找回迷失的自己。 飙车 卧底 热血 兄弟情" data-cat="国产剧集" data-year="2026">
+  <div class="movie-poster">
+    <img src="assets/covers/1535.svg" alt="狂飙摩托" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">狂飙摩托</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2026</span>
+      <span>•</span>
+      <span>动作</span>
+    </div>
+    <p class="movie-line">一名卧底警察为摧毁地下赛车集团,必须在生死时速中找回迷失的自己。</p>
+    <div class="chip-row"><span class="chip muted">飙车</span><span class="chip muted">卧底</span><span class="chip muted">热血</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0445.html" data-filter-card data-search="《人类体验》 美国 电影 科幻,惊悚,哲学 一款付费体验他人真实记忆的VR设备风靡全球,直到一名杀人犯付费进入了受害者的记忆——发现自己根本没有杀人。 VR 记忆 伦理 意识" data-cat="欧美作品" data-year="2026">
+  <div class="movie-poster">
+    <img src="assets/covers/0445.svg" alt="《人类体验》" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">《人类体验》</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2026</span>
+      <span>•</span>
+      <span>科幻</span>
+    </div>
+    <p class="movie-line">一款付费体验他人真实记忆的VR设备风靡全球,直到一名杀人犯付费进入了受害者的记忆——发现自己根本没有杀人。</p>
+    <div class="chip-row"><span class="chip muted">VR</span><span class="chip muted">记忆</span><span class="chip muted">伦理</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0753.html" data-filter-card data-search="梦中的她 中国大陆 电影 爱情、奇幻、悬疑 男主每晚梦见同一位女孩,醒来后按梦中的线索在现实中寻找,却发现每一次找到的“她”,都会在第二天消失。 梦境穿越 初恋之谜 时间循环 双向奔赴" data-cat="国产电影" data-year="2025">
+  <div class="movie-poster">
+    <img src="assets/covers/0753.svg" alt="梦中的她" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">梦中的她</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2025</span>
+      <span>•</span>
+      <span>爱情</span>
+    </div>
+    <p class="movie-line">男主每晚梦见同一位女孩,醒来后按梦中的线索在现实中寻找,却发现每一次找到的“她”,都会在第二天消失。</p>
+    <div class="chip-row"><span class="chip muted">梦境穿越</span><span class="chip muted">初恋之谜</span><span class="chip muted">时间循环</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1905.html" data-filter-card data-search="银都百美 中国香港 剧集 剧情,女性,商战 银都电视台第100届选美大赛,入围的百位佳丽中,有一半是豪门家族安插的棋子,另一半则各怀杀机。 选美黑幕 豪门争产 女性群像" data-cat="国产剧集" data-year="2027">
+  <div class="movie-poster">
+    <img src="assets/covers/1905.svg" alt="银都百美" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">银都百美</h3>
+    <div class="movie-meta">
+      <span>中国香港</span>
+      <span>•</span>
+      <span>2027</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">银都电视台第100届选美大赛,入围的百位佳丽中,有一半是豪门家族安插的棋子,另一半则各怀杀机。</p>
+    <div class="chip-row"><span class="chip muted">选美黑幕</span><span class="chip muted">豪门争产</span><span class="chip muted">女性群像</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1829.html" data-filter-card data-search="三国志长江在燃烧 日本/中国大陆 电影 战争/史诗/灾难 赤壁之战前夜,长江上一名东吴火攻船夫,意外救起了乔装成伤兵的曹操,被迫在国仇与道义之间抉择。 赤壁别传 火攻特效 小人物史诗" data-cat="日韩电影" data-year="2026">
+  <div class="movie-poster">
+    <img src="assets/covers/1829.svg" alt="三国志长江在燃烧" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">三国志长江在燃烧</h3>
+    <div class="movie-meta">
+      <span>日本/中国大陆</span>
+      <span>•</span>
+      <span>2026</span>
+      <span>•</span>
+      <span>战争</span>
+    </div>
+    <p class="movie-line">赤壁之战前夜,长江上一名东吴火攻船夫,意外救起了乔装成伤兵的曹操,被迫在国仇与道义之间抉择。</p>
+    <div class="chip-row"><span class="chip muted">赤壁别传</span><span class="chip muted">火攻特效</span><span class="chip muted">小人物史诗</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0825.html" data-filter-card data-search="神秘博士第十三季 英国 剧集 科幻,冒险,奇幻 博士的第十三世化身被困在一个不断坍缩的时间牢笼里,而她的过去、未来与所有同伴都被抹除了。 时间旅行 宇宙魔方 重生 史诗" data-cat="欧美作品" data-year="2025">
+  <div class="movie-poster">
+    <img src="assets/covers/0825.svg" alt="神秘博士第十三季" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">神秘博士第十三季</h3>
+    <div class="movie-meta">
+      <span>英国</span>
+      <span>•</span>
+      <span>2025</span>
+      <span>•</span>
+      <span>科幻</span>
+    </div>
+    <p class="movie-line">博士的第十三世化身被困在一个不断坍缩的时间牢笼里,而她的过去、未来与所有同伴都被抹除了。</p>
+    <div class="chip-row"><span class="chip muted">时间旅行</span><span class="chip muted">宇宙魔方</span><span class="chip muted">重生</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1311.html" data-filter-card data-search="热街小子 中国香港 电影 动作/青春 庙街长大的外卖少年为救兄弟,被迫参加地下跑酷赌局,对手竟是警队精英。 街头 跑酷 兄弟情 逆袭 热血" data-cat="国产电影" data-year="2026">
+  <div class="movie-poster">
+    <img src="assets/covers/1311.svg" alt="热街小子" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">热街小子</h3>
+    <div class="movie-meta">
+      <span>中国香港</span>
+      <span>•</span>
+      <span>2026</span>
+      <span>•</span>
+      <span>动作</span>
+    </div>
+    <p class="movie-line">庙街长大的外卖少年为救兄弟,被迫参加地下跑酷赌局,对手竟是警队精英。</p>
+    <div class="chip-row"><span class="chip muted">街头</span><span class="chip muted">跑酷</span><span class="chip muted">兄弟情</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0323.html" data-filter-card data-search="轴线 中国大陆 电影 科幻,悬疑,剧情 物理学家发现每个人都是一条时间轴线,而“删除”别人的轴线,就能吸收其寿命和运气。 高概念 时间轴 蝴蝶效应 选择 平行宇宙" data-cat="国产电影" data-year="2025">
+  <div class="movie-poster">
+    <img src="assets/covers/0323.svg" alt="轴线" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">轴线</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2025</span>
+      <span>•</span>
+      <span>科幻</span>
+    </div>
+    <p class="movie-line">物理学家发现每个人都是一条时间轴线,而“删除”别人的轴线,就能吸收其寿命和运气。</p>
+    <div class="chip-row"><span class="chip muted">高概念</span><span class="chip muted">时间轴</span><span class="chip muted">蝴蝶效应</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0881.html" data-filter-card data-search="泼妇碧安卡:俄国恨运游 美国 电影 动作/喜剧/冒险 被黑帮偷走爱犬的纽约悍妇,一路追杀到莫斯科,却发现狗已被寡头养成了抖音网红。 女性暴力 复仇 俄罗斯 黑色幽默 公路片" data-cat="欧美作品" data-year="2025">
+  <div class="movie-poster">
+    <img src="assets/covers/0881.svg" alt="泼妇碧安卡:俄国恨运游" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">泼妇碧安卡:俄国恨运游</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2025</span>
+      <span>•</span>
+      <span>动作</span>
+    </div>
+    <p class="movie-line">被黑帮偷走爱犬的纽约悍妇,一路追杀到莫斯科,却发现狗已被寡头养成了抖音网红。</p>
+    <div class="chip-row"><span class="chip muted">女性暴力</span><span class="chip muted">复仇</span><span class="chip muted">俄罗斯</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1615.html" data-filter-card data-search="绝命杀机 美国 剧集 动作,悬疑,犯罪 一名退役间谍被陷害后只剩24小时洗清罪名,却发现每一步自救都在帮真凶完成计划。 间谍 背叛 连环陷阱 反转 限时" data-cat="欧美作品" data-year="2025">
+  <div class="movie-poster">
+    <img src="assets/covers/1615.svg" alt="绝命杀机" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">绝命杀机</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2025</span>
+      <span>•</span>
+      <span>动作</span>
+    </div>
+    <p class="movie-line">一名退役间谍被陷害后只剩24小时洗清罪名,却发现每一步自救都在帮真凶完成计划。</p>
+    <div class="chip-row"><span class="chip muted">间谍</span><span class="chip muted">背叛</span><span class="chip muted">连环陷阱</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0033.html" data-filter-card data-search="及笄年华 中国大陆 电视剧/网络剧 古装/家庭/成长 三个不同阶层的女孩在古代“及笄之年”的遭遇,交织出一幅大宋女子生存图鉴。 古代女性 及笄礼 家族斗争 少女成长" data-cat="国产剧集" data-year="2027">
+  <div class="movie-poster">
+    <img src="assets/covers/0033.svg" alt="及笄年华" loading="lazy" />
+    <span class="type-badge">电视剧/网络剧</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">及笄年华</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2027</span>
+      <span>•</span>
+      <span>古装</span>
+    </div>
+    <p class="movie-line">三个不同阶层的女孩在古代“及笄之年”的遭遇,交织出一幅大宋女子生存图鉴。</p>
+    <div class="chip-row"><span class="chip muted">古代女性</span><span class="chip muted">及笄礼</span><span class="chip muted">家族斗争</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1116.html" data-filter-card data-search="他人之颜 日本 电影 悬疑、剧情 一位在火灾中毁容的律师,接受了一次先锋的换脸手术,他带着全新的“他人之颜”回到妻子身边,试图诱惑她,以此测试妻子的忠诚。 换脸 整容 身份认同 婚姻" data-cat="日韩电影" data-year="2026">
+  <div class="movie-poster">
+    <img src="assets/covers/1116.svg" alt="他人之颜" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">他人之颜</h3>
+    <div class="movie-meta">
+      <span>日本</span>
+      <span>•</span>
+      <span>2026</span>
+      <span>•</span>
+      <span>悬疑</span>
+    </div>
+    <p class="movie-line">一位在火灾中毁容的律师,接受了一次先锋的换脸手术,他带着全新的“他人之颜”回到妻子身边,试图诱惑她,以此测试妻子的忠诚。</p>
+    <div class="chip-row"><span class="chip muted">换脸</span><span class="chip muted">整容</span><span class="chip muted">身份认同</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0039.html" data-filter-card data-search="爱与森林 法国 电影 剧情,悬疑,惊悚 一对隐居森林的恩爱夫妻,各自隐瞒着关于“自己是谁”的终极秘密。 心理惊悚 婚姻 身份认同 森林隐喻" data-cat="欧美作品" data-year="2025">
+  <div class="movie-poster">
+    <img src="assets/covers/0039.svg" alt="爱与森林" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">爱与森林</h3>
+    <div class="movie-meta">
+      <span>法国</span>
+      <span>•</span>
+      <span>2025</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">一对隐居森林的恩爱夫妻,各自隐瞒着关于“自己是谁”的终极秘密。</p>
+    <div class="chip-row"><span class="chip muted">心理惊悚</span><span class="chip muted">婚姻</span><span class="chip muted">身份认同</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0850.html" data-filter-card data-search="战后之战 中国大陆 剧集 悬疑/历史 抗日战争胜利后,五名幸存者组建秘密小组,追猎当年未被审判的日军细菌部队成员。 战后追凶 复仇联盟 时代创伤" data-cat="国产剧集" data-year="2026">
+  <div class="movie-poster">
+    <img src="assets/covers/0850.svg" alt="战后之战" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">战后之战</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2026</span>
+      <span>•</span>
+      <span>悬疑</span>
+    </div>
+    <p class="movie-line">抗日战争胜利后,五名幸存者组建秘密小组,追猎当年未被审判的日军细菌部队成员。</p>
+    <div class="chip-row"><span class="chip muted">战后追凶</span><span class="chip muted">复仇联盟</span><span class="chip muted">时代创伤</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1549.html" data-filter-card data-search="维达I:过去的碎片 美国 剧集 科幻/动作/冒险 帝国统治初期,伤痕累累的达斯·维达重返纳布星,寻找他作为阿纳金·天行者时遗落的一件关键遗物。 星球大战衍生 原力黑暗面 宿命 机械改造" data-cat="欧美作品" data-year="2025">
+  <div class="movie-poster">
+    <img src="assets/covers/1549.svg" alt="维达I:过去的碎片" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">维达I:过去的碎片</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2025</span>
+      <span>•</span>
+      <span>科幻</span>
+    </div>
+    <p class="movie-line">帝国统治初期,伤痕累累的达斯·维达重返纳布星,寻找他作为阿纳金·天行者时遗落的一件关键遗物。</p>
+    <div class="chip-row"><span class="chip muted">星球大战衍生</span><span class="chip muted">原力黑暗面</span><span class="chip muted">宿命</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1210.html" data-filter-card data-search="复制品 德国 电影 科幻,惊悚,伦理 一位濒死富豪唤醒了自己的克隆体,试图转移意识,克隆体却宣称自己才是本体。 克隆人 记忆移植 本体与复制体 生存之战" data-cat="欧美作品" data-year="2026">
+  <div class="movie-poster">
+    <img src="assets/covers/1210.svg" alt="复制品" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">复制品</h3>
+    <div class="movie-meta">
+      <span>德国</span>
+      <span>•</span>
+      <span>2026</span>
+      <span>•</span>
+      <span>科幻</span>
+    </div>
+    <p class="movie-line">一位濒死富豪唤醒了自己的克隆体,试图转移意识,克隆体却宣称自己才是本体。</p>
+    <div class="chip-row"><span class="chip muted">克隆人</span><span class="chip muted">记忆移植</span><span class="chip muted">本体与复制体</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0037.html" data-filter-card data-search="真心话太冒险 中国大陆 电影 青春/喜剧 毕业聚会上玩真心话大冒险,所有人都被逼出了足以毁掉人生的秘密。 游戏 校园 友情 社死" data-cat="国产电影" data-year="2026">
+  <div class="movie-poster">
+    <img src="assets/covers/0037.svg" alt="真心话太冒险" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">真心话太冒险</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2026</span>
+      <span>•</span>
+      <span>青春</span>
+    </div>
+    <p class="movie-line">毕业聚会上玩真心话大冒险,所有人都被逼出了足以毁掉人生的秘密。</p>
+    <div class="chip-row"><span class="chip muted">游戏</span><span class="chip muted">校园</span><span class="chip muted">友情</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0526.html" data-filter-card data-search="我推成为了上司第二季 日本 剧集 喜剧/爱情/职场 当痴迷的地下偶像突然空降成自己的魔鬼部长,社畜的追星梦瞬间变成地狱级职场求生记。 偶像 职场恋爱 漫改 反差萌 追星" data-cat="日韩剧集" data-year="2026">
+  <div class="movie-poster">
+    <img src="assets/covers/0526.svg" alt="我推成为了上司第二季" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">我推成为了上司第二季</h3>
+    <div class="movie-meta">
+      <span>日本</span>
+      <span>•</span>
+      <span>2026</span>
+      <span>•</span>
+      <span>喜剧</span>
+    </div>
+    <p class="movie-line">当痴迷的地下偶像突然空降成自己的魔鬼部长,社畜的追星梦瞬间变成地狱级职场求生记。</p>
+    <div class="chip-row"><span class="chip muted">偶像</span><span class="chip muted">职场恋爱</span><span class="chip muted">漫改</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1156.html" data-filter-card data-search="独行侠野狼 中国大陆 电影 动作,西部,犯罪 在苍茫的大西北戈壁上,一名沉默的货车司机,一辆改装越野车,和一群亡命之徒上演了一场生死时速的猫鼠游戏。 中国西部 复仇 硬汉电影 公路追杀" data-cat="国产电影" data-year="2026">
+  <div class="movie-poster">
+    <img src="assets/covers/1156.svg" alt="独行侠野狼" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">独行侠野狼</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2026</span>
+      <span>•</span>
+      <span>动作</span>
+    </div>
+    <p class="movie-line">在苍茫的大西北戈壁上,一名沉默的货车司机,一辆改装越野车,和一群亡命之徒上演了一场生死时速的猫鼠游戏。</p>
+    <div class="chip-row"><span class="chip muted">中国西部</span><span class="chip muted">复仇</span><span class="chip muted">硬汉电影</span></div>
+  </div>
+</a>
+      </div>
+      <div class="pagination"><a href="rankings-5.html">上一页</a><a href="rankings.html" class="">1</a><span>…</span><a href="rankings-5.html" class="">5</a><a href="rankings-6.html" class="active">6</a><a href="rankings-7.html" class="">7</a><span>…</span><a href="rankings-84.html" class="">84</a><a href="rankings-7.html">下一页</a></div>
+    </div>
+  </section>
+</main>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <h4>日韩热门视频</h4>
+        <p>日韩热门视频页面整理近期关注较高的视频内容，按类型与热度展示相关分类。</p>
+      </div>
+      <div>
+        <h4>分类入口</h4>
+        <p><a href="categories.html">分类总览</a></p>
+        <p><a href="rankings.html">热度排行榜</a></p>
+        <p><a href="search.html">站内搜索</a></p>
+      </div>
+      <div>
+        <h4>帮助说明</h4>
+        <p><a href="service.html">使用指南</a></p>
+        <p><a href="copyright.html">用户协议</a></p>
+        <p><a href="about.html">关于我们</a></p>
+      </div>
+      <div>
+        <h4>联系信息</h4>
+        <p>工作日 9:00 - 18:00</p>
+        <p>我们将在 24 小时内回复邮件</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 日韩热门视频. 保留所有权利。</span>
+      <span>纯静态 HTML / CSS / JS 构建</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?76b5e2e0f6c84c06f0a7cb7105df054d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>

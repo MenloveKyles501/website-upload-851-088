@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>搜索片库 - 亚洲热门视频-热门好看的视频大全-热门片库持续更新</title>
+  <meta name="description" content="搜索亚洲热门视频、热门好看的视频大全与热门片库持续更新内容。" />
+  <meta name="keywords" content="亚洲热门视频,热门好看的视频大全,热门片库持续更新,亚洲视频,热门视频,视频大全" />
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="stylesheet" href="./assets/site.css" />
+  
+</head>
+<body class="">
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="./index.html" aria-label="亚洲热榜首页">
+      <span class="brand-icon">▶</span>
+      <span class="brand-text">亚洲热榜</span>
+    </a>
+    <nav class="desktop-nav" aria-label="主导航">
+      <a class="nav-link" href="./index.html">首页</a>
+      <a class="nav-link" href="./categories.html">分类</a>
+      <a class="nav-link" href="./ranking.html">排行榜</a>
+      <a class="nav-link active" href="./search.html">搜索</a>
+    </nav>
+    <form class="header-search" action="./search.html" method="get">
+      <input type="search" name="q" placeholder="搜索电影、剧集、地区" aria-label="搜索电影" />
+      <button type="submit">搜索</button>
+    </form>
+    <button class="menu-toggle" type="button" data-menu-toggle aria-label="打开导航">☰</button>
+  </div>
+  <div class="mobile-nav" data-mobile-nav>
+    <a class="nav-link" href="./index.html">首页</a>
+    <a class="nav-link" href="./categories.html">分类</a>
+    <a class="nav-link" href="./ranking.html">排行榜</a>
+    <a class="nav-link active" href="./search.html">搜索</a>
+    <form class="mobile-search" action="./search.html" method="get">
+      <input type="search" name="q" placeholder="搜索片名或标签" aria-label="移动端搜索" />
+      <button type="submit">搜索</button>
+    </form>
+  </div>
+</header>
+
+<main class="page-main">
+  <section class="container page-hero small">
+    <p class="eyebrow dark">Search</p>
+    <h1>搜索与筛选</h1>
+    <p>支持按片名、简介、地区、年份、类型、标签和分类频道进行前端静态筛选。</p>
+  </section>
+  <section class="container search-app" data-search-app>
+    <div class="search-controls">
+      <input type="search" data-search-input placeholder="输入关键词" aria-label="搜索关键词" />
+      <select data-search-category aria-label="频道筛选">
+        <option value="">全部频道</option>
+        <option value="asian-hot">亚洲热榜</option><option value="word-of-mouth">口碑佳片</option><option value="new-release">新片速递</option><option value="series-picks">剧集精选</option><option value="midnight-theater">午夜剧场</option><option value="love-drama">情感故事</option><option value="suspense-track">悬疑追踪</option><option value="comedy-life">喜剧轻松</option><option value="sci-fi-fantasy">科幻奇想</option><option value="action-crime">动作犯罪</option><option value="family-healing">家庭治愈</option><option value="classic-library">经典片库</option>
+      </select>
+      <select data-search-type aria-label="类型筛选">
+        <option value="">全部类型</option>
+        <option value="电影">电影</option>
+        <option value="剧集">剧集</option>
+        <option value="综艺">综艺</option>
+        <option value="纪录">纪录</option>
+      </select>
+      <input type="search" data-search-year placeholder="年份，例如 2025" aria-label="年份筛选" />
+      <button type="button" data-search-reset>重置</button>
+    </div>
+    <p class="search-count" data-search-count>正在读取片库...</p>
+    <div class="movie-grid four" data-search-results></div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <a class="brand footer-brand" href="./index.html">
+        <span class="brand-icon">▶</span>
+        <span class="brand-text">亚洲热榜</span>
+      </a>
+      <p>亚洲热门视频页面汇总关注度较高的视频内容，分类清晰，便于浏览相关主题。</p>
+    </div>
+    <div>
+      <h3>热门年份</h3>
+      <div class="footer-links"><a href="./search.html?year=2026">2026</a><a href="./search.html?year=2025">2025</a><a href="./search.html?year=2024">2024</a><a href="./search.html?year=2023">2023</a><a href="./search.html?year=2022">2022</a></div>
+    </div>
+    <div>
+      <h3>频道入口</h3>
+      <div class="footer-links"><a href="./category-asian-hot.html">亚洲热榜</a><a href="./category-word-of-mouth.html">口碑佳片</a><a href="./category-new-release.html">新片速递</a><a href="./category-series-picks.html">剧集精选</a><a href="./category-midnight-theater.html">午夜剧场</a><a href="./category-love-drama.html">情感故事</a></div>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="./assets/app.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?76b5e2e0f6c84c06f0a7cb7105df054d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>

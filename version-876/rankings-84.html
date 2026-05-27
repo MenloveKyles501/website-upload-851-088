@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>热度排行榜 - 日韩热门视频-热门好看的视频大全-热门片库持续更新</title>
+  <meta name="description" content="热度排行榜页展示按热度与年份排序的影视内容。" />
+  <meta name="keywords" content="排行榜,日韩热门视频,热门好看的视频大全,热门片库持续更新,日韩视频,热门视频,视频大全" />
+  <meta name="theme-color" content="#0b1120" />
+  <meta property="og:title" content="热度排行榜 - 日韩热门视频-热门好看的视频大全-热门片库持续更新" />
+  <meta property="og:description" content="热度排行榜页展示按热度与年份排序的影视内容。" />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="inner">
+      <a class="brand" href="index.html" aria-label="日韩热门视频">
+        <span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 10.5A2.5 2.5 0 1 1 12 7a2.5 2.5 0 0 1 0 5.5z"/></svg></span>
+        <span class="brand-text">
+          <span class="brand-title">日韩热门视频</span>
+          <span class="brand-sub">热门内容整理 · 静态站点</span>
+        </span>
+      </a>
+      <nav class="nav" aria-label="主导航">
+        <a href="index.html" class="">首页</a><a href="categories.html" class="">分类总览</a><a href="rankings.html" class="active">排行榜</a><a href="search.html" class="">搜索</a><a href="about.html" class="">关于我们</a>
+      </nav>
+      <div class="header-actions">
+        <form class="search-pill" action="search.html" method="get" role="search">
+          <span aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4a6 6 0 1 0 3.7 10.7l4.3 4.3 1.4-1.4-4.3-4.3A6 6 0 0 0 10 4zm0 2a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/></svg></span>
+          <input type="search" name="q" placeholder="搜索影片名称、地区、年份、标签" />
+        </form>
+        <button class="icon-btn mobile-toggle" type="button" data-mobile-toggle aria-expanded="false" aria-label="展开菜单">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-nav" data-mobile-nav aria-label="移动端导航">
+      <a href="index.html" class="">首页</a><a href="categories.html" class="">分类总览</a><a href="rankings.html" class="active">排行榜</a><a href="search.html" class="">搜索</a><a href="about.html" class="">关于我们</a>
+      <form class="search-pill" action="search.html" method="get" role="search" style="margin-top:10px; min-width:0;">
+        <span aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4a6 6 0 1 0 3.7 10.7l4.3 4.3 1.4-1.4-4.3-4.3A6 6 0 0 0 10 4zm0 2a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/></svg></span>
+        <input type="search" name="q" placeholder="搜索影片名称、地区、年份、标签" />
+      </form>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">首页</a><span>›</span><span>排行榜</span></div>
+      <h1 class="title">热度排行榜</h1>
+      <p class="sub">根据年份、题材关键词和标题热度生成的静态排行榜，支持分页浏览全部条目。</p>
+    </div>
+  </section>
+  <section class="section" data-live-filter>
+    <div class="container">
+      <div class="filter-bar">
+        <input type="search" placeholder="在本页内搜索影片名称、地区、标签" data-filter-input />
+        <select data-filter-select>
+          <option value="">全部分类</option>
+          <option value="国产电影">国产电影</option><option value="国产剧集">国产剧集</option><option value="日韩电影">日韩电影</option><option value="日韩剧集">日韩剧集</option><option value="欧美作品">欧美作品</option><option value="动画动漫">动画动漫</option><option value="其他热播">其他热播</option>
+        </select>
+        <select data-filter-select>
+          <option value="">全部年份</option>
+          <option value="1953">1953</option><option value="1949">1949</option><option value="1945">1945</option><option value="1944">1944</option><option value="1940">1940</option><option value="1922">1922</option><option value="1921">1921</option>
+        </select>
+      </div>
+      <div class="card-grid">
+        <a class="movie-card" href="movie-1087.html" data-filter-card data-search="罗马假日 美国/意大利 电影 爱情,喜剧 厌烦繁文缛节的欧洲公主逃出使馆,与穷记者在罗马度过了改变彼此一生的一天。 经典 公主 记者 黑白片" data-cat="欧美作品" data-year="1953">
+  <div class="movie-poster">
+    <img src="assets/covers/1087.svg" alt="罗马假日" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">罗马假日</h3>
+    <div class="movie-meta">
+      <span>美国/意大利</span>
+      <span>•</span>
+      <span>1953</span>
+      <span>•</span>
+      <span>爱情</span>
+    </div>
+    <p class="movie-line">厌烦繁文缛节的欧洲公主逃出使馆,与穷记者在罗马度过了改变彼此一生的一天。</p>
+    <div class="chip-row"><span class="chip muted">经典</span><span class="chip muted">公主</span><span class="chip muted">记者</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1808.html" data-filter-card data-search="感谢伟大的国家 苏联 电影 剧情,战争,宣传 二战期间,一名失去双腿的苏联飞行员凭借钢铁意志重返蓝天,用生命践行了对祖国的一句诺言。 二战 苏联 英雄主义 斯大林 主旋律" data-cat="其他热播" data-year="1949">
+  <div class="movie-poster">
+    <img src="assets/covers/1808.svg" alt="感谢伟大的国家" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">感谢伟大的国家</h3>
+    <div class="movie-meta">
+      <span>苏联</span>
+      <span>•</span>
+      <span>1949</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">二战期间,一名失去双腿的苏联飞行员凭借钢铁意志重返蓝天,用生命践行了对祖国的一句诺言。</p>
+    <div class="chip-row"><span class="chip muted">二战</span><span class="chip muted">苏联</span><span class="chip muted">英雄主义</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0984.html" data-filter-card data-search="奇兵勇士 美国 电影 战争/冒险 六名被军事法庭判刑的士兵,被秘密组建执行一项炸毁德军雷达站的必死任务。 二战 敢死队 爆破 黑白片" data-cat="欧美作品" data-year="1944">
+  <div class="movie-poster">
+    <img src="assets/covers/0984.svg" alt="奇兵勇士" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">奇兵勇士</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>1944</span>
+      <span>•</span>
+      <span>战争</span>
+    </div>
+    <p class="movie-line">六名被军事法庭判刑的士兵,被秘密组建执行一项炸毁德军雷达站的必死任务。</p>
+    <div class="chip-row"><span class="chip muted">二战</span><span class="chip muted">敢死队</span><span class="chip muted">爆破</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0683.html" data-filter-card data-search="凯撒与克里奥佩特拉 英国 电影 剧情,历史,爱情 年老精明的罗马凯撒,遇上年幼任性却野心勃勃的埃及艳后,一场权力与智慧的师生恋。 经典改编 萧伯纳 史诗 艳后" data-cat="欧美作品" data-year="1945">
+  <div class="movie-poster">
+    <img src="assets/covers/0683.svg" alt="凯撒与克里奥佩特拉" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">凯撒与克里奥佩特拉</h3>
+    <div class="movie-meta">
+      <span>英国</span>
+      <span>•</span>
+      <span>1945</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">年老精明的罗马凯撒,遇上年幼任性却野心勃勃的埃及艳后,一场权力与智慧的师生恋。</p>
+    <div class="chip-row"><span class="chip muted">经典改编</span><span class="chip muted">萧伯纳</span><span class="chip muted">史诗</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1648.html" data-filter-card data-search="七月圣诞 美国 电影 喜剧/爱情 小职员被同事恶搞,以为中了五万美金的彩票头奖,于是他决定炒掉吝啬的老板。 经典 谎言 职场" data-cat="欧美作品" data-year="1940">
+  <div class="movie-poster">
+    <img src="assets/covers/1648.svg" alt="七月圣诞" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">七月圣诞</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>1940</span>
+      <span>•</span>
+      <span>喜剧</span>
+    </div>
+    <p class="movie-line">小职员被同事恶搞,以为中了五万美金的彩票头奖,于是他决定炒掉吝啬的老板。</p>
+    <div class="chip-row"><span class="chip muted">经典</span><span class="chip muted">谎言</span><span class="chip muted">职场</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1584.html" data-filter-card data-search="猫和老鼠旧版 美国 动画 喜剧,动画,家庭 一只名叫汤姆的蓝猫与一只名叫杰瑞的小鼠,在一栋平凡的房子里上演永不落幕的、充满暴力美学的追逐战。 无对白 经典手绘 物理搞笑" data-cat="动画动漫" data-year="1940">
+  <div class="movie-poster">
+    <img src="assets/covers/1584.svg" alt="猫和老鼠旧版" loading="lazy" />
+    <span class="type-badge">动画</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">猫和老鼠旧版</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>1940</span>
+      <span>•</span>
+      <span>喜剧</span>
+    </div>
+    <p class="movie-line">一只名叫汤姆的蓝猫与一只名叫杰瑞的小鼠,在一栋平凡的房子里上演永不落幕的、充满暴力美学的追逐战。</p>
+    <div class="chip-row"><span class="chip muted">无对白</span><span class="chip muted">经典手绘</span><span class="chip muted">物理搞笑</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0383.html" data-filter-card data-search="撒旦日记 丹麦 电影 剧情/奇幻 撒旦被上帝惩罚流放人间,他试图通过诱惑人类作恶来重返天堂,却屡屡被人类的善良打败。 默片 宗教寓言 黑白电影 四段式" data-cat="其他热播" data-year="1921">
+  <div class="movie-poster">
+    <img src="assets/covers/0383.svg" alt="撒旦日记" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">撒旦日记</h3>
+    <div class="movie-meta">
+      <span>丹麦</span>
+      <span>•</span>
+      <span>1921</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">撒旦被上帝惩罚流放人间,他试图通过诱惑人类作恶来重返天堂,却屡屡被人类的善良打败。</p>
+    <div class="chip-row"><span class="chip muted">默片</span><span class="chip muted">宗教寓言</span><span class="chip muted">黑白电影</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1984.html" data-filter-card data-search="发薪日 美国 电影 喜剧,短片 一个建筑工人拿到工资后,如何在妻子、酒馆和老板之间上演疯狂一夜。 默片 查理 卓别林 工人 幽默" data-cat="欧美作品" data-year="1922">
+  <div class="movie-poster">
+    <img src="assets/covers/1984.svg" alt="发薪日" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">发薪日</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>1922</span>
+      <span>•</span>
+      <span>喜剧</span>
+    </div>
+    <p class="movie-line">一个建筑工人拿到工资后,如何在妻子、酒馆和老板之间上演疯狂一夜。</p>
+    <div class="chip-row"><span class="chip muted">默片</span><span class="chip muted">查理</span><span class="chip muted">卓别林</span></div>
+  </div>
+</a>
+      </div>
+      <div class="pagination"><a href="rankings-83.html">上一页</a><a href="rankings.html" class="">1</a><span>…</span><a href="rankings-80.html" class="">80</a><a href="rankings-81.html" class="">81</a><a href="rankings-82.html" class="">82</a><a href="rankings-83.html" class="">83</a><a href="rankings-84.html" class="active">84</a><span class="disabled">下一页</span></div>
+    </div>
+  </section>
+</main>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <h4>日韩热门视频</h4>
+        <p>日韩热门视频页面整理近期关注较高的视频内容，按类型与热度展示相关分类。</p>
+      </div>
+      <div>
+        <h4>分类入口</h4>
+        <p><a href="categories.html">分类总览</a></p>
+        <p><a href="rankings.html">热度排行榜</a></p>
+        <p><a href="search.html">站内搜索</a></p>
+      </div>
+      <div>
+        <h4>帮助说明</h4>
+        <p><a href="service.html">使用指南</a></p>
+        <p><a href="copyright.html">用户协议</a></p>
+        <p><a href="about.html">关于我们</a></p>
+      </div>
+      <div>
+        <h4>联系信息</h4>
+        <p>工作日 9:00 - 18:00</p>
+        <p>我们将在 24 小时内回复邮件</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 日韩热门视频. 保留所有权利。</span>
+      <span>纯静态 HTML / CSS / JS 构建</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?76b5e2e0f6c84c06f0a7cb7105df054d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>

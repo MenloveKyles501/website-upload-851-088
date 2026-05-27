@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>热度排行榜 - 日韩热门视频-热门好看的视频大全-热门片库持续更新</title>
+  <meta name="description" content="热度排行榜页展示按热度与年份排序的影视内容。" />
+  <meta name="keywords" content="排行榜,日韩热门视频,热门好看的视频大全,热门片库持续更新,日韩视频,热门视频,视频大全" />
+  <meta name="theme-color" content="#0b1120" />
+  <meta property="og:title" content="热度排行榜 - 日韩热门视频-热门好看的视频大全-热门片库持续更新" />
+  <meta property="og:description" content="热度排行榜页展示按热度与年份排序的影视内容。" />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="inner">
+      <a class="brand" href="index.html" aria-label="日韩热门视频">
+        <span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 10.5A2.5 2.5 0 1 1 12 7a2.5 2.5 0 0 1 0 5.5z"/></svg></span>
+        <span class="brand-text">
+          <span class="brand-title">日韩热门视频</span>
+          <span class="brand-sub">热门内容整理 · 静态站点</span>
+        </span>
+      </a>
+      <nav class="nav" aria-label="主导航">
+        <a href="index.html" class="">首页</a><a href="categories.html" class="">分类总览</a><a href="rankings.html" class="active">排行榜</a><a href="search.html" class="">搜索</a><a href="about.html" class="">关于我们</a>
+      </nav>
+      <div class="header-actions">
+        <form class="search-pill" action="search.html" method="get" role="search">
+          <span aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4a6 6 0 1 0 3.7 10.7l4.3 4.3 1.4-1.4-4.3-4.3A6 6 0 0 0 10 4zm0 2a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/></svg></span>
+          <input type="search" name="q" placeholder="搜索影片名称、地区、年份、标签" />
+        </form>
+        <button class="icon-btn mobile-toggle" type="button" data-mobile-toggle aria-expanded="false" aria-label="展开菜单">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-nav" data-mobile-nav aria-label="移动端导航">
+      <a href="index.html" class="">首页</a><a href="categories.html" class="">分类总览</a><a href="rankings.html" class="active">排行榜</a><a href="search.html" class="">搜索</a><a href="about.html" class="">关于我们</a>
+      <form class="search-pill" action="search.html" method="get" role="search" style="margin-top:10px; min-width:0;">
+        <span aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4a6 6 0 1 0 3.7 10.7l4.3 4.3 1.4-1.4-4.3-4.3A6 6 0 0 0 10 4zm0 2a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/></svg></span>
+        <input type="search" name="q" placeholder="搜索影片名称、地区、年份、标签" />
+      </form>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">首页</a><span>›</span><span>排行榜</span></div>
+      <h1 class="title">热度排行榜</h1>
+      <p class="sub">根据年份、题材关键词和标题热度生成的静态排行榜，支持分页浏览全部条目。</p>
+    </div>
+  </section>
+  <section class="section" data-live-filter>
+    <div class="container">
+      <div class="filter-bar">
+        <input type="search" placeholder="在本页内搜索影片名称、地区、标签" data-filter-input />
+        <select data-filter-select>
+          <option value="">全部分类</option>
+          <option value="国产电影">国产电影</option><option value="国产剧集">国产剧集</option><option value="日韩电影">日韩电影</option><option value="日韩剧集">日韩剧集</option><option value="欧美作品">欧美作品</option><option value="动画动漫">动画动漫</option><option value="其他热播">其他热播</option>
+        </select>
+        <select data-filter-select>
+          <option value="">全部年份</option>
+          <option value="2026">2026</option><option value="2025">2025</option><option value="2024">2024</option>
+        </select>
+      </div>
+      <div class="card-grid">
+        <a class="movie-card" href="movie-0083.html" data-filter-card data-search="外卖骑士 韩国 剧集 剧情、动作 首尔的雨夜里,一群外卖员用送餐箱运送着比食物更危险的东西——真相。 外卖员 贫富差距 地下正义 雨夜美学 阶级反抗" data-cat="日韩剧集" data-year="2025">
+  <div class="movie-poster">
+    <img src="assets/covers/0083.svg" alt="外卖骑士" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">外卖骑士</h3>
+    <div class="movie-meta">
+      <span>韩国</span>
+      <span>•</span>
+      <span>2025</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">首尔的雨夜里,一群外卖员用送餐箱运送着比食物更危险的东西——真相。</p>
+    <div class="chip-row"><span class="chip muted">外卖员</span><span class="chip muted">贫富差距</span><span class="chip muted">地下正义</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0180.html" data-filter-card data-search="堕落之心 美国 电影 犯罪/惊悚 警探追查连环杀手,发现每一具尸体都被取走了心脏,而最后一颗心脏,写着警探自己的名字。 心理 连环杀手 堕落 反转" data-cat="欧美作品" data-year="2025">
+  <div class="movie-poster">
+    <img src="assets/covers/0180.svg" alt="堕落之心" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">堕落之心</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2025</span>
+      <span>•</span>
+      <span>犯罪</span>
+    </div>
+    <p class="movie-line">警探追查连环杀手,发现每一具尸体都被取走了心脏,而最后一颗心脏,写着警探自己的名字。</p>
+    <div class="chip-row"><span class="chip muted">心理</span><span class="chip muted">连环杀手</span><span class="chip muted">堕落</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0465.html" data-filter-card data-search="刁蛮公主 中国大陆 电视剧 喜剧,古装,爱情 现代女企业家穿越成即将和亲的刁蛮公主,为了退婚,她竟把敌国太子告上了公堂。 古偶 欢喜冤家 女强 甜宠 反套路" data-cat="国产剧集" data-year="2025">
+  <div class="movie-poster">
+    <img src="assets/covers/0465.svg" alt="刁蛮公主" loading="lazy" />
+    <span class="type-badge">电视剧</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">刁蛮公主</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2025</span>
+      <span>•</span>
+      <span>喜剧</span>
+    </div>
+    <p class="movie-line">现代女企业家穿越成即将和亲的刁蛮公主,为了退婚,她竟把敌国太子告上了公堂。</p>
+    <div class="chip-row"><span class="chip muted">古偶</span><span class="chip muted">欢喜冤家</span><span class="chip muted">女强</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1154.html" data-filter-card data-search="被怀疑:兔子和刺猬 英国 电影 悬疑推理 心理诊所发生命案,所有病人的代号都是动物,而凶手只能是最温顺的“兔子”或“刺猬”。 动物隐喻 双重人格 密室推理" data-cat="欧美作品" data-year="2025">
+  <div class="movie-poster">
+    <img src="assets/covers/1154.svg" alt="被怀疑:兔子和刺猬" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">被怀疑:兔子和刺猬</h3>
+    <div class="movie-meta">
+      <span>英国</span>
+      <span>•</span>
+      <span>2025</span>
+      <span>•</span>
+      <span>悬疑推理</span>
+    </div>
+    <p class="movie-line">心理诊所发生命案,所有病人的代号都是动物,而凶手只能是最温顺的“兔子”或“刺猬”。</p>
+    <div class="chip-row"><span class="chip muted">动物隐喻</span><span class="chip muted">双重人格</span><span class="chip muted">密室推理</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1745.html" data-filter-card data-search="心中的杀手 美国 电影 犯罪/心理惊悚 一位老实巴交的户籍警晚上会变成雨夜杀手,但他正在追查的下一个目标竟是另一个自己。 连环杀手 双重人格 警察 雨夜 犯罪心理" data-cat="欧美作品" data-year="2025">
+  <div class="movie-poster">
+    <img src="assets/covers/1745.svg" alt="心中的杀手" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">心中的杀手</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2025</span>
+      <span>•</span>
+      <span>犯罪</span>
+    </div>
+    <p class="movie-line">一位老实巴交的户籍警晚上会变成雨夜杀手,但他正在追查的下一个目标竟是另一个自己。</p>
+    <div class="chip-row"><span class="chip muted">连环杀手</span><span class="chip muted">双重人格</span><span class="chip muted">警察</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1775.html" data-filter-card data-search="周日总是下雨天 中国台湾 电影 剧情/爱情/家庭 每个下雨的周日,她都会接到一通来自过去的电话,而电话那头是五年前因误会分手的恋人。 台北 雨 重逢 和解 逝去的时光" data-cat="国产电影" data-year="2025">
+  <div class="movie-poster">
+    <img src="assets/covers/1775.svg" alt="周日总是下雨天" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">周日总是下雨天</h3>
+    <div class="movie-meta">
+      <span>中国台湾</span>
+      <span>•</span>
+      <span>2025</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">每个下雨的周日,她都会接到一通来自过去的电话,而电话那头是五年前因误会分手的恋人。</p>
+    <div class="chip-row"><span class="chip muted">台北</span><span class="chip muted">雨</span><span class="chip muted">重逢</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1791.html" data-filter-card data-search="反贪风暴 中国香港 电影 动作/犯罪 ICAC首席调查官发现,最大的贪腐源头竟是自己已故父亲的慈善基金会。 廉政公署 金融犯罪 枪战" data-cat="国产电影" data-year="2024">
+  <div class="movie-poster">
+    <img src="assets/covers/1791.svg" alt="反贪风暴" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">反贪风暴</h3>
+    <div class="movie-meta">
+      <span>中国香港</span>
+      <span>•</span>
+      <span>2024</span>
+      <span>•</span>
+      <span>动作</span>
+    </div>
+    <p class="movie-line">ICAC首席调查官发现,最大的贪腐源头竟是自己已故父亲的慈善基金会。</p>
+    <div class="chip-row"><span class="chip muted">廉政公署</span><span class="chip muted">金融犯罪</span><span class="chip muted">枪战</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0996.html" data-filter-card data-search="捷克梦 捷克/斯洛伐克 电影 剧情/黑色幽默 布拉格的一名清洁工中了彩票头奖,却发现奖金只是一张前往“西方极乐世界”的单程票。 东欧转型 梦想与现实 荒诞" data-cat="其他热播" data-year="2026">
+  <div class="movie-poster">
+    <img src="assets/covers/0996.svg" alt="捷克梦" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">捷克梦</h3>
+    <div class="movie-meta">
+      <span>捷克/斯洛伐克</span>
+      <span>•</span>
+      <span>2026</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">布拉格的一名清洁工中了彩票头奖,却发现奖金只是一张前往“西方极乐世界”的单程票。</p>
+    <div class="chip-row"><span class="chip muted">东欧转型</span><span class="chip muted">梦想与现实</span><span class="chip muted">荒诞</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1137.html" data-filter-card data-search="恋爱要在放学后 日本 剧集 青春,爱情,校园 白天是严厉的数学老师,夜晚是地下偶像,她的两个身份分别吸引了同一位男学生。 师生恋 秘密 纯爱 反差" data-cat="日韩剧集" data-year="2025">
+  <div class="movie-poster">
+    <img src="assets/covers/1137.svg" alt="恋爱要在放学后" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">恋爱要在放学后</h3>
+    <div class="movie-meta">
+      <span>日本</span>
+      <span>•</span>
+      <span>2025</span>
+      <span>•</span>
+      <span>青春</span>
+    </div>
+    <p class="movie-line">白天是严厉的数学老师,夜晚是地下偶像,她的两个身份分别吸引了同一位男学生。</p>
+    <div class="chip-row"><span class="chip muted">师生恋</span><span class="chip muted">秘密</span><span class="chip muted">纯爱</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1844.html" data-filter-card data-search="龙虎盟 美国 电影 西部/动作/剧情 两名曾经情同手足的赏金猎人,如今一个成了警长,一个成了劫匪,在小镇“龙虎”展开最终对决。 西部片复兴 双雄对决 枪战 兄弟情 硬汉" data-cat="欧美作品" data-year="2025">
+  <div class="movie-poster">
+    <img src="assets/covers/1844.svg" alt="龙虎盟" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">龙虎盟</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2025</span>
+      <span>•</span>
+      <span>西部</span>
+    </div>
+    <p class="movie-line">两名曾经情同手足的赏金猎人,如今一个成了警长,一个成了劫匪,在小镇“龙虎”展开最终对决。</p>
+    <div class="chip-row"><span class="chip muted">西部片复兴</span><span class="chip muted">双雄对决</span><span class="chip muted">枪战</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0173.html" data-filter-card data-search="校花的超级保镖之无极诀 中国大陆 网络电影 动作,奇幻,喜剧 修仙界第一高手被贬下凡,任务是给一名普通校花当保镖,却发现校花体内封印着上古魔尊,而她本人对此毫不知情。 校园修仙 贴身保护 反转套路 二次元画风" data-cat="国产电影" data-year="2024">
+  <div class="movie-poster">
+    <img src="assets/covers/0173.svg" alt="校花的超级保镖之无极诀" loading="lazy" />
+    <span class="type-badge">网络电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">校花的超级保镖之无极诀</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2024</span>
+      <span>•</span>
+      <span>动作</span>
+    </div>
+    <p class="movie-line">修仙界第一高手被贬下凡,任务是给一名普通校花当保镖,却发现校花体内封印着上古魔尊,而她本人对此毫不知情。</p>
+    <div class="chip-row"><span class="chip muted">校园修仙</span><span class="chip muted">贴身保护</span><span class="chip muted">反转套路</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0270.html" data-filter-card data-search="青年干探 香港 电影 动作,犯罪,悬疑 警校最废柴的四人组被选为“天选卧底”,潜入高校调查黑帮毒品案。 警校 卧底 校园暴力 热血" data-cat="国产电影" data-year="2024">
+  <div class="movie-poster">
+    <img src="assets/covers/0270.svg" alt="青年干探" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">青年干探</h3>
+    <div class="movie-meta">
+      <span>香港</span>
+      <span>•</span>
+      <span>2024</span>
+      <span>•</span>
+      <span>动作</span>
+    </div>
+    <p class="movie-line">警校最废柴的四人组被选为“天选卧底”,潜入高校调查黑帮毒品案。</p>
+    <div class="chip-row"><span class="chip muted">警校</span><span class="chip muted">卧底</span><span class="chip muted">校园暴力</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0700.html" data-filter-card data-search="情人劫 中国香港 电影 爱情/犯罪/惊悚 情人节当晚,四个“杀猪盘”骗子齐聚一栋别墅,却发现目标竟是彼此。 反转 杀猪盘 黑色幽默 情人节" data-cat="国产电影" data-year="2024">
+  <div class="movie-poster">
+    <img src="assets/covers/0700.svg" alt="情人劫" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">情人劫</h3>
+    <div class="movie-meta">
+      <span>中国香港</span>
+      <span>•</span>
+      <span>2024</span>
+      <span>•</span>
+      <span>爱情</span>
+    </div>
+    <p class="movie-line">情人节当晚,四个“杀猪盘”骗子齐聚一栋别墅,却发现目标竟是彼此。</p>
+    <div class="chip-row"><span class="chip muted">反转</span><span class="chip muted">杀猪盘</span><span class="chip muted">黑色幽默</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0009.html" data-filter-card data-search="师声对决 韩国 电影 剧情,音乐,悬疑 被誉为“神之声”的合唱团指挥突遭失声,他找来的替身竟然是他20年前抛弃的弟子。 合唱团 指挥 替身 嗓音 复仇" data-cat="日韩电影" data-year="2025">
+  <div class="movie-poster">
+    <img src="assets/covers/0009.svg" alt="师声对决" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">师声对决</h3>
+    <div class="movie-meta">
+      <span>韩国</span>
+      <span>•</span>
+      <span>2025</span>
+      <span>•</span>
+      <span>剧情</span>
+    </div>
+    <p class="movie-line">被誉为“神之声”的合唱团指挥突遭失声,他找来的替身竟然是他20年前抛弃的弟子。</p>
+    <div class="chip-row"><span class="chip muted">合唱团</span><span class="chip muted">指挥</span><span class="chip muted">替身</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0036.html" data-filter-card data-search="牵牛的夏天 中国大陆 电影 爱情/青春 在城市打拼失败的男孩回到山村,发现幼时总欺负他的“恶霸”女孩,一直在等他一起种活全村最老的牵牛花。 乡村 治愈 青梅竹马" data-cat="国产电影" data-year="2025">
+  <div class="movie-poster">
+    <img src="assets/covers/0036.svg" alt="牵牛的夏天" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">牵牛的夏天</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2025</span>
+      <span>•</span>
+      <span>爱情</span>
+    </div>
+    <p class="movie-line">在城市打拼失败的男孩回到山村,发现幼时总欺负他的“恶霸”女孩,一直在等他一起种活全村最老的牵牛花。</p>
+    <div class="chip-row"><span class="chip muted">乡村</span><span class="chip muted">治愈</span><span class="chip muted">青梅竹马</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1348.html" data-filter-card data-search="提心吊胆 中国大陆 电影 黑色喜剧/悬疑 一场因“鬼屋”闹剧而起的古董失窃案,让四个各怀鬼胎的小人物在废弃剧院里互相设局。 荒诞 盗窃案 小人物 反转" data-cat="国产电影" data-year="2025">
+  <div class="movie-poster">
+    <img src="assets/covers/1348.svg" alt="提心吊胆" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">提心吊胆</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2025</span>
+      <span>•</span>
+      <span>黑色喜剧</span>
+    </div>
+    <p class="movie-line">一场因“鬼屋”闹剧而起的古董失窃案,让四个各怀鬼胎的小人物在废弃剧院里互相设局。</p>
+    <div class="chip-row"><span class="chip muted">荒诞</span><span class="chip muted">盗窃案</span><span class="chip muted">小人物</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1423.html" data-filter-card data-search="半城明媚半城雨第一季 中国大陆 剧集 奇幻,都市,悬疑 每逢雨天,这家古董店就会为都市中的失落灵魂打开一扇通往另一个“半城”的门。 治愈系 妖怪客栈 平行时空" data-cat="国产剧集" data-year="2025">
+  <div class="movie-poster">
+    <img src="assets/covers/1423.svg" alt="半城明媚半城雨第一季" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">半城明媚半城雨第一季</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2025</span>
+      <span>•</span>
+      <span>奇幻</span>
+    </div>
+    <p class="movie-line">每逢雨天,这家古董店就会为都市中的失落灵魂打开一扇通往另一个“半城”的门。</p>
+    <div class="chip-row"><span class="chip muted">治愈系</span><span class="chip muted">妖怪客栈</span><span class="chip muted">平行时空</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0755.html" data-filter-card data-search="四月一日灵异事件簿第一季 日本 剧集 奇幻/悬疑/剧情 能看见鬼魂的高中生四月一日君寻,被迫在魔女侑子的店里打工,用“等价交换”解决灵异委托。 都市传说 代价 CLAMP 氛围诡异" data-cat="日韩剧集" data-year="2024">
+  <div class="movie-poster">
+    <img src="assets/covers/0755.svg" alt="四月一日灵异事件簿第一季" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">四月一日灵异事件簿第一季</h3>
+    <div class="movie-meta">
+      <span>日本</span>
+      <span>•</span>
+      <span>2024</span>
+      <span>•</span>
+      <span>奇幻</span>
+    </div>
+    <p class="movie-line">能看见鬼魂的高中生四月一日君寻,被迫在魔女侑子的店里打工,用“等价交换”解决灵异委托。</p>
+    <div class="chip-row"><span class="chip muted">都市传说</span><span class="chip muted">代价</span><span class="chip muted">CLAMP</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0852.html" data-filter-card data-search="符碌军团 中国香港 电影 喜剧/动作/犯罪 四个一事无成的废柴被误认成顶级雇佣兵,不得不硬着头皮去拯救被绑架的黑帮大佬。 草根逆袭 乌龙事件 黑色幽默 港式无厘头 兄弟情" data-cat="国产电影" data-year="2024">
+  <div class="movie-poster">
+    <img src="assets/covers/0852.svg" alt="符碌军团" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">符碌军团</h3>
+    <div class="movie-meta">
+      <span>中国香港</span>
+      <span>•</span>
+      <span>2024</span>
+      <span>•</span>
+      <span>喜剧</span>
+    </div>
+    <p class="movie-line">四个一事无成的废柴被误认成顶级雇佣兵,不得不硬着头皮去拯救被绑架的黑帮大佬。</p>
+    <div class="chip-row"><span class="chip muted">草根逆袭</span><span class="chip muted">乌龙事件</span><span class="chip muted">黑色幽默</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1611.html" data-filter-card data-search="镇魂街之热血再燃 中国大陆 剧集 动作,奇幻,动画 曹焱兵为救弟弟,闯入禁地“罗刹街”,却意外解封了上古最强神将,引得各方势力追杀。 热血 战斗 守护灵 兄弟 国漫" data-cat="动画动漫" data-year="2024">
+  <div class="movie-poster">
+    <img src="assets/covers/1611.svg" alt="镇魂街之热血再燃" loading="lazy" />
+    <span class="type-badge">剧集</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">镇魂街之热血再燃</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2024</span>
+      <span>•</span>
+      <span>动作</span>
+    </div>
+    <p class="movie-line">曹焱兵为救弟弟,闯入禁地“罗刹街”,却意外解封了上古最强神将,引得各方势力追杀。</p>
+    <div class="chip-row"><span class="chip muted">热血</span><span class="chip muted">战斗</span><span class="chip muted">守护灵</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1165.html" data-filter-card data-search="炎热的夜晚 美国 电影 悬疑犯罪 一个北方黑人警探在密西西比的闷热夜晚,被迫与种族主义警长合作侦破离奇谋杀案。 警匪对峙 种族冲突 心理博弈 封闭空间" data-cat="欧美作品" data-year="2025">
+  <div class="movie-poster">
+    <img src="assets/covers/1165.svg" alt="炎热的夜晚" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">炎热的夜晚</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2025</span>
+      <span>•</span>
+      <span>悬疑犯罪</span>
+    </div>
+    <p class="movie-line">一个北方黑人警探在密西西比的闷热夜晚,被迫与种族主义警长合作侦破离奇谋杀案。</p>
+    <div class="chip-row"><span class="chip muted">警匪对峙</span><span class="chip muted">种族冲突</span><span class="chip muted">心理博弈</span></div>
+  </div>
+</a><a class="movie-card" href="movie-1576.html" data-filter-card data-search="星期恋人:前篇 日本 电影 爱情/校园/青春 全校最受欢迎的男生和最高冷的女生签订合约:只做一周恋人,到期自动分手。 告白 时限恋爱 校花校草 纯爱 双向暗恋" data-cat="日韩电影" data-year="2025">
+  <div class="movie-poster">
+    <img src="assets/covers/1576.svg" alt="星期恋人:前篇" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">星期恋人:前篇</h3>
+    <div class="movie-meta">
+      <span>日本</span>
+      <span>•</span>
+      <span>2025</span>
+      <span>•</span>
+      <span>爱情</span>
+    </div>
+    <p class="movie-line">全校最受欢迎的男生和最高冷的女生签订合约:只做一周恋人,到期自动分手。</p>
+    <div class="chip-row"><span class="chip muted">告白</span><span class="chip muted">时限恋爱</span><span class="chip muted">校花校草</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0095.html" data-filter-card data-search="娇娃闹军营 中国大陆 电影 喜剧,动作 三名来自城市的问题少女因违法被“改造”入伍,她们发誓要在一个月内搞垮一个王牌连队。 女子特战 搞笑征兵 逆袭 热血" data-cat="国产电影" data-year="2024">
+  <div class="movie-poster">
+    <img src="assets/covers/0095.svg" alt="娇娃闹军营" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">娇娃闹军营</h3>
+    <div class="movie-meta">
+      <span>中国大陆</span>
+      <span>•</span>
+      <span>2024</span>
+      <span>•</span>
+      <span>喜剧</span>
+    </div>
+    <p class="movie-line">三名来自城市的问题少女因违法被“改造”入伍,她们发誓要在一个月内搞垮一个王牌连队。</p>
+    <div class="chip-row"><span class="chip muted">女子特战</span><span class="chip muted">搞笑征兵</span><span class="chip muted">逆袭</span></div>
+  </div>
+</a><a class="movie-card" href="movie-0935.html" data-filter-card data-search="杜兰餐馆:黑色传奇 美国 电影 惊悚/悬疑/犯罪 一家只接待精英的米其林餐厅,每位客人离开后都会神秘失踪,侦探卧底发现主厨在烹饪人性。 暗黑料理 密闭空间 心理博弈 血腥美学" data-cat="欧美作品" data-year="2024">
+  <div class="movie-poster">
+    <img src="assets/covers/0935.svg" alt="杜兰餐馆:黑色传奇" loading="lazy" />
+    <span class="type-badge">电影</span>
+  </div>
+  <div class="movie-body">
+    <h3 class="movie-title">杜兰餐馆:黑色传奇</h3>
+    <div class="movie-meta">
+      <span>美国</span>
+      <span>•</span>
+      <span>2024</span>
+      <span>•</span>
+      <span>惊悚</span>
+    </div>
+    <p class="movie-line">一家只接待精英的米其林餐厅,每位客人离开后都会神秘失踪,侦探卧底发现主厨在烹饪人性。</p>
+    <div class="chip-row"><span class="chip muted">暗黑料理</span><span class="chip muted">密闭空间</span><span class="chip muted">心理博弈</span></div>
+  </div>
+</a>
+      </div>
+      <div class="pagination"><a href="rankings-21.html">上一页</a><a href="rankings.html" class="">1</a><span>…</span><a href="rankings-21.html" class="">21</a><a href="rankings-22.html" class="active">22</a><a href="rankings-23.html" class="">23</a><span>…</span><a href="rankings-84.html" class="">84</a><a href="rankings-23.html">下一页</a></div>
+    </div>
+  </section>
+</main>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <h4>日韩热门视频</h4>
+        <p>日韩热门视频页面整理近期关注较高的视频内容，按类型与热度展示相关分类。</p>
+      </div>
+      <div>
+        <h4>分类入口</h4>
+        <p><a href="categories.html">分类总览</a></p>
+        <p><a href="rankings.html">热度排行榜</a></p>
+        <p><a href="search.html">站内搜索</a></p>
+      </div>
+      <div>
+        <h4>帮助说明</h4>
+        <p><a href="service.html">使用指南</a></p>
+        <p><a href="copyright.html">用户协议</a></p>
+        <p><a href="about.html">关于我们</a></p>
+      </div>
+      <div>
+        <h4>联系信息</h4>
+        <p>工作日 9:00 - 18:00</p>
+        <p>我们将在 24 小时内回复邮件</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 日韩热门视频. 保留所有权利。</span>
+      <span>纯静态 HTML / CSS / JS 构建</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?76b5e2e0f6c84c06f0a7cb7105df054d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>
